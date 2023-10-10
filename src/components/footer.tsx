@@ -17,8 +17,13 @@ const Footer = () => {
             <h2 className="font-normal text-normal text-center mb-6">Lorem ipsum dolor sit amet consectetur. Sit tincidunt amet volutpat neque porttitor. Morbi risus turpis
                  est platea aliquam ridiculus nibh. Imperdiet id eget tempus aliquam semper volutpat viverra dolor in.
             </h2>
+<<<<<<< HEAD
             <div className="flex items-center">
                 <div className="flex justify-center mr-3">
+=======
+            <div className="flex justify-start">
+                <div className="mr-5 max-lg:mr-0 flex justify-center">
+>>>>>>> 4fb58d94aef3889a42d9510eb3625feff6330096
                     <Image
                         src='/image/img.png'
                         width={950}
