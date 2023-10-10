@@ -18,7 +18,7 @@ const Footer = () => {
                  est platea aliquam ridiculus nibh. Imperdiet id eget tempus aliquam semper volutpat viverra dolor in.
             </h2>
             <div className="flex justify-start">
-                <div className="mr-5 flex justify-center">
+                <div className="mr-5 max-lg:mr-0 flex justify-center">
                     <Image
                         src='/image/img.png'
                         width={950}
