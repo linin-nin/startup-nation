@@ -5,7 +5,7 @@ import spinningLetter from '../../public/icons/spining-letter.svg'
 
 const Rocket = () => {
   return (
-    <section className='rocket h-[100px] flex items-center justify-center mb-52'>
+    <section className='rocket h-[100px] flex items-center justify-center mb-52 pl-14'>
         <Image
             src={spinningLetter}
             alt='spinningLetter'
