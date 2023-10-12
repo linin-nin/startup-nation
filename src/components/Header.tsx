@@ -19,7 +19,9 @@ const Header = () => {
 
 
                 </div>
-                <div className="burger-menu"><Burgermenu/></div>
+                <div className="burger-menu">
+                    <Burgermenu/>
+                </div>
             </nav>
         </header>
 

@@ -6,11 +6,11 @@
 @tailwind utilities;
 
 .container {
-  @apply max-w-[1280px] mx-auto
+  @apply max-w-[1400px] mx-auto
 }
 
 .padding-body {
-  @apply px-6
+  @apply px-10
 }
 
 body {
