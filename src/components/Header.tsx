@@ -2,13 +2,14 @@
 import React from 'react'
 import Image from "next/image"
 import Burgermenu from './Burgermenu'
+import SideBar from './SideBar'
 
 const Header = () => {
     return (
         <header className='border-b-2 border-white sticky top-0 bg-black z-[999]'>
             <nav className=' flex justify-between items-center'>
                 <button className='button-style text-[20px] font-bold'>Apply</button>
-                <div className="logo">
+                <div className="logo mr-12">
                     <Image
                         src="/icons/logo.svg"
                         width={200}
@@ -20,7 +21,8 @@ const Header = () => {
 
                 </div>
                 <div className="burger-menu">
-                    <Burgermenu/>
+                    {/* <Burgermenu/> */}
+                    <SideBar/>
                 </div>
             </nav>
         </header>
