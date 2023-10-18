@@ -1,19 +1,18 @@
-import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
 import VideoContent from "@/components/VideoContent";
 import AboutUs from "@/components/aboutUs";
-import Footer from "@/components/Footer";
 import Rocket from "@/components/Rocket";
+import Join from "@/components/joinUs";
 
 export default function Home() {
   return (
-    <div className="container padding-body font-body">
-      <Header/>
+    <div>
       <Hero/>
       <Rocket/>
       <VideoContent/>
       <AboutUs/>
-      <Footer/>
+      <Join/>
     </div>
   )
 }

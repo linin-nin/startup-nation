@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import Image from "next/image"
-import Burgermenu from './Burgermenu'
 import SideBar from './SideBar'
 
 const Header = () => {
