@@ -1,8 +1,14 @@
 import Hero from "@/components/directory/directory"
+import ShowPath from "@/components/directory/showPath"
+import Header from "@/components/header/Header"
 
 const page = () => {
   return (
-    <div><Hero/></div>
+    <div>
+      <Header/>
+      <Hero/>
+      <ShowPath/>
+    </div>
   )
 }
 
