@@ -4,7 +4,7 @@ import { useState } from 'react';
 import sidebarCSS from './sidebar.module.css'
 import Link from 'next/link';
 
-const SideBar = (props:string) => {
+const SideBar = () => {
 
     const [menuName, setmenuName] = useState("")
 
