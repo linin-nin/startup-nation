@@ -16,7 +16,12 @@ const config: Config = {
 
       fontFamily: {
         body: ["Teko"]
-      }
+      },
+
+      screens: {
+        'myscreen': '800px'
+      },
+
     },
   },
   plugins: [],

@@ -6,11 +6,11 @@
 @tailwind utilities;
 
 .container {
-  @apply max-w-[1280px] mx-auto
+  @apply max-w-[1400px] mx-auto
 }
 
 .padding-body {
-  @apply px-6
+  @apply px-10
 }
 
 body {
@@ -42,4 +42,55 @@ body {
   transition: 0.6s;
 }
 
+.page {
+  @apply flex justify-end max-xl:flex-wrap;
+}
+.page .content-list {
+  @apply flex justify-between;
+}
+.arrow{
+  @apply flex flex-col max-xl:flex-col max-lg:flex-row gap-5;
+}
+.arrow .arrow-btn {
+  @apply rounded-full border-2 border-white bg-black hover:border-yellow-300;
+}
 
+.hide {
+  @apply hidden xl:block
+}
+
+.input {
+  @apply bg-black border-2 rounded-none w-full py-5 pl-3 mb-4 placeholder:text-2xl;
+}
+
+/* text size part  */
+.text-lg {
+  @apply text-6xl
+}
+.text-medium {
+  @apply text-3xl;
+}
+.text-normal{
+  @apply text-2xl;
+}
+
+.text-hero {
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+/* button style  */
+.button-style {
+  @apply border-2 border-white py-2 px-6
+  hover:bg-white hover:text-black hover:font-bold
+}
+
+/* margin list  */
+.marquee ul li{
+  margin: 0 10px;
+}
+
+/* effect on hover  */
+.effect-yellow {
+  @apply hover:text-[#F8DC4C]
+}
