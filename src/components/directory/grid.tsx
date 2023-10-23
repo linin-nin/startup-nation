@@ -6,6 +6,7 @@ import Link from "next/link"
 const Grid = () => {
   return (
     <section className="grid grid-cols-3 bg-white text-black">
+      Hello
         {Cards.map((item)=>(
           <div key={item.id}  className="h-[500px] w-[416px] border-r-2 border-black pr-5">
             <Image src={item.img} width={416} height={416} bg-white alt="image" className="h-[87%]"/>
