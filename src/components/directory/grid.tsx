@@ -11,7 +11,7 @@ const Grid = () => {
             <Image src={item.img} width={416} height={416} bg-white alt="image" className="h-[87%]"/>
             <div className="flex justify-between">
               <div className="">
-                <Link href="/startup-directory/detial-info"><h2 className="text-2xl ">{item.name}</h2></Link>
+                <Link href="/startup-directory/detial-info"><h2 className="text-2xl hover:underline hover:text-blue-400">{item.name}</h2></Link>
                 <p>{item.date}</p>
               </div>
               <p>0{item.id}/100</p>

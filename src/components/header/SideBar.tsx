@@ -4,11 +4,7 @@ import { useState } from 'react';
 import sidebarCSS from './sidebar.module.css'
 import Link from 'next/link';
 
-const SideBar = (props:string) => {
-
-    const [menuName, setmenuName] = useState("")
-
-    
+const SideBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
