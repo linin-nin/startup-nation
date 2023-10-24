@@ -6,6 +6,7 @@ import Rocket from "@/components/Rocket";
 import Join from "@/components/joinUs";
 import Header from "@/components/header/Header";
 
+
 export default function Home() {
   return (
     <div>
