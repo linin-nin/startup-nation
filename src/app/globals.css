@@ -94,3 +94,12 @@ body {
 .effect-yellow {
   @apply hover:text-[#F8DC4C]
 }
+
+.grid-style {
+  @apply grid grid-cols-3 overflow-hidden relative;
+}
+
+.grid-style .card {
+  /* @apply h-[500px] w-[416px] after:absolute after:w-[2px] after:h-[100%] after:top-0 after:ml-5 after:bg-red-400; */
+  @apply h-[500px] w-[416px] border-r-2 border-black pr-5;
+}

@@ -35,4 +35,22 @@ export const Cards =[
         name: "DreamLAB,co.LTD",
         date: "founded: 2021    "
     },
+    {
+        id: 4,
+        img: "/image/startup.jpeg",
+        name: "DreamLAB,co.LTD",
+        date: "founded: 2021    "
+    },
+    {
+        id: 5,
+        img: "/image/boku.jpeg",
+        name: "DreamLAB,co.LTD",
+        date: "founded: 2021    "
+    },
+    {
+        id: 6,
+        img: "/image/startup.jpeg",
+        name: "DreamLAB,co.LTD",
+        date: "founded: 2021    "
+    },
 ]

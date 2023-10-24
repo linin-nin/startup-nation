@@ -1,9 +1,13 @@
-import React from 'react'
+import About from "@/components/about/About"
+import Header from "@/components/header/Header"
 
-const page = () => {
+const Page = () => {
   return (
-    <div>page</div>
+    <div>
+      <Header/>
+      Hello About Us
+    </div>
   )
 }
 
-export default page
+export default Page

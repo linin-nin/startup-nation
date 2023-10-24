@@ -45,7 +45,6 @@ const Footer = () => {
                 All Rights  Reserved.
             </div>
         </div>
-        <div>
     </footer>
   ) 
 }
