@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const Grid = () => {
   return (
-    <section className="grid-style bg-white text-black">
+    <section className="padding-body grid-style bg-white text-black">
         {Cards.map((item)=>(
           <div key={item.id}>
             <div   className="card">

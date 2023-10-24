@@ -4,7 +4,7 @@ import { Socail } from "@/lib/navbarMenu"
 
 const Info = () => {
   return (
-    <main className='bg-white text-black flex justify-start py-8'>
+    <main className='bg-white text-black flex justify-start py-8 padding-body'>
         <div className="pr-5 w-[864px] max-w-[864px]">
             <div className="flex">
                 <div className="w-[644px]">

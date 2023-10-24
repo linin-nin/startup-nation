@@ -9,7 +9,7 @@ const Paginations = () => {
     setpages(p)
   }
   return (
-    <main className='bg-white text-black border-t-2 border-black flex justify-between items-center mt-3 py-5'>
+    <main className='bg-white text-black border-t-2 border-black flex padding-body  justify-between items-center mt-3 py-5'>
         <div>1 -6 from 100</div>
         <Pagination 
           count={16} 

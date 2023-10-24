@@ -5,12 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply max-w-[1400px] mx-auto
-}
+/* .container {
+  @apply  ;
+} */
 
 .padding-body {
-  @apply px-10
+  @apply px-20
 }
 
 body {

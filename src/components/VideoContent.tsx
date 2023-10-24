@@ -6,7 +6,7 @@ import { download, strayImg, goku, levi, levi2, spiderman, naruto, itachi } from
 
 const VideoContent = () => {
     return (
-        <div id="fly">
+        <div className='padding-body'>
 
             <h1 className='border-t-2 border-b-2 py-3 title'>Side Project</h1>
 

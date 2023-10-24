@@ -12,7 +12,7 @@ const AboutUs = () => {
     const handleClick = () => { }
 
     return (
-        <section>
+        <section className='padding-body'>
             <div className="py-3 mt-4">
                 <h1 className='title border-t-2 border-b-2 py-3'>We provide</h1>
             </div>
