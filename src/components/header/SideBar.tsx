@@ -5,9 +5,6 @@ import sidebarCSS from './sidebar.module.css'
 import Link from 'next/link';
 
 const SideBar = () => {
-<<<<<<< HEAD
-=======
->>>>>>> 9c56512811b03a10cc364628ed739f64aa1b1419
 
     const [isOpen, setIsOpen] = useState(false);
 

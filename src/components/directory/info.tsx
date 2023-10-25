@@ -2,22 +2,21 @@ import Image from "next/image"
 import Link from "next/link"
 import { Socail } from "@/lib/navbarMenu"
 
-const Info = () => {
+const Info_detail = () => {
   return (
-    <main className='bg-white text-black flex justify-start py-8 padding-body'>
+    <main className='bg-white text-black flex justify-start py-8 px-24'>
         <div className="pr-5 w-[864px] max-w-[864px]">
             <div className="flex">
-                <div className="w-[644px]">
-                    <Image src="/image/startup.jpeg" width={416} height={416} alt="image" className="w-[100%]"/>
+                <div className=" h-[416px] w-[644px] relative bg-cover bg-center">
+                  <Image src="/image/business 10.jpg" fill alt="image" className="w-full h-full object-cover"/>
                 </div>
                 <div className="ml-5">
-                    <div className="w-[196px] mb-5">
-                        <Image src="/image/appwar (1).jpeg" width={416} height={213} alt="image" className="w-[100%]"/>
+                    <div className=" h-[196px] w-[196px] relative bg-cover bg-center mb-5">
+                      <Image src="/image/business 10.jpg" fill alt="image" className="w-full h-full object-cover"/>
                     </div>
-                    <div className="w-[196px]">
-                        <Image src="/image/appwar (1).jpeg" width={416} height={213} alt="image" className="w-[100%]"/>
+                    <div className=" h-[196px] w-[196px] relative bg-cover bg-center">
+                      <Image src="/image/business 10.jpg" fill alt="image" className="w-full h-full object-cover"/>
                     </div>
-                    
                 </div>
             </div>
             <p className="w-[100%] mt-5">What Is a Startup? The term startup refers to a company in the first stages of operations. 
@@ -27,10 +26,12 @@ const Info = () => {
         </div>
 
         {/* -------------------Right-------------------- */}
-        <div className="border-l-2 border-black pl-5">
-            <div className="border-2 border-black p-5">
+        <div className="border-l-2 border-gray-400 pl-5">
+            <div className="border-2 border-gray-400 p-5">
                 <div className="flex justify-start">
-                    <Image src="/image/Mark Zuckerberg.jpeg" width={80} height={80} alt="image"/>
+                    <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
+                      <Image src="/image/serevuth.jpg" fill alt="image" className="w-full h-full object-cover"/>
+                    </div>
                     <div className="ml-3">
                         <h1 className="text-5xl bold">Dreamslab,co.LTD</h1>
                         <p className="text-gray-500">Develop the latest technology around the world</p>
@@ -62,10 +63,12 @@ const Info = () => {
                     </div>
                 </div>
             </div>
-            <h2 className="py-5">Founder</h2>
+            <h2 className="py-2 title">Founder</h2>
             <div>
                 <div className="flex justify-start mb-3">
-                    <Image src="/image/serevuth.jpg" width={80} height={80} alt="image"/>
+                    <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
+                      <Image src="/image/serevuth.jpg" fill alt="image" className="w-full h-full object-cover"/>
+                    </div>
                     <div className="ml-3">
                         <p>San SereyVath</p>
                         <p>Manager of <Link href="https://dreamslab.dev/"><span className="text-blue-500 hover:underline cursor-pointer">Dreamslab.dev</span></Link></p>
@@ -92,4 +95,4 @@ const Info = () => {
   )
 }
 
-export default Info
+export default Info_detail

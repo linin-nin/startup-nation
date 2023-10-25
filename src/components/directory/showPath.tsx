@@ -5,7 +5,7 @@ import SideBar from "../header/SideBar"
 const hello = "Hello"
 const ShowPath = () => {
   return (
-    <div className='py-5 bg-black padding-body'>
+    <div className='bg-black mt-6 px-24'>
         <div className="inline-block">
             <div className="flex justify-between gap-4">
                 <Link href="/"><h2 className="text-2xl hover:underline">Home</h2></Link>

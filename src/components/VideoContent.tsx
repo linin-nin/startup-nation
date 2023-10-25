@@ -5,7 +5,7 @@ import ShareArrow from './ShareArrow'
 
 const VideoContent = () => {
     return (
-        <div className='padding-body'>
+        <div>
 
             <h1 className='border-t-2 border-b-2 py-3 title'>Side Project</h1>
 

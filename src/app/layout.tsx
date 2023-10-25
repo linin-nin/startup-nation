@@ -17,11 +17,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
   return (
     <html lang="en">
       <body className={`${teko.className}`}>
-        {/* <Header/> */}
         {children}
         <Footer/>
       </body>

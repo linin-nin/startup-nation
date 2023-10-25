@@ -3,7 +3,7 @@ import Input from "@/ui/input"
 
 const Join = () => {
   return (
-    <main className="mt-8 padding-body">
+    <main className="mt-8">
         <div className="border-2 border-white">
             <div className="banner-footer flex justify-center items-center bg-white p-4 text-black text-lg font-bold">
                 <h1>Join us !!!</h1>
