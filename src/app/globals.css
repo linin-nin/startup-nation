@@ -10,7 +10,7 @@
 }
 
 .padding-body {
-  @apply px-10
+  @apply px-8
 }
 
 body {
@@ -93,4 +93,7 @@ body {
 /* effect on hover  */
 .effect-yellow {
   @apply hover:text-[#F8DC4C]
+}
+p{
+  @apply text-[20px]
 }
