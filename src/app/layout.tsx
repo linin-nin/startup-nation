@@ -19,11 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body className={`${teko.className} container padding-body font-body`}>
-=======
       <body className={`${teko.className}`}>
->>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
         {children}
       </body>
     </html>
