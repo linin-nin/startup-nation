@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+
+import Image from "next/image"
+import { useState } from "react"
+import { motion } from "framer-motion"
+
+
+const Search = () => {
+  const [click, setclick] = useState("")
+
+  return (
+    <section className="bg-white text-black h-[300px] w-[100%] absolute left-0 right-0">
+      <div className="container padding-body flex h-16 mt-6">
+        {/* filter  */}
+        <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-black p-4">
+=======
 "use client"
 import Image from "next/image"
 import { Cards } from "@/lib/card-directory"
@@ -17,6 +33,7 @@ const Search = () => {
       <div className=" flex h-16">
         {/* filter  */}
         <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-gray-400 p-4">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <div>
             filter project
           </div>
@@ -28,7 +45,11 @@ const Search = () => {
           </div>
         </div>
         {/* search */}
+<<<<<<< HEAD
+        <div className=" h-[100%] w-[60%] flex items-center border-t-2 border-b-2 border-black p-4">
+=======
         <div className=" h-[100%] w-[60%] flex items-center border-t-2 border-b-2 border-gray-400 p-4">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
@@ -36,14 +57,22 @@ const Search = () => {
           <div className="ml-4">search project</div>
         </div>
         {/* button navigate */}
+<<<<<<< HEAD
+        <div className=" h-[100%] w-[10%] flex justify-between items-center border-2 border-black">
+=======
         <div className=" h-[100%] w-[10%] flex justify-between items-center border-2 border-gray-400">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <button className=" w-[50%] h-[100%] center-element">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
 
           </button>
+<<<<<<< HEAD
+          <button className=" w-[50%] h-[100%] border-l-2 border-black center-element">
+=======
           <button className=" w-[50%] h-[100%] border-l-2 border-gray-400 center-element">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
@@ -51,6 +80,8 @@ const Search = () => {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
       {/* ----grid--- */}
       <div className="grid grid-cols-3 gap-y-2 gap-x-10 mt-10 overflow-hidden">
         {Cards.map((item)=>(
@@ -81,6 +112,7 @@ const Search = () => {
             onChange={handleChange}/>
             <div>Show rows </div>
         </div>
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
     </section>
   )
 }

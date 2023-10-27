@@ -13,6 +13,10 @@
   @apply px-7
 }
 
+.center-element {
+  @apply flex items-center justify-center
+}
+
 body {
   background-color: black;
   color: white;

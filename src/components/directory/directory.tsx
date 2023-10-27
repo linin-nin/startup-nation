@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-const Hero = () => {
+const Directory = () => {
   return (
     <main>
         <div className="w-full h-[530px] relative bg-cover bg-center">
@@ -22,4 +22,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Directory
