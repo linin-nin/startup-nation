@@ -1,11 +1,11 @@
 import Image from "next/image"
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Directory = () => {
   return (
-    <section>
-        <div className="w-full h-[520px] relative bg-cover bg-center">
-          <Image src="/image/directory-img.jpg" fill  alt="bg-cover" className="w-full h-full object-cover"/>
+    <main>
+        <div className="w-full h-[530px] relative bg-cover bg-center">
+          <Image src="/image/directory-cover.jpg" fill  alt="bg-cover" className="w-full h-full object-cover"/>
           <div className="flex opacity-100 inset-0 before:opacity-70 before:absolute before:bg-black before:w-full before:inset-0 before:h-full before:top-0 before:left-0 items-center justify-center absolute ">
             <div className="z-10 text-center">
               <h1 className="text-[128px] font-bold">Startup Directory</h1>
@@ -17,7 +17,7 @@ const Directory = () => {
             </div>
           </div>
         </div>
-    </section>
+    </main>
   )
 }
 

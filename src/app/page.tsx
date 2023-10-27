@@ -9,7 +9,7 @@ import Header from "@/components/header/Header";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container padding-body font-body">
       <Header/>
       <Hero/>
       <Rocket/>

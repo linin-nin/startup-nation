@@ -7,7 +7,7 @@ import { Socail } from "@/lib/navbarMenu"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="container padding-body font-body">
 
         <div className="flex justify-center items-center mt-6 border-t-2 border-b-2 py-2">
             <Image

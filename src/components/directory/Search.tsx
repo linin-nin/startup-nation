@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Image from "next/image"
 import { useState } from "react"
@@ -12,6 +13,27 @@ const Search = () => {
       <div className="container padding-body flex h-16 mt-6">
         {/* filter  */}
         <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-black p-4">
+=======
+"use client"
+import Image from "next/image"
+import { Cards } from "@/lib/card-directory"
+import Link from "next/link"
+import Pagination from '@mui/material/Pagination'; 
+import {useState} from "react"
+
+
+const Search = () => {
+  const [pages, setpages] = useState(1)
+  const handleChange = (e:React.ChangeEvent<unknown>, p:number) =>{
+    setpages(p)
+  }
+
+  return (
+    <section className="bg-white text-black mt-6 pt-10 px-24">
+      <div className=" flex h-16">
+        {/* filter  */}
+        <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-gray-400 p-4">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <div>
             filter project
           </div>
@@ -23,7 +45,11 @@ const Search = () => {
           </div>
         </div>
         {/* search */}
+<<<<<<< HEAD
         <div className=" h-[100%] w-[60%] flex items-center border-t-2 border-b-2 border-black p-4">
+=======
+        <div className=" h-[100%] w-[60%] flex items-center border-t-2 border-b-2 border-gray-400 p-4">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
@@ -31,14 +57,22 @@ const Search = () => {
           <div className="ml-4">search project</div>
         </div>
         {/* button navigate */}
+<<<<<<< HEAD
         <div className=" h-[100%] w-[10%] flex justify-between items-center border-2 border-black">
+=======
+        <div className=" h-[100%] w-[10%] flex justify-between items-center border-2 border-gray-400">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
           <button className=" w-[50%] h-[100%] center-element">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
 
           </button>
+<<<<<<< HEAD
           <button className=" w-[50%] h-[100%] border-l-2 border-black center-element">
+=======
+          <button className=" w-[50%] h-[100%] border-l-2 border-gray-400 center-element">
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
@@ -46,6 +80,39 @@ const Search = () => {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      {/* ----grid--- */}
+      <div className="grid grid-cols-3 gap-y-2 gap-x-10 mt-10 overflow-hidden">
+        {Cards.map((item)=>(
+            <div key={item.id} className="card h-[460px] w-[414px] relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px]
+            before:top-0 before:left-[-20px]">
+                <div className=" h-[400px] relative bg-cover bg-center">
+                  <Image src={item.img} fill bg-white alt="image" className="w-full h-full object-cover"/>
+                </div>
+                <div className="flex justify-between">
+                  <div className="">
+                    <Link href="/startup-directory/detail"><h2 className="text-2xl hover:underline hover:text-blue-400">{item.name}</h2></Link>
+                    <p>{item.date}</p>
+                  </div>
+                  <p>0{item.id}/100</p>
+                </div>
+            </div>
+         ))}
+      </div>
+      {/* ---Pagination--- */}
+      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400">
+        <div>1 -6 from 100</div>
+          <Pagination 
+            count={16} 
+            color="standard"
+            variant="outlined" 
+            shape="rounded" 
+            size="large"
+            onChange={handleChange}/>
+            <div>Show rows </div>
+        </div>
+>>>>>>> 8241c85baaf3cb78b1d4cafaead00c2f22f25740
     </section>
   )
 }

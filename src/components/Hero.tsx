@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Hero = () => {
     return (
-        <section className='hero mb-7'>
+        <section className='hero mb-7 padding-body'>
             <div className='hero-section1 flex h-[500px] items-center justify-between'>
                 <div className=' flex max-w-[85%] items-center justify-center flex-col text-hero pl-36'>
                     <Marquee speed={100} direction='left' className='marquee text-[500] border border-white 
