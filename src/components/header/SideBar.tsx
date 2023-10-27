@@ -11,7 +11,6 @@ const SideBar = () => {
     const handleClick = () => { 
         setIsOpen(!isOpen);
     };
-
     return (
         <div className={isOpen ? sidebarCSS.open : ''}>
             <button className={sidebarCSS.button} onClick={handleClick}>
@@ -23,7 +22,7 @@ const SideBar = () => {
                             Startup Directory
                         </li>
                     </Link>
-                    <Link href="/about"><li className={sidebarCSS.li}>About Us</li></Link>
+                    <Link href="/about"><li className={sidebarCSS.li}>dAbout Us</li></Link>
                     <Link href="/"><li className={sidebarCSS.li}>Services</li></Link>
                 </ul>
             </nav>
