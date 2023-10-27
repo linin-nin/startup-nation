@@ -22,7 +22,7 @@ const SideBar = () => {
                             Startup Directory
                         </li>
                     </Link>
-                    <Link href="/about"><li className={sidebarCSS.li}>dAbout Us</li></Link>
+                    <Link href="/about"><li className={sidebarCSS.li}>About Us</li></Link>
                     <Link href="/"><li className={sidebarCSS.li}>Services</li></Link>
                 </ul>
             </nav>
