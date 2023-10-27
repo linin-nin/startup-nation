@@ -11,7 +11,6 @@ const SideBar = () => {
     const handleClick = () => { 
         setIsOpen(!isOpen);
     };
-
     return (
         <div className={isOpen ? sidebarCSS.open : ''}>
             <button className={sidebarCSS.button} onClick={handleClick}>
