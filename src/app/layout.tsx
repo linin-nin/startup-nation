@@ -21,9 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${teko.className} container padding-body font-body`}>
-        {/* <Header/> */}
         {children}
-        <Footer/>
       </body>
     </html>
   )

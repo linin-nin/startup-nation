@@ -1,17 +1,17 @@
-import Hero from "@/components/directory/directory"
-import ShowPath from "@/components/directory/showPath"
+'use client'
 import Header from "@/components/header/Header"
-import Main from "@/components/directory/main"
-import Grid from "@/components/directory/grid"
+import Directory from "@/components/directory/Directory"
+import Showpath from "@/components/directory/Showpath"
+import Search from "@/components/directory/Search"
+
 
 const page = () => {
   return (
     <div>
       <Header/>
-      <Hero/>
-      <ShowPath/>
-      <Main/>
-      <Grid/>
+      <Directory/>
+      <Showpath/>
+      <Search/>
     </div>
   )
 }
