@@ -5,14 +5,19 @@ import SideBar from "../header/SideBar"
 const hello = "Hello"
 const ShowPath = () => {
   return (
-    <div className='bg-black mt-6 px-24 container'>
-        <div className="inline-block">
-            <div className="flex justify-between gap-4">
-                <Link href="/"><h2 className="text-2xl hover:underline">Home</h2></Link>
-                <Image src="/icons/greater-then.svg" width={24} height={24} alt="icon" className=""/>
-                <h2 className="text-yellow-300 text-2xl">{hello}</h2>
-            </div>
+    <div className='container py-6 border-b-2'>
+      <div className="inline-block">
+        <div className="flex justify-between gap-4">
+          <Link href="/"><h2 className="text-2xl hover:underline">Home</h2></Link>
+          <Image
+          src={'/icons/greater-then.svg'}
+          alt="greater-than-icon"
+          width={32}
+          height={32}/>
+          
+          <h2 className="text-yellow-300 text-2xl">{hello}</h2>
         </div>
+      </div>
     </div>
   )
 }

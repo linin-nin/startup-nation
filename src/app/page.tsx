@@ -5,6 +5,7 @@ import AboutUs from "@/components/aboutUs";
 import Rocket from "@/components/Rocket";
 import Join from "@/components/joinUs";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/footer";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <VideoContent/>
       <AboutUs/>
       <Join/>
+      <Footer/>
     </div>
   )
 }
