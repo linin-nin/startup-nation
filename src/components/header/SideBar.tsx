@@ -19,11 +19,11 @@ const SideBar = () => {
                 <ul className={`${sidebarCSS.ul} ${sidebarCSS.menu}`}>
                     <Link href="/startup-directory">
                         <li className={sidebarCSS.li}>
-                            Startup Directorya
+                            Startup Directory
                         </li>
                     </Link>
                     <Link href="/about"><li className={sidebarCSS.li}>About Us</li></Link>
-                    <Link href="/"><li className={sidebarCSS.li}>Services</li></Link>
+                    <Link href="/contactus"><li className={sidebarCSS.li}>Contact US</li></Link>
                 </ul>
             </nav>
         </div>
