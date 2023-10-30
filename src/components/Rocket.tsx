@@ -36,7 +36,7 @@ const Rocket = () => {
     if(isInview){
       maincontrol.start('show')
     }
-  },[])
+  },[isInview, maincontrol])
   
   return (
     <section className='rocket h-[100px] flex items-center justify-center mb-52'>

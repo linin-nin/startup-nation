@@ -9,7 +9,7 @@ const EmailContactus = () => {
                 <div className=' w-[50%] flex flex-col p-16'>
                     <h1 className='text-[4rem]'>
                         If you are interested, <br />
-                        let's keep in touch
+                        let&apos;s keep in touch
                     </h1>
                     <p className='text-[24px]'>Lorem ipsum dolor sit amet consectetur. Sit tincidunt amet volutpat neque porttitor. Morbi risus turpis est platea aliquam ridiculus nibh. Imperdiet id eget tempus aliquam semper volutpat viverra dolor in.</p>
                 </div>
