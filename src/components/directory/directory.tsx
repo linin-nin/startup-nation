@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const Hero = () => {
   return (
-    <main>
+    <main className="bg-yellow-300">
       <div className="w-full h-[530px] relative bg-cover bg-center">
         <Image src="/image/directory-cover.jpg" fill alt="bg-cover" className="w-full h-full object-cover" />
         <div className="flex opacity-100 inset-0 before:opacity-70 before:absolute before:bg-black before:w-full before:inset-0 before:h-full before:top-0 before:left-0 items-center justify-center absolute ">

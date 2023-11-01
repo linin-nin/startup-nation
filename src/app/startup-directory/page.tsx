@@ -1,4 +1,4 @@
-
+import Hero from "@/components/directory/directory"
 import ShowPath from "@/components/directory/showPath"
 import Search from "@/components/directory/Search"
 import Footer from "@/components/footer/footer"
@@ -9,7 +9,8 @@ const page = () => {
     <div>
       <div className=' bg-black padding-body right-0 left-0 sticky top-0 z-50'>
           <Header/>
-        </div>
+      </div>
+      <Hero/>
       <ShowPath/>
       <Search/>
       <Footer/>

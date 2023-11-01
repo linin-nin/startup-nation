@@ -1,4 +1,4 @@
-    
+import { MenuNavbar } from '@/lib/meu-navbar';
 import React from 'react'
 import { useState } from 'react';
 import sidebarCSS from './sidebar.module.css'
@@ -7,6 +7,7 @@ import Link from 'next/link';
 const SideBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+
 
     const handleClick = () => { 
         setIsOpen(!isOpen);
@@ -17,13 +18,13 @@ const SideBar = () => {
             </button>
             <nav className={sidebarCSS.nav}>
                 <ul className={`${sidebarCSS.ul} ${sidebarCSS.menu}`}>
-                    <Link href="/startup-directory">
-                        <li className={sidebarCSS.li}>
-                            Startup Directory
-                        </li>
-                    </Link>
-                    <Link href="/about"><li className={sidebarCSS.li}>About Us</li></Link>
-                    <Link href="/contactus"><li className={sidebarCSS.li}>Contact US</li></Link>
+                    {MenuNavbar.map((item, index)=>(
+                        <Link href={item.pathUrl} key={index}>
+                            <li  className={`${sidebarCSS.li}`}>
+                                {item.menuName}
+                            </li>
+                        </Link>
+                    ))}
                 </ul>
             </nav>
         </div>

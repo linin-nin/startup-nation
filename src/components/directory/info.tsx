@@ -4,7 +4,7 @@ import { Socail } from "@/lib/navbarMenu"
 
 const Info_detail = () => {
     return (
-        <main className='bg-white text-black flex justify-start py-8 px-24'>
+        <main className='bg-white text-black flex justify-start py-8'>
             <div className="container flex"> 
                 <div className="pr-5 w-[70%]">
                     <div className="flex">
@@ -38,8 +38,8 @@ const Info_detail = () => {
                             </div>
                         </div>
                         <div className="my-3">
-                            <button className="px-4 py-2 bg-none border-2 border-black mr-3">Robot</button>
-                            <button className="px-4 py-2 bg-none border-2 border-black">Technology</button>
+                            <button className="px-4 py-2 bg-none border-2 border-black mr-3 hover:bg-black hover:text-white">Robot</button>
+                            <button className="px-4 py-2 bg-none border-2 border-black hover:bg-black hover:text-white">Technology</button>
                         </div>
                         <div className="leading-9">
                             <p>Founded: 2021</p>
