@@ -13,7 +13,7 @@ const About = () => {
       <OurPhilosophy/>
       <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
