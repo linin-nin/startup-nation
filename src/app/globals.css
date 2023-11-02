@@ -6,11 +6,11 @@
 @tailwind utilities;
 
 .container {
-  @apply max-w-[1400px] mx-auto
+  @apply max-w-[1500px] mx-auto
 }
 
 .padding-body {
-  @apply px-7
+  @apply px-[1rem]
 }
 
 .center-element {
@@ -100,4 +100,8 @@ body {
 }
 p{
   @apply text-[20px]
+}
+
+.map  {
+  filter: grayscale(100%) invert(100%);
 }

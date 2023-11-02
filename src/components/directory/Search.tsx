@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   return (
-    <section className="bg-white text-black mt-[-2px] pt-10 px-24">
+    <section className="bg-white text-black mt-[-2px] pt-10 padding-body">
       <div className=" flex h-16 container">
         {/* filter  */}
         <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-gray-400 p-4">
@@ -91,22 +91,24 @@ const Search = () => {
         </div>
       </div>
       {/* ----grid--- */}
-      <div className="grid grid-cols-3 gap-y-2 gap-x-10 mt-10 overflow-hidden container">
+
+      <div
+        className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8
+      
+      "
+      >
         {Cards.map((item) => (
-          <div
-            key={item.id}
-            className="card h-[460px] w-[414px] relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px]
-            before:top-0 before:left-[-20px]"
-          >
-            <div className=" h-[400px] relative bg-cover bg-center">
+          <div key={item.id} className="bg-red-500">
+            <div className="h-[416px] ">
               <Image
                 src={item.img}
-                fill
-                bg-white
                 alt="image"
-                className="w-full h-full object-cover"
+                width={416}
+                height={416}
+                className="h-full w-full object-cover"
               />
             </div>
+            {/* card content  */}
             <div className="flex justify-between">
               <div className="">
                 <Link href="/startup-directory/detail">
@@ -121,8 +123,9 @@ const Search = () => {
           </div>
         ))}
       </div>
+
       {/* ---Pagination--- */}
-      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400">
+      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
         <div>1 -6 from 100</div>
         <Pagination
           count={16}

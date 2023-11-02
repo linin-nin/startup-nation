@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OurPhilosophy = () => {
   return (
-    <main>
+    <main className="">
       <h2 className="title px-20">
         OUR <br />
         PHILOSOPHY OF SUCCESS
@@ -19,7 +19,7 @@ const OurPhilosophy = () => {
       </p>
       <div className="relative h-[570px] w-full my-3">
         <Image
-          src="/image/business 05.jpg"
+          src="/image/business 06.jpg"
           alt="image"
           fill
           className="object-cover w-full h-full"
