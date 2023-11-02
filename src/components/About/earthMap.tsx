@@ -9,7 +9,7 @@ const EarthMap = () => {
         <h2 className='text-6xl pt-36 inset-0 absolute'>“  Develop Cambodia to be a central hub of startups<br/> <span className='flex justify-end'>in Southeast Asian region.  “</span></h2>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default EarthMap
+export default EarthMap;

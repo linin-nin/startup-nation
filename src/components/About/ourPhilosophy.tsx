@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const OurPhilosophy = () => {
   return (
@@ -11,7 +11,7 @@ const OurPhilosophy = () => {
             <Image src="/image/business 06.jpg" alt="image" fill className="object-cover w-full h-full"/>
         </div>
     </main>
-  )
-}
+  );
+};
 
-export default OurPhilosophy
+export default OurPhilosophy;

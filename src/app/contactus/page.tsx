@@ -1,10 +1,10 @@
-import Emptybox from '@/components/Emptybox'
-import EmailContactus from '@/components/contactUs/Emailcontactus'
-import HeroContactus from '@/components/contactUs/HeroContactus'
-import ShowPath from '@/components/directory/showPath'
-import Footer from '@/components/footer/footer'
-import Header from '@/components/header/Header'
-import React from 'react'
+import Emptybox from "@/components/Emptybox";
+import EmailContactus from "@/components/contactUs/Emailcontactus";
+import HeroContactus from "@/components/contactUs/HeroContactus";
+import ShowPath from "@/components/directory/showPath";
+import Footer from "@/components/footer/footer";
+import Header from "@/components/header/Header";
+import React from "react";
 
 const ContactUs = () => {
   return (
@@ -21,7 +21,7 @@ const ContactUs = () => {
         </div>
         
     </div>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

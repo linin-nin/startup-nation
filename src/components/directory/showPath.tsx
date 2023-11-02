@@ -17,7 +17,9 @@ const ShowPath = () => {
     <div className='container py-6'>
       <div className="inline-block">
         <div className="flex justify-between gap-4">
-          <Link href="/"><h2 className="text-2xl hover:underline">Home</h2></Link>
+          <Link href="/">
+            <h2 className="text-2xl hover:underline">Home</h2>
+          </Link>
           <Image
           src={'/icons/greater-then.svg'}
           alt="greater-than-icon"
@@ -32,7 +34,7 @@ const ShowPath = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShowPath
+export default ShowPath;

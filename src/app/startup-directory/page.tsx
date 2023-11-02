@@ -15,7 +15,7 @@ const page = () => {
       <Search/>
       <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

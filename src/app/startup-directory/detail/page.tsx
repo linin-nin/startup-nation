@@ -15,7 +15,7 @@ const aboutUs = () => {
       <Info_detail/>
       <Footer/>
     </div>
-  )
-}
+  );
+};
 
-export default aboutUs
+export default aboutUs;
