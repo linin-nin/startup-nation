@@ -11,12 +11,10 @@ const page = () => {
       </div>
       <div className="padding-body">
         <ShowPath />
-        
-        
       </div>
       <Search />
       <div className="padding-body">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
