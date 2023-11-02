@@ -6,7 +6,7 @@ import OurPhilosophy from "@/components/About/ourPhilosophy";
 
 const About = () => {
   return (
-    <div className="container padding-body">
+    <div className="container padding-body font-body">
       <Header />
       <Intro />
       <EarthMap />

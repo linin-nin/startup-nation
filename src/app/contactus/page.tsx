@@ -13,7 +13,7 @@ const ContactUs = () => {
       <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
         <Header />
       </div>
-      <div className="padding-body">
+      <div className="padding-body font-body">
         <ShowPath />
         <HeroContactus />
         <Map />
