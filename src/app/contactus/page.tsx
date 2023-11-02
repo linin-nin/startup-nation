@@ -1,6 +1,7 @@
 import Emptybox from '@/components/Emptybox'
 import EmailContactus from '@/components/contactUs/Emailcontactus'
 import HeroContactus from '@/components/contactUs/HeroContactus'
+import Map from '@/components/contactUs/Map'
 import ShowPath from '@/components/directory/showPath'
 import Footer from '@/components/footer/footer'
 import Header from '@/components/header/Header'
@@ -15,6 +16,7 @@ const ContactUs = () => {
         <div className='padding-body'> 
           <ShowPath/>
           <HeroContactus/>
+          <Map/>
           <EmailContactus/>
           <Emptybox/>
           <Footer/>
