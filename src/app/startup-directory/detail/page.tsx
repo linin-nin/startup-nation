@@ -1,6 +1,6 @@
-import Info_detail from "@/components/directory/info"
+import Info_detail from "@/components/directory/info";
 // import Header from "@/components/header/Header"
-import ShowPath from "@/components/directory/showPath"
+import ShowPath from "@/components/directory/showPath";
 // import Hero from "@/components/directory/directory"
 
 const aboutUs = () => {
@@ -8,10 +8,10 @@ const aboutUs = () => {
     <div>
       {/* <Header/>
       <Hero/> */}
-      <ShowPath/>
-      <Info_detail/>
+      <ShowPath />
+      <Info_detail />
     </div>
-  )
-}
+  );
+};
 
-export default aboutUs
+export default aboutUs;
