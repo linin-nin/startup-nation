@@ -10,7 +10,7 @@
 }
 
 .padding-body {
-  @apply px-[1rem]
+  @apply px-[1.8rem]
 }
 
 .center-element {
