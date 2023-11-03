@@ -14,6 +14,9 @@ const SideBar = () => {
       <button className={sidebarCSS.button} onClick={handleClick}></button>
       <nav className={sidebarCSS.nav}>
         <ul className={`${sidebarCSS.ul} ${sidebarCSS.menu}`}>
+          <Link href="/try">
+            <li className={sidebarCSS.li}>try</li>
+          </Link>
           <Link href="/startup-directory">
             <li className={sidebarCSS.li}>Startup Directory</li>
           </Link>
