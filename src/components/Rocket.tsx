@@ -59,9 +59,14 @@ const Rocket = () => {
         initial="hidden"
         animate={"show"}
       >
-        <motion.div 
-          whileHover={{y: -20}}
-          transition={{duration: 0.5, damping: 10, type: "spring", stiffness: 300}}
+        <motion.div
+          whileHover={{ y: -20 }}
+          transition={{
+            duration: 0.5,
+            damping: 10,
+            type: "spring",
+            stiffness: 300
+          }}
         >
           <Link href="/">
             <Image src={rocket} alt="rocket" />
