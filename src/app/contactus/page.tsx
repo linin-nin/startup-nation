@@ -8,18 +8,17 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div >
-        <div className=' bg-black padding-body right-0 left-0 sticky top-0 z-50'>
-          <Header/>
-        </div>
-        <div className='padding-body'> 
-          <ShowPath/>
-          <HeroContactus/>
-          <EmailContactus/>
-          <Emptybox/>
-          <Footer/>
-        </div>
-        
+    <div>
+      <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
+        <Header />
+      </div>
+      <div className="padding-body">
+        <ShowPath />
+        <HeroContactus />
+        <EmailContactus />
+        <Emptybox />
+        <Footer />
+      </div>
     </div>
   );
 };

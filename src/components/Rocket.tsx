@@ -11,16 +11,16 @@ const revealShow = {
   hidden: {
     opacity: 0,
     y: 200,
-    scale: 1.8
+    scale: 1.9
   },
   show: {
     opacity: 1,
     scale: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.6,
       type: "spring",
-      delay: 0.5,
+      delay: 1,
       stiffness: 100
     }
   }
@@ -59,9 +59,14 @@ const Rocket = () => {
         initial="hidden"
         animate={"show"}
       >
-        <Link href="/">
-          <Image src={rocket} alt="rocket" />
-        </Link>
+        <motion.div 
+          whileHover={{y: -20}}
+          transition={{duration: 0.5, damping: 10, type: "spring", stiffness: 300}}
+        >
+          <Link href="/">
+            <Image src={rocket} alt="rocket" />
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   );
