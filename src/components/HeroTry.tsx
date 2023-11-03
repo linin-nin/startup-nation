@@ -24,7 +24,7 @@ const HeroTry = () => {
               <li>STARTUPNATION LAB</li>
             </ul>
           </Marquee>
-          <div className="glowy-text text-[35px] sm:text-[54px] md:text-[6rem] mt-20 mb-20 ml-16">
+          <div className="centaur tracking-[10px] text-[35px] sm:text-[54px] md:text-[6rem] mt-20 mb-20 ml-16">
             A Centaur of Asia
           </div>
           <Marquee

@@ -39,7 +39,7 @@ const RocketTry = () => {
 
   return (
     <section className="relative rocket h-[300px] flex items-center justify-center mb-52 ">
-      <p className="absolute top-2 left-0 text-[80px] ml-36 glowy-text font-bold">
+      <p className="absolute top-2 left-0 text-[80px] ml-32 glowy-text font-bold">
         Join Startup
       </p>
 
@@ -69,7 +69,7 @@ const RocketTry = () => {
         </Link>
       </motion.div>
 
-      <p className="absolute bottom-2 right-0 text-[80px] mr-36 glowy-text font-bold">
+      <p className="absolute bottom-2 right-0 text-[80px] mr-32 glowy-text font-bold">
         Nation now
       </p>
     </section>
