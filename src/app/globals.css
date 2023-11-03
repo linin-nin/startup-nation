@@ -105,3 +105,11 @@ p{
 .map  {
   filter: grayscale(100%) invert(100%);
 }
+
+.glowy-text {
+  color: #fff;
+  text-shadow:  0 0 100px #ffffffd3,
+                0 0 20px #ffffff57,
+                0 0 40px #ffffff5d;
+  letter-spacing: 10px;
+}
