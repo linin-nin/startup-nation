@@ -1,4 +1,3 @@
-import Hero from "@/components/directory/directory";
 import ShowPath from "@/components/directory/showPath";
 import Search from "@/components/directory/Search";
 import Footer from "@/components/footer/footer";
@@ -10,10 +9,13 @@ const page = () => {
       <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
         <Header />
       </div>
-      <Hero />
-      <ShowPath />
+      <div className="padding-body font-body">
+        <ShowPath />
+      </div>
       <Search />
-      <Footer />
+      <div className="padding-body font-body">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Image from "next/image";
 const OurPhilosophy = () => {
   return (
     <main className="">
-      <h2 className="title">
+      <h2 className="title px-20">
         OUR <br />
         PHILOSOPHY OF SUCCESS
       </h2>

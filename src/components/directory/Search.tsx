@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   return (
-    <section className="bg-white text-black mt-[-2px] pt-10 padding-body">
+    <section className="bg-white text-black mt-[-2px] pt-10 padding-body font-body">
       <div className=" flex h-16 container">
         {/* filter  */}
         <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-gray-400 p-4">
@@ -92,12 +92,13 @@ const Search = () => {
       </div>
       {/* ----grid--- */}
 
-      <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden">
+      <div
+        className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8
+      
+      "
+      >
         {Cards.map((item) => (
-          <div
-            key={item.id}
-            className="relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px] before:top-0 before:left-[-17px]"
-          >
+          <div key={item.id} className="bg-red-500">
             <div className="h-[416px] ">
               <Image
                 src={item.img}
