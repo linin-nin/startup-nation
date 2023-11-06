@@ -94,7 +94,10 @@ const Search = () => {
 
       <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden">
         {Cards.map((item) => (
-          <div key={item.id} className="relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px] before:top-0 before:left-[-17px]">
+          <div
+            key={item.id}
+            className="relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px] before:top-0 before:left-[-17px]"
+          >
             <div className="h-[416px] ">
               <Image
                 src={item.img}

@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 
 const Header = () => {
   return (
-    <header className="container font-body border-b-2 border-white sticky top-0 bg-black z-[999]">
+    <header className="container font-body border-b-2 border-white sticky top-0 bg-black z-[99]">
       <nav className=" flex justify-between items-center">
         <button className="button-style text-[14px] font-bold sm:text-[20px]">
           Apply

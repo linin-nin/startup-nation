@@ -10,7 +10,7 @@ const page = () => {
       <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
         <Header />
       </div>
-      <Hero/>
+      <Hero />
       <div className="padding-body font-body">
         <ShowPath />
       </div>
