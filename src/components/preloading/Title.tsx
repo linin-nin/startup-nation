@@ -5,7 +5,7 @@ const Opacity = {
     scale: 1,
     opacity: 0.05
   },
-  open: (i:number) => ({
+  open: (i: number) => ({
     scale: 0.7,
     // y: -30 ,
     opacity: 1,
@@ -32,7 +32,7 @@ const Title = () => {
             animate="open"
             custom={index}
             key={index}
-            className="text-[1.3em]"
+            className="text-[1.3em] glowy-text"
           >
             {word}
           </motion.p>
