@@ -27,7 +27,6 @@ const revealShow = {
 };
 
 const Rocket = () => {
-  const [isFly, setisFly] = useState(false);
   const ref = useRef(null);
   const isInview = useInView(ref, { once: true });
   const maincontrol = useAnimation();
