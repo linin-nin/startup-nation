@@ -10,27 +10,22 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Prelanding from "@/components/preloading/PreLoading";
 
-
 export default function Home() {
-  const [isLoading, setLoading] = useState(true)
+  const [isLoading, setLoading] = useState(true);
 
-  useEffect(()=>{
-   (
-     async () => {
-       // const locomotiveScroll = new LocomotiveScroll();
-       setTimeout( () => {
-         setLoading(false)
-         document.body.style.cursor = "default"
-         window.scrollTo(0,0)
-       }, 2500)
-     }
-   )()
-  })
+  useEffect(() => {
+    (async () => {
+      // const locomotiveScroll = new LocomotiveScroll();
+      setTimeout(() => {
+        setLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2500);
+    })();
+  });
   return (
     <main>
-      <AnimatePresence>
-        {isLoading && <Prelanding/>}
-      </AnimatePresence>
+      <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
       <div className="container padding-body font-body">
         <Header />
         <Hero />

@@ -16,7 +16,7 @@ const Header = () => {
             width={0}
             height={0}
             alt="Startup Nation"
-            className=" ml-[20px] w-[200px] h-[100px] sm:w-[500px] sm:h-[100px]"
+            className=" ml-[0px] w-[200px] h-[100px] sm:w-[500px] sm:h-[100px]"
           />
         </div>
         <div className="">
