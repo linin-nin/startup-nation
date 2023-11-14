@@ -48,7 +48,7 @@ const Hero = () => {
             <motion.span
               initial="hidden"
               animate="visible"
-              transition={{ staggerChildren: 0.09, delayChildren: 2.5 }}
+              transition={{ staggerChildren: 0.09, delayChildren: 2 }}
             >
               {/* join startup  */}
               {text.split(" ").map((word, index) => {
