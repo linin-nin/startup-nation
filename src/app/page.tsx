@@ -29,7 +29,6 @@ export default function Home() {
       <div className="container padding-body font-body">
         <Header />
         <Hero />
-        <Rocket />
         <VideoContent />
         <AboutUs />
         <Join />
