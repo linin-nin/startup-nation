@@ -32,7 +32,7 @@ const Title = () => {
             animate="open"
             custom={index}
             key={index}
-            className="text-[1.3em]"
+            className="text-[1.3em] glowy-text"
           >
             {word}
           </motion.p>
