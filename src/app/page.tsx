@@ -20,7 +20,7 @@ export default function Home() {
         setLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
-      }, 2500);
+      }, 1500);
     })();
   });
   return (
