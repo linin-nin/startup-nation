@@ -7,12 +7,7 @@ import Link from "next/link";
 import { delay, motion, useAnimation, useInView } from "framer-motion";
 import { useRef } from "react";
 
-
-
-
-
 const Hero = () => {
-
   const text = "A Centaur of Asia";
 
   const defaultAnimation = {
@@ -25,15 +20,10 @@ const Hero = () => {
       opacity: 1,
       y: 0
     }
-
   };
 
   // const ref2 = useRef(null);
   // const isInView = useInView(ref2, { amount: 0.8, once: true, });
-
-
-
-
 
   return (
     <section className="hero mb-7 padding-body  h-[80vh] mt-20 ">
@@ -58,7 +48,7 @@ const Hero = () => {
             <motion.span
               initial="hidden"
               animate="visible"
-              transition={{ staggerChildren: 0.09, delayChildren: 2.5}}
+              transition={{ staggerChildren: 0.09, delayChildren: 2.5 }}
             >
               {/* join startup  */}
               {text.split(" ").map((word, index) => {
@@ -81,7 +71,6 @@ const Hero = () => {
                 );
               })}
             </motion.span>
-
           </div>
           <Marquee
             speed={100}
