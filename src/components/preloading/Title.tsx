@@ -5,7 +5,7 @@ const Opacity = {
     scale: 1,
     opacity: 0.05
   },
-  open: (i:number) => ({
+  open: (i: number) => ({
     scale: 0.7,
     // y: -30 ,
     opacity: 1,
