@@ -108,20 +108,10 @@ p{
 
 .glowy-text {
   color: #fff;
-  text-shadow:  0 0 100px #ffffffd3,
+  text-shadow:  0 0 100px #ffffff,
                 0 0 20px #ffffff57,
-                0 0 40px #ffffff5d;
-  letter-spacing: 10px;
-}
+                0 0 40px #ffffff57,
+                0 0 60px #ffffff5d;
 
-.centaur{
-  transition: all 0.5s ease-in-out;
-}
-
-.centaur:hover {
-  color: #fff;
-  text-shadow:  0 0 100px #ffffffd3,
-                0 0 20px #ffffff57,
-                0 0 40px #ffffff5d;
   letter-spacing: 10px;
 }

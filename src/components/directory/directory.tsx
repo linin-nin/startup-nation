@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <main>
+    <main className="bg-yellow-300">
       <div className="w-full h-[530px] relative bg-cover bg-center">
         <Image
           src="/image/directory-cover.jpg"

@@ -7,7 +7,7 @@ const OurPhilosophy = () => {
         OUR <br />
         PHILOSOPHY OF SUCCESS
       </h2>
-      <p className="mt-5 px-20 text-xl">
+      <p className="mt-5 text-xl">
         Lorem ipsum dolor sit amet consectetur. At non id tellus ornare placerat
         quam laoreet. In ipsum amet sapien risus sem augue lorem vel. Euismod
         nunc lectus ut volutpat sodales sollicitudin. Imperdiet tellus id

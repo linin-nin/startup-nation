@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="hero mb-7 padding-body">
-      <div className="hero-section1 flex h-[380px] md:h-[500px] items-center justify-between">
-        <div className=" flex max-w-full lg:max-w-[85%]  items-center justify-center flex-col text-hero lg:pl-36 h-[80%]">
+    <section className="hero mb-7 padding-body  h-[80vh] mt-20">
+      <div className="hero-section1 flex items-center justify-between h-[80%]">
+        <div className=" flex max-w-full lg:max-w-[85%]  items-center justify-center flex-col text-hero lg:pl-36 h-[100vh]">
           <Marquee
             speed={100}
             direction="left"
@@ -24,7 +24,7 @@ const Hero = () => {
               <li>STARTUPNATION LAB</li>
             </ul>
           </Marquee>
-          <div className="text-[35px] sm:text-[54px] md:text-[6rem] mt-5 mb-5">
+          <div className="centaur tracking-[10px] text-[35px] sm:text-[54px] md:text-[6rem] mt-20 mb-20 ml-16">
             A Centaur of Asia
           </div>
           <Marquee
