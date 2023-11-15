@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Socail } from "@/lib/navbarMenu";
+import { SocailDark } from "@/lib/navbarMenu";
 
 const Info_detail = () => {
   return (
-    <main className="bg-white text-black flex justify-start py-8 px-24">
+    <main className="bg-white text-black flex justify-start py-8 padding-body">
       <div className="container flex">
         <div className="pr-5 w-[70%]">
           <div className="flex">
             <div className=" h-[416px] w-[644px] relative bg-cover bg-center">
               <Image
-                src="/image/business 10.jpg"
+                src="/image/business 09.jpg"
                 fill
                 alt="image"
                 className="w-full h-full object-cover"
@@ -19,7 +19,7 @@ const Info_detail = () => {
             <div className="ml-5">
               <div className=" h-[196px] w-[196px] relative bg-cover bg-center mb-5">
                 <Image
-                  src="/image/business 10.jpg"
+                  src="/image/business 04.jpg"
                   fill
                   alt="image"
                   className="w-full h-full object-cover"
@@ -27,7 +27,7 @@ const Info_detail = () => {
               </div>
               <div className=" h-[196px] w-[196px] relative bg-cover bg-center">
                 <Image
-                  src="/image/business 10.jpg"
+                  src="/image/business 02.jpg"
                   fill
                   alt="image"
                   className="w-full h-full object-cover"
@@ -43,8 +43,8 @@ const Info_detail = () => {
           </p>
         </div>
         {/* -------------------Right-------------------- */}
-        <div className="border-l-2 border-gray-400 pl-5 w-[30%]">
-          <div className="border-2 border-gray-400 p-5">
+        <div className="border-l-2 border-black pl-5 w-[48%]">
+          <div className="border-2 border-black p-5">
             <div className="flex justify-start">
               <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
                 <Image
@@ -62,10 +62,10 @@ const Info_detail = () => {
               </div>
             </div>
             <div className="my-3">
-              <button className="px-4 py-2 bg-none border-2 border-black mr-3">
+              <button className="px-4 py-2 bg-none border-2 hover:bg-black hover:text-white border-black mr-3">
                 Robot
               </button>
-              <button className="px-4 py-2 bg-none border-2 border-black">
+              <button className="px-4 py-2 bg-none border-2 hover:bg-black hover:text-white border-black">
                 Technology
               </button>
             </div>
@@ -76,19 +76,19 @@ const Info_detail = () => {
               <p>
                 Website:{" "}
                 <Link href="https://dreamslab.dev/">
-                  <span className="text-blue-500 hover:underline cursor-pointer">
+                  <span className="text-black underline hover:text-yellow-500 cursor-pointer">
                     http://dreamslab
                   </span>
                 </Link>
               </p>
               <p>
                 Phone Number :{" "}
-                <span className="text-blue-500 hover:underline cursor-pointer">
+                <span className="text-black underline hover:text-yellow-500 cursor-pointer">
                   ( 855 ) 123 123 123
                 </span>
               </p>
-              <div className="bg-black flex justify-between">
-                {Socail.map((item) => (
+              <div className=" flex justify-start gap-10 mt-3">
+                {SocailDark.map((item) => (
                   <Link href={item.path} key={item.logo}>
                     <Image src={item.logo} alt="icon" width={40} height={40} />
                   </Link>
@@ -112,13 +112,13 @@ const Info_detail = () => {
                 <p>
                   Manager of{" "}
                   <Link href="https://dreamslab.dev/">
-                    <span className="text-blue-500 hover:underline cursor-pointer">
+                    <span className="text-black underline hover:text-yellow-500 cursor-pointer">
                       Dreamslab.dev
                     </span>
                   </Link>
                 </p>
-                <div className="bg-black flex justify-between">
-                  {Socail.map((item) => (
+                <div className="flex justify-start gap-5 mt-[2px]">
+                  {SocailDark.map((item) => (
                     <Link href={item.path} key={item.logo}>
                       <Image
                         src={item.logo}
