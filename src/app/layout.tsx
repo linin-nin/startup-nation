@@ -1,8 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Teko } from "next/font/google";
-import Footer from "@/components/footer/footer";
-// import Header from '@/components/header/Header'
 
 const teko = Teko({ subsets: ["latin"] });
 
