@@ -7,12 +7,12 @@ import { MenuNavbar } from "@/lib/meu-navbar";
 const ShowPath = () => {
   const pathName = usePathname();
   function Name() {
-    for (let i = 0; i < MenuNavbar.length; i++) {
-      if (pathName == MenuNavbar[i].pathUrl) return MenuNavbar[i].menuName;
+    for (const element of MenuNavbar) {
+      if (pathName == element.pathUrl) return element.menuName;
     }
   }
   return (
-    <div className="container py-6">
+    <div className="container py-6 border-b-2 border-t-2">
       <div className="inline-block">
         <div className="flex justify-between gap-4">
           <Link href="/">

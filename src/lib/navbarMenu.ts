@@ -45,4 +45,4 @@ export const SocailDark = [
     path: "/",
     logo: "/icons/linkedinDark.svg"
   }
-]
+];

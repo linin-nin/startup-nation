@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   return (
-    <section className="bg-white text-black mt-[-2px] pt-10 padding-body font-body">
+    <section className="bg-black text-white pt-10 padding-body font-body">
       <div className=" flex h-16 container">
         {/* filter  */}
         <div className=" h-[100%] w-[30%] flex justify-between items-center border-2 border-gray-400 p-4">
