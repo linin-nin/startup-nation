@@ -31,3 +31,18 @@ export const Socail = [
     logo: "/icons/linkin.svg"
   }
 ];
+
+export const SocailDark = [
+  {
+    path: "/",
+    logo: "/icons/facebookDark.svg"
+  },
+  {
+    path: "/",
+    logo: "/icons/youtubeDark.svg"
+  },
+  {
+    path: "/",
+    logo: "/icons/linkedinDark.svg"
+  }
+];

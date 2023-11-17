@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const OurPhilosophy = () => {
   return (
-    <main className="">
-      <h2 className="title px-20">
+    <main className="relative">
+      <h2 className="title">
         OUR <br />
         PHILOSOPHY OF SUCCESS
       </h2>

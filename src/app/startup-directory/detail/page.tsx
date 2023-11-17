@@ -10,10 +10,13 @@ const aboutUs = () => {
       <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
         <Header />
       </div>
-      <Hero />
-      <ShowPath />
+      <div className="padding-body">
+        <ShowPath />
+      </div>
       <Info_detail />
-      <Footer />
+      <div className="padding-body">
+        <Footer />
+      </div>
     </div>
   );
 };

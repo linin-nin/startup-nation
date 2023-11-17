@@ -4,7 +4,6 @@ import sidebarCSS from "./sidebar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MenuNavbar } from "@/lib/meu-navbar";
-import { motion } from "framer-motion";
 
 const revealUl = {
   hidden: {
@@ -44,13 +43,13 @@ const SideBar = () => {
         <ul className={`${sidebarCSS.ul} ${sidebarCSS.menu}`}>
           {MenuNavbar.map((item, index) => (
             <Link href={item.pathUrl} key={index}>
-              <motion.li
+              <li
                 className={`${
                   item.pathUrl === pathName && "bg-yellow-300 text-black"
                 } ${sidebarCSS.li}`}
               >
                 {item.menuName}
-              </motion.li>
+              </li>
             </Link>
           ))}
         </ul>

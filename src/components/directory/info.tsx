@@ -1,33 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Socail } from "@/lib/navbarMenu";
 
+const images = [
+  {
+    img: "/image/business 03.jpg"
+  },
+  {
+    img: "/image/business 04.jpg"
+  },
+  {
+    img: "/image/business 05.jpg"
+  }
+];
+
 const Info_detail = () => {
   return (
-    <main className="bg-white text-black flex justify-start py-8 px-24">
+    <main className="text-white bg-black flex justify-start py-8 padding-body">
       <div className="container flex">
         <div className="pr-5 w-[70%]">
           <div className="flex">
             <div className=" h-[416px] w-[644px] relative bg-cover bg-center">
               <Image
-                src="/image/business 10.jpg"
+                id="slide"
+                src={images[2].img}
                 fill
+                loading="lazy"
                 alt="image"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="ml-5">
-              <div className=" h-[196px] w-[196px] relative bg-cover bg-center mb-5">
+              <div className="cursor-pointer h-[196px] w-[196px] relative bg-cover bg-center mb-5">
                 <Image
-                  src="/image/business 10.jpg"
+                  id="pic"
+                  src={images[0].img}
                   fill
+                  loading="lazy"
                   alt="image"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className=" h-[196px] w-[196px] relative bg-cover bg-center">
+              <div className="cursor-pointer h-[196px] w-[196px] relative bg-cover bg-center">
                 <Image
-                  src="/image/business 10.jpg"
+                  id="pic"
+                  src={images[1].img}
                   fill
                   alt="image"
                   className="w-full h-full object-cover"
@@ -43,8 +62,8 @@ const Info_detail = () => {
           </p>
         </div>
         {/* -------------------Right-------------------- */}
-        <div className="border-l-2 border-gray-400 pl-5 w-[30%]">
-          <div className="border-2 border-gray-400 p-5">
+        <div className="border-l-2 border-white pl-5 w-[48%]">
+          <div className="border-2 border-white p-5">
             <div className="flex justify-start">
               <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
                 <Image
@@ -62,10 +81,10 @@ const Info_detail = () => {
               </div>
             </div>
             <div className="my-3">
-              <button className="px-4 py-2 bg-none border-2 border-black mr-3">
+              <button className="px-4 py-2 bg-none border-2  hover:bg-white hover:text-black  border-white mr-3">
                 Robot
               </button>
-              <button className="px-4 py-2 bg-none border-2 border-black">
+              <button className="px-4 py-2 bg-none border-2 hover:bg-white hover:text-black  border-white">
                 Technology
               </button>
             </div>
@@ -76,18 +95,18 @@ const Info_detail = () => {
               <p>
                 Website:{" "}
                 <Link href="https://dreamslab.dev/">
-                  <span className="text-blue-500 hover:underline cursor-pointer">
+                  <span className="text-white underline hover:text-yellow-500 cursor-pointer">
                     http://dreamslab
                   </span>
                 </Link>
               </p>
               <p>
                 Phone Number :{" "}
-                <span className="text-blue-500 hover:underline cursor-pointer">
+                <span className="text-white underline hover:text-yellow-500 cursor-pointer">
                   ( 855 ) 123 123 123
                 </span>
               </p>
-              <div className="bg-black flex justify-between">
+              <div className=" flex justify-start gap-10 mt-3">
                 {Socail.map((item) => (
                   <Link href={item.path} key={item.logo}>
                     <Image src={item.logo} alt="icon" width={40} height={40} />
@@ -112,12 +131,12 @@ const Info_detail = () => {
                 <p>
                   Manager of{" "}
                   <Link href="https://dreamslab.dev/">
-                    <span className="text-blue-500 hover:underline cursor-pointer">
+                    <span className="text-white underline hover:text-yellow-500 cursor-pointer">
                       Dreamslab.dev
                     </span>
                   </Link>
                 </p>
-                <div className="bg-black flex justify-between">
+                <div className="flex justify-start gap-5 mt-[2px]">
                   {Socail.map((item) => (
                     <Link href={item.path} key={item.logo}>
                       <Image
