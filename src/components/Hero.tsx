@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <section className="hero mb-7">
-      <div className="w-full h-[610px] relative bg-cover bg-center">
+      <div className="w-full h-[100vh] relative bg-cover bg-center">
         <Image
           src="/image/directory.gif"
           fill

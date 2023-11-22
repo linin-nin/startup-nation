@@ -22,7 +22,7 @@ export default function Home() {
   });
   return (
     <main>
-      <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
+      {/* <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence> */}
       <div className="container padding-body font-body">
         <Header />
         <Hero />

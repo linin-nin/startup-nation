@@ -1,6 +1,24 @@
+"use client";
+
 import Image from "next/image";
+import gsap from "gsap";
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollTrigger";
 
 const EarthMap = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    // ScrollTrigger.normalizeScroll(true)
+    // Create the smooth scroller
+    // let smoother = ScrollSmoother.create({
+    //   smooth: 2,
+    //   effects: true,
+    //   normalizeScroll: true
+    // });
+    return () => {};
+  }, []);
+
   return (
     <main className="">
       <div className=" relative border-b-2 border-white h-[500px] my-20 bg-cover bg-center">
