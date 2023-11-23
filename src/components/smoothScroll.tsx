@@ -1,21 +1,17 @@
-import React, { useEffect, useRef, ReactElement } from 'react'
-
+import React, { useEffect, useRef, ReactElement } from "react";
 
 interface SmoothProps {
-    children: ReactElement
+  children: ReactElement;
 }
 
 export default function Smooth({ children }: SmoothProps): ReactElement {
+  const smooth = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
 
-    const smooth = useRef<HTMLDivElement>(null)
-    useEffect( () => {
-        (
-          async () => {
-              const LocomotiveScroll = (await import('locomotive-scroll')).default
-              const locomotiveScroll = new LocomotiveScroll();
-          }
-        )()
-      }, [])
-
-  return React.cloneElement(children, { ref : smooth})
+  return React.cloneElement(children, { ref: smooth });
 }

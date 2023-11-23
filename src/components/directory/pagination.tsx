@@ -3,7 +3,6 @@ import ReactPaginate from "react-paginate";
 import Image from "next/image";
 import { Cards } from "@/lib/card-directory";
 import Link from "next/link";
-import { Card } from "@mui/material";
 
 const Pagination = () => {
   const [pageCount, setPageCount] = useState(1);
@@ -13,10 +12,8 @@ const Pagination = () => {
     setPageCount(Math.ceil(Cards.length / limit));
   }, [limit]);
 
-  const onclickChange = (data: any) => {
-    console.log(pageCount);
-    console.log(Cards.length);
-    console.log(records);
+  const onclickChange = () => {
+    console.log("")
   };
   return (
     <main>

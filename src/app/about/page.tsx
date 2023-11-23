@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Intro from "@/components/About/intro";
 import EarthMap from "@/components/About/earthMap";
@@ -10,13 +10,13 @@ import Smooth from "@/components/smoothScroll";
 const About = () => {
   return (
     <Smooth>
-        <div className="container padding-body font-body">
-            <Header />
-            <Intro />
-            <EarthMap />
-            <OurPhilosophy />
-            <Footer />
-        </div>
+      <div className="container padding-body font-body">
+        <Header />
+        <Intro />
+        <EarthMap />
+        <OurPhilosophy />
+        <Footer />
+      </div>
     </Smooth>
   );
 };

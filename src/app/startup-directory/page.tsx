@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Smooth from '@/components/smoothScroll'
-import Hero from '@/components/directory/directory'
-import Header from '@/components/header/Header'
-import ShowPath from '@/components/directory/showPath'
-import Search from '@/components/directory/Search'
-import Footer from '@/components/footer/footer'
+import React from "react";
+import Smooth from "@/components/smoothScroll";
+import Hero from "@/components/directory/directory";
+import Header from "@/components/header/Header";
+import ShowPath from "@/components/directory/showPath";
+import Search from "@/components/directory/Search";
+import Footer from "@/components/footer/footer";
 
 const Page = () => {
   return (
@@ -16,7 +16,7 @@ const Page = () => {
           <Header />
         </div>
         <Hero />
-        <div className="padding-body font-body">
+        <div className="padding-body font-body border-b-2 border-t-2">
           <ShowPath />
         </div>
         <Search />
@@ -25,7 +25,7 @@ const Page = () => {
         </div>
       </div>
     </Smooth>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

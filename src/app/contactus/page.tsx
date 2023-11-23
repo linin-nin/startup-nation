@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Emptybox from "@/components/Emptybox";
 import EmailContactus from "@/components/contactUs/Emailcontactus";

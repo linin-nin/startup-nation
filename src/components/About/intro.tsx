@@ -1,28 +1,22 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const title = 'STARTUPNATION LAB'
 const Intro = () => {
-  console.log(title.split(""))
   return (
-    <main className="">
-      <div className="flex justify-start border-b-2 border-white pt-5">
-        <div className="title">
-          ABOUT
-          <br />
-          {/* <p className="text-yellow-400" >
-            { title.split(" ").map( (word, index) => {
-              <span key={index}>{word}</span>
-            })}
-          </p> */}
-          
+    <main className="flex justify-start border-b-2 border-white pt-5">
+        <div className="pr-10">
+          <h2 className="title">
+            ABOUT
+          </h2>
+          <motion.h2 initial={{y: 20, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 0.8}} className="text-yellow-500 title">STARTUPNATION LAB</motion.h2>
         </div>
-        <div className="ml-[80px] relative before:absolute before:w-[2px] before:h-[100%] before:top-0 before:l-0 before:bg-white">
-          <div className="pl-7 pb-7">
-            <h2 className="title">
+        <div className="relative before:absolute before:w-[2px] before:h-[100%] before:top-0 before:l-0 before:bg-white">
+          <div data-scroll-contian className="pl-7 pb-7">
+            <h2  data-scroll data-scroll-speed="0.04" className="title">
               StartupNation is a flagship community program of DreamsLAB for
               boot camp, heckathon, incubation, accelerator and investing.
             </h2>
@@ -39,7 +33,6 @@ const Intro = () => {
             </div>
           </div>
         </div>
-      </div>
     </main>
   );
 };
