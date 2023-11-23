@@ -1,12 +1,13 @@
 "use client";
+import Header from "@/components/header/Header";
+import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
 import VideoContent from "@/components/VideoContent";
 import AboutUs from "@/components/aboutUs";
-import Header from "@/components/header/Header";
 import Footer from "@/components/footer/footer";
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import Smooth from "@/components/smoothScroll";
 import Prelanding from "@/components/preloading/PreLoading";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,16 +21,19 @@ export default function Home() {
       }, 1500);
     })();
   });
+
   return (
-    <main>
+    <main className="container padding-body font-body">
       <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
-      <div className="container padding-body font-body">
-        <Header />
-        <Hero />
-        <VideoContent />
-        <AboutUs />
-        <Footer />
-      </div>
+      <Smooth>
+        <div>
+          <Header />
+          <Hero />
+          <VideoContent />
+          <AboutUs />
+          <Footer />
+        </div>
+      </Smooth>
     </main>
   );
 }
