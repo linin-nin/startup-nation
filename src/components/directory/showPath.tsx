@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MenuNavbar } from "@/lib/meu-navbar";
+import { MenuNavbar } from "@/lib/menu-navbar";
 
 const ShowPath = () => {
   const pathName = usePathname();

@@ -1,62 +1,11 @@
-import { easeIn, easeInOut, motion, useInView } from "framer-motion";
+import Image from "next/image";
 import React from "react";
-import { useRef } from "react";
 import ShareArrow from "./ShareArrow";
 
-const animToright = {
-  initial: {
-    width: 0
-  },
-  animate: {
-    width: "100%",
-    transition: {
-      duration: 1,
-      ease: easeInOut
-    }
-  },
-  close: {
-    width: "100%",
-    transition: { duration: 0.5 }
-  }
-};
-
-const animToleft = {
-  initial: {
-    width: 0
-  },
-  animate: {
-    width: "100%",
-    transition: {
-      duration: 1,
-      ease: easeIn
-    }
-  },
-  close: {
-    width: "100%",
-    transition: { duration: 0.5 }
-  }
-};
-
 const VideoContent = () => {
-  const ref = useRef(null);
-  const isInview = useInView(ref);
   return (
     <div>
-      <div ref={ref}>
-        <motion.div
-          variants={animToright}
-          initial="initial"
-          animate={isInview ? "animate" : "close"}
-          className="border-2 border-white"
-        ></motion.div>
-        <h1 className="py-3 title">Side Project</h1>
-        <motion.div
-          variants={animToleft}
-          initial="initial"
-          animate={isInview ? "animate" : "close"}
-          className="border-2 border-white"
-        ></motion.div>
-      </div>
+      <h1 className="border-t-2 border-b-2 py-3 title">Side Project</h1>
 
       {/* layout 1 */}
       <div className="py-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
