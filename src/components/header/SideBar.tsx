@@ -46,7 +46,7 @@ const SideBar = () => {
               <li
                 className={`${
                   item.pathUrl === pathName && "bg-yellow-300 text-black"
-                } ${sidebarCSS.li}`}
+                } ${sidebarCSS.li} text-[1.75rem] md:text-[3.75rem]`}
               >
                 {item.menuName}
               </li>
