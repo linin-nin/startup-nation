@@ -38,9 +38,9 @@ const Hero = () => {
           className="hero-section1 absolute w-full h-fullinset-0
                         before:absolute before:w-full before:inset-0 before:h-[610px] before:top-0 before:left-0 before:bg-black before:opacity-70"
         >
-          <div className="flex justify-between text-hero">
-            <div className=" flex max-w-full lg:max-w-[85%] flex-col items-center pt-32 text-hero lg:pl-36 h-[100vh]">
-              <div className="w-[80%] pl-24">
+          <div className="flex justify-between">
+            <div className=" flex max-w-full lg:max-w-[85%] flex-col items-center pt-32 text-[40px] font-bold sm:text-[80px] sm:font-bold lg:pl-36 h-[100vh] ">
+              <div className="w-[80%] lg:pl-24">
                 <Marquee
                   speed={60}
                   direction="left"
@@ -56,12 +56,12 @@ const Hero = () => {
                   </ul>
                 </Marquee>
               </div>
-              <div className="mt-16 z-50">
-                <div className="tracking-[10px]">
+              <div className="mt-3 md:mt-16 z-50  text-center">
+                <div className="tracking-[10px]  md:ml-24 ">
                   <motion.span
                     initial="hidden"
                     animate="visible"
-                    className=" ml-36"
+                    className=""
                     transition={{ staggerChildren: 0.09, delayChildren: 2 }}
                   >
                     {/* join startup  */}
@@ -86,8 +86,8 @@ const Hero = () => {
                     })}
                   </motion.span>
                 </div>
-                <div className="flex justify-end pr-5">
-                  <p className="mr-5">
+                <div className="flex justify-end mt-4 sm:mt-0">
+                  <p className="">
                     Develop to be a centron hub of startup in Southeast
                     Asiangion
                   </p>

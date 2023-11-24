@@ -16,13 +16,13 @@ const Header = () => {
         <button className="button-style text-[14px] font-bold sm:text-[20px]">
           Apply
         </button>
-        <div className="logo mr-12 ">
+        <div className="logo">
           <Image
             src="/icons/logo.svg"
             width={0}
             height={0}
             alt="Startup Nation"
-            className=" ml-[0px] w-[200px] h-[100px] sm:w-[500px] sm:h-[100px]"
+            className="w-[120px] h-[100px] sm:w-[500px] sm:h-[100px]"
           />
         </div>
         <div className="">

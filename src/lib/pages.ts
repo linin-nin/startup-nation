@@ -9,13 +9,7 @@ export const pages = [
       },
       {
         content: "Meeting room, Event space and Play-ground"
-      }
-      // {
-      //     content: 'training room and Studio room'
-      // },
-      // {
-      //     content: 'Utility, Parcking, and security'
-      // }
+      },
     ]
   },
   {

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { arrows } from "@/lib/pages";
 
 const AboutUs = () => {
-  const handleClick = () => {};
+  const handleClick = () => { };
 
   return (
     <section>
@@ -16,7 +16,7 @@ const AboutUs = () => {
       <div className="my-1">
         {/* {pages.map((page)=>( */}
         <div>
-          <h2 className="my-4 font-normal text-lg">{pages[0].numPage}/04</h2>
+          <h2 className="my-4 font-normal text-4xl">{pages[0].numPage}/04</h2>
           <div className="page myscreen:pl-20">
             <div className="relative">
               <div className="relative">
@@ -35,12 +35,22 @@ const AboutUs = () => {
                     {pages[0].slideTitle}
                   </h1>
                 </div>
-
-                <div className="content-list ml-4">
-                  <ul className="sm:mt-3 list-disc">
+                {/* list  */}
+                <div className="content-list ml-4 grid grid-cols-2 gap-6">
+                  <ul className="mt-6 sm:mt-4 list-disc">
                     {pages[0].benifit.map((item) => (
                       <li
-                        className="mt-2 text-normal leading-4 max-sm:text-xl max-sm:leading-3"
+                        className="mt-5  text-[17px] md:text-[26px]"
+                        key={item.content}
+                      >
+                        {item.content}
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="mt-6 sm:mt-4 list-disc">
+                    {pages[0].benifit.map((item) => (
+                      <li
+                        className="mt-5  text-[17px] md:text-[26px]"
                         key={item.content}
                       >
                         {item.content}
@@ -48,16 +58,6 @@ const AboutUs = () => {
                     ))}
                   </ul>
 
-                  <ul className="sm:mt-3 list-disc">
-                    {pages[0].benifit.map((item) => (
-                      <li
-                        className="mt-2 text-normal leading-4 max-sm:text-xl max-sm:leading-3"
-                        key={item.content}
-                      >
-                        {item.content}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </div>
