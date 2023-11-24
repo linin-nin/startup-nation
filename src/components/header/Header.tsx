@@ -25,7 +25,6 @@ const Header = () => {
             className=" ml-[0px] w-[200px] h-[100px] sm:w-[500px] sm:h-[100px]"
           />
         </div>
-        {/* <p onClick={handleClick} className={`${mode}rounded-full p-3`}>Mode</p> */}
         <div className="">
           <SideBar />
         </div>
