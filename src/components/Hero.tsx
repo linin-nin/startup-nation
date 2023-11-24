@@ -56,8 +56,8 @@ const Hero = () => {
                   </ul>
                 </Marquee>
               </div>
-              <div className="mt-3 md:mt-16 z-50  text-center">
-                <div className="tracking-[10px]  md:ml-24 ">
+              <div className="mt-3 md:mt-16 z-50 text-center">
+                <div className="tracking-[10px]  pl-5 ">
                   <motion.span
                     initial="hidden"
                     animate="visible"
