@@ -25,17 +25,17 @@ const Footer = () => {
         ))}
       </nav>
       <div className="py-4 flex justify-between items-center">
-        <div className="flex justify-start gap-6 max-lg:gap-2">
+        <div className="flex justify-start gap-1 lg:gap-6">
           {Socail.map((item) => (
             <Link href={item.path} key={item.logo}>
-              <Image src={item.logo} alt="icon" width={30} height={30} />
+              <Image src={item.logo} alt="icon" width={25} height={25} />
             </Link>
           ))}
         </div>
-        <div className="font-normal text-center text-sm md:text-lg">
+        <div className="font-normal text-center text-[12px] md:text-lg">
           COPY RIGHT @2023 Powered by Dreamslab.
         </div>
-        <div className="font-normal text-center text-sm md:text-lg">
+        <div className="font-normal text-center text-[12px] md:text-lg">
           All Rights Reserved.
         </div>
       </div>
