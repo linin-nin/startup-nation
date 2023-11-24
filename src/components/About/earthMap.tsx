@@ -21,8 +21,19 @@ const EarthMap = () => {
             </span>
           </h2>
           <div className="relative flex justify-end mt-32 mr-56">
-            <Image src='/icons/circleYellow.svg' width={80} height={80} alt="icon"/>
-            <Image className="absolute flex justify-center top-5 right-4" src='/icons/SubcircleYellow.svg' width={40} height={40} alt="icon"/>
+            <Image
+              src="/icons/circleYellow.svg"
+              width={80}
+              height={80}
+              alt="icon"
+            />
+            <Image
+              className="absolute flex justify-center top-5 right-4"
+              src="/icons/SubcircleYellow.svg"
+              width={40}
+              height={40}
+              alt="icon"
+            />
           </div>
         </div>
       </div>

@@ -16,7 +16,10 @@ const Hero = () => {
           <div className="z-10 text-center">
             <h1 className="text-[130px] font-bold">Startup Directory</h1>
             <div className="tracking-[2px]">
-              <p className="text-2xl">Lorem ipsum dolor sit amet consectetur. Venenatis nec sodales semper nec rhoncus leo arcu ultricies tincidunt.</p>
+              <p className="text-2xl">
+                Lorem ipsum dolor sit amet consectetur. Venenatis nec sodales
+                semper nec rhoncus leo arcu ultricies tincidunt.
+              </p>
             </div>
           </div>
         </div>
