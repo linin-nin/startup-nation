@@ -4,12 +4,11 @@ import Image from "next/image";
 import SideBar from "./SideBar";
 
 const Header = () => {
-
-  const [mode, setmode] = useState(false)
+  const [mode, setmode] = useState(false);
   const handleClick = () => {
-    setmode(true)
-    console.log(mode)
-  }
+    setmode(true);
+    console.log(mode);
+  };
 
   return (
     <header className="container font-body border-b-2 border-white sticky top-0 bg-black z-[99]">

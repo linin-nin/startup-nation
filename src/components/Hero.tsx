@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   const ref2 = useRef(null);
-  const isInView = useInView(ref2, { amount: 0.8, once: true, });
+  const isInView = useInView(ref2, { amount: 0.8, once: true });
 
   return (
     <section className="hero mb-7">
@@ -34,8 +34,10 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="hero-section1 absolute w-full h-fullinset-0
-                        before:absolute before:w-full before:inset-0 before:h-[610px] before:top-0 before:left-0 before:bg-black before:opacity-70">
+        <div
+          className="hero-section1 absolute w-full h-fullinset-0
+                        before:absolute before:w-full before:inset-0 before:h-[610px] before:top-0 before:left-0 before:bg-black before:opacity-70"
+        >
           <div className="flex justify-between text-hero">
             <div className=" flex max-w-full lg:max-w-[85%] flex-col items-center pt-32 text-hero lg:pl-36 h-[100vh]">
               <div className="w-[80%] pl-24">
@@ -85,11 +87,14 @@ const Hero = () => {
                   </motion.span>
                 </div>
                 <div className="flex justify-end pr-5">
-                  <p className="mr-5">Develop to be a centron hub of startup in Southeast Asiangion</p>
+                  <p className="mr-5">
+                    Develop to be a centron hub of startup in Southeast
+                    Asiangion
+                  </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="hidden lg:block h-[50%] mt-32  border-2 border-white z-50">
               <div className=" w-16 h-[100%] flex flex-col items-center justify-around gap-y-20">
                 {Socail.map((item) => (
@@ -99,9 +104,7 @@ const Hero = () => {
                 ))}
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
@@ -109,6 +112,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-

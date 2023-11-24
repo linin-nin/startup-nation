@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,18 +6,17 @@ import { Socail } from "@/lib/navbarMenu";
 
 const images = [
   {
-    img: '/image/business 03.jpg',
+    img: "/image/business 03.jpg"
   },
   {
-    img: '/image/business 04.jpg',
+    img: "/image/business 04.jpg"
   },
   {
-    img: '/image/business 05.jpg',
+    img: "/image/business 05.jpg"
   }
-]
+];
 
 const Info_detail = () => {
-
   return (
     <main className="text-white bg-black flex justify-start py-8 padding-body">
       <div className="container flex">
@@ -25,14 +24,14 @@ const Info_detail = () => {
           <div className="flex">
             <div className=" h-[416px] w-[644px] relative bg-cover bg-center">
               <Image
-                    id="slide"
-                    src={images[2].img}
-                    fill
-                    loading="lazy"
-                    alt="image"
-                    className="w-full h-full object-cover"
-                  />
-              </div>
+                id="slide"
+                src={images[2].img}
+                fill
+                loading="lazy"
+                alt="image"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="ml-5">
               <div className="cursor-pointer h-[196px] w-[196px] relative bg-cover bg-center mb-5">
                 <Image
