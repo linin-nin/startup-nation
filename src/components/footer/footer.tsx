@@ -17,13 +17,9 @@ const Footer = () => {
           className="py-4"
         />
       </div>
-      <nav className=" border-b-2 py-4 text-center">
+      <nav className=" border-b-2 py-4 text-center text-[19px] md:text-[32px] ">
         {NavsList.map((item) => (
-          <Link
-            key={item.menu}
-            href={item.path}
-            className="title px-3 effect-yellow"
-          >
+          <Link key={item.menu} href={item.path} className="px-3 effect-yellow">
             {item.menu}
           </Link>
         ))}
@@ -32,14 +28,14 @@ const Footer = () => {
         <div className="flex justify-start gap-6 max-lg:gap-2">
           {Socail.map((item) => (
             <Link href={item.path} key={item.logo}>
-              <Image src={item.logo} alt="icon" width={40} height={40} />
+              <Image src={item.logo} alt="icon" width={30} height={30} />
             </Link>
           ))}
         </div>
-        <div className="font-normal text-2xl text-center max-lg:text-xl">
+        <div className="font-normal text-center text-sm md:text-lg">
           COPY RIGHT @2023 Powered by Dreamslab.
         </div>
-        <div className="font-normal text-2xl text-center max-lg:text-xl">
+        <div className="font-normal text-center text-sm md:text-lg">
           All Rights Reserved.
         </div>
       </div>

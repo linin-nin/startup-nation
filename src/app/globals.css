@@ -74,9 +74,6 @@ body {
 .text-medium {
   @apply text-3xl;
 }
-.text-normal{
-  @apply text-2xl;
-}
 
 .text-hero {
   font-size: 7rem;
@@ -115,3 +112,5 @@ p{
 
   letter-spacing: 10px;
 }
+
+

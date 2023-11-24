@@ -13,7 +13,7 @@ const Pagination = () => {
   }, [limit]);
 
   const onclickChange = () => {
-    console.log("")
+    console.log("");
   };
   return (
     <main>

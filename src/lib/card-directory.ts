@@ -123,6 +123,6 @@ export const Cards = [
     id: 21,
     img: "/image/Rectangle 33.png",
     name: "DreamLAB,co.LTD",
-    date: "founded: 2021    "
+    date: "founded: 2021"
   }
 ];
