@@ -6,7 +6,7 @@ import Image from "next/image";
 import { arrows } from "@/lib/pages";
 
 const AboutUs = () => {
-  const handleClick = () => { };
+  const handleClick = () => {};
 
   return (
     <section>
@@ -57,7 +57,6 @@ const AboutUs = () => {
                       </li>
                     ))}
                   </ul>
-
                 </div>
               </div>
             </div>

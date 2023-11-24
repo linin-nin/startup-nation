@@ -19,11 +19,7 @@ const Footer = () => {
       </div>
       <nav className=" border-b-2 py-4 text-center text-[19px] md:text-[32px] ">
         {NavsList.map((item) => (
-          <Link
-            key={item.menu}
-            href={item.path}
-            className="px-3 effect-yellow"
-          >
+          <Link key={item.menu} href={item.path} className="px-3 effect-yellow">
             {item.menu}
           </Link>
         ))}

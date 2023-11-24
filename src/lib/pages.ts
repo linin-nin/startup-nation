@@ -9,7 +9,7 @@ export const pages = [
       },
       {
         content: "Meeting room, Event space and Play-ground"
-      },
+      }
     ]
   },
   {
