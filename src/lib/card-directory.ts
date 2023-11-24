@@ -51,6 +51,6 @@ export const Cards = [
     id: 6,
     img: "/image/business 09.jpg",
     name: "DreamLAB,co.LTD",
-    date: "founded: 2021    "
+    date: "founded: 2021"
   }
 ];
