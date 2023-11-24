@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="container font-body border-b-2 border-white sticky top-0 bg-black z-[99]">
       <nav className=" flex justify-between items-center">
-        <button className="button-style text-[14px] font-bold sm:text-[20px]">
+        <button className="button-style text-[10px] font-bold sm:text-[20px]">
           Apply
         </button>
         <div className="logo">
@@ -22,7 +22,7 @@ const Header = () => {
             width={0}
             height={0}
             alt="Startup Nation"
-            className="w-[120px] h-[100px] sm:w-[500px] sm:h-[100px]"
+            className="w-[100px] h-[100px] sm:w-[500px] sm:h-[100px] mr-5"
           />
         </div>
         <div className="">
