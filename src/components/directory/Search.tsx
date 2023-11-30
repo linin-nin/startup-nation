@@ -10,10 +10,10 @@ const Search = () => {
   };
 
   return (
-    <section className="bg-black text-white pt-10 padding-body font-body">
-      <div className="flex justify-between gap-8 w-[100%] h-16 container">
+    <section className="bg-black text-white pt-5 padding-body font-body">
+      <div className="md:flex justify-between gap-8 w-[100%] h-16 container">
         {/* filter  */}
-        <div className=" flex w-[47%] border-2 border-white px-5 items-center">
+        <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 mb-3 px-5 items-center">
           <div className=" w-full text-2xl">filter project</div>
           <div className=" w-[7%]">
             <svg
@@ -33,9 +33,9 @@ const Search = () => {
           </div>
         </div>
         {/* search */}
-        <div className=" w-full items-center flex border-2 border-white">
+        <div className="px-5 w-full items-center md:py-8 flex border-2 border-white">
           <div className="flex justify-start w-full">
-            <div className="flex justify-center items-center px-3">
+            <div className="flex justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,12 +56,12 @@ const Search = () => {
               <input
                 type="text"
                 placeholder="search"
-                className="w-[100%] placeholder:text-2xl p-4 bg-black"
+                className="w-[100%] outline-none text-2xl placeholder:text-2xl bg-black"
               />
             </div>
             {/* button navigate */}
             <div className="flex">
-              <button className="px-3 border-l-2">
+              <button className="pl-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -77,7 +77,7 @@ const Search = () => {
                   />
                 </svg>
               </button>
-              <button className="px-3 border-l-2">
+              <button className="pl-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
