@@ -32,7 +32,7 @@ const Info_detail = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:border-none border-2 py-2">
+            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:border-none border-2 md:py-0 py-2">
               <div className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
                 <Image
                   id="pic"
@@ -43,7 +43,25 @@ const Info_detail = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
+              <div className="cursor-pointer opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
+                <Image
+                  id="pic"
+                  src={images[1].img}
+                  fill
+                  alt="image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="cursor-pointer md:hidden opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
+                <Image
+                  id="pic"
+                  src={images[1].img}
+                  fill
+                  alt="image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="cursor-pointer md:hidden opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
                 <Image
                   id="pic"
                   src={images[1].img}
@@ -74,7 +92,9 @@ const Info_detail = () => {
                 />
               </div>
               <div className="ml-3">
-                <h1 className="md:text-4xl sm:text-3xl text-2xl bold">Dreamslab,co.LTD</h1>
+                <h1 className="md:text-4xl sm:text-3xl text-2xl bold">
+                  Dreamslab,co.LTD
+                </h1>
                 <p className="text-gray-500">
                   Develop the latest technology around the world
                 </p>
