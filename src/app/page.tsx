@@ -29,7 +29,7 @@ export default function Home() {
       <Smooth>
         <div>
           <Header />
-          <MarqueeComponent/>
+          <MarqueeComponent />
           <Hero />
           <VideoContent />
           <AboutUs />
