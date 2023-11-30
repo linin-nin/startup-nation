@@ -21,7 +21,11 @@ const Intro = () => {
       </div>
       <div className="relative before:absolute before:w-[2px] before:h-[100%] before:top-0 before:l-0 lg:before:bg-white">
         <div data-scroll-contian className="lg:pl-7 pb-7">
-          <h2 data-scroll data-scroll-speed="0.04" className="md:text-4xl sm:text-2xl text-xl py-2">
+          <h2
+            data-scroll
+            data-scroll-speed="0.04"
+            className="md:text-4xl sm:text-2xl text-xl py-2"
+          >
             StartupNation is a flagship community program of DreamsLAB for boot
             camp, heckathon, incubation, accelerator and investing.
           </h2>
