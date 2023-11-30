@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef } from "react";
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import { Socail } from "@/lib/navbarMenu";
 import Link from "next/link";
@@ -34,78 +33,42 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
 
+        {/* black screen on top  */}
         <div
-          className="hero-section1 absolute w-full h-fullinset-0
+          className="hero-section1 absolute w-full h-full inset-0
                         before:absolute before:w-full before:inset-0 before:h-[610px] before:top-0 before:left-0 before:bg-black before:opacity-70"
         >
-          <div className="flex justify-between">
-            <div className=" flex max-w-full lg:max-w-[85%] flex-col items-center pt-32 text-[40px] font-bold sm:text-[80px] sm:font-bold lg:pl-36 h-[100vh] ">
-              <div className="w-[80%] lg:pl-24">
-                <Marquee
-                  speed={60}
-                  direction="left"
-                  className="marquee text-[500] border border-white p-2 text-[1rem] md:text-[1.5rem] font-medium"
-                >
-                  <ul className="flex [&>*:nth-child(odd)]:text-[#F8DC4C]">
-                    <li>STARTUPNATION LAB</li>
-                    <li>STARTUPNATION LAB</li>
-                    <li>STARTUPNATION LAB</li>
-                    <li>STARTUPNATION LAB</li>
-                    <li>STARTUPNATION LAB</li>
-                    <li>STARTUPNATION LAB</li>
-                  </ul>
-                </Marquee>
-              </div>
-              <div className="mt-3 md:mt-16 z-50 text-center">
-                <div className="tracking-[10px]  pl-5 lg:ml-20 ">
-                  <motion.span
-                    initial="hidden"
-                    animate="visible"
-                    className=""
-                    transition={{ staggerChildren: 0.09, delayChildren: 2 }}
-                  >
-                    {/* join startup  */}
-                    {text.split(" ").map((word, index) => {
-                      return (
-                        <span className="inline-block glowy-text" key={index}>
-                          {word.split("").map((char, index) => {
-                            return (
-                              <motion.span
-                                className="inline-block"
-                                key={index}
-                                variants={defaultAnimation}
-                                whileHover={{ scale: 1.5 }}
-                              >
-                                {char}
-                              </motion.span>
-                            );
-                          })}
-                          <span className="inline-block">&nbsp;</span>
-                        </span>
-                      );
-                    })}
-                  </motion.span>
-                </div>
-                <div className="flex justify-end mt-4 sm:mt-0">
-                  <p className="">
-                    Develop to be a centron hub of startup in Southeast
-                    Asiangion
-                  </p>
-                </div>
-              </div>
-            </div>
+        </div>
 
-            <div className="hidden lg:block h-[50%] mt-32  border-2 border-white z-50">
-              <div className=" w-16 h-[100%] flex flex-col items-center justify-around gap-y-20">
-                {Socail.map((item) => (
-                  <Link href={item.path} key={item.logo}>
-                    <Image src={item.logo} alt="icon" width={40} height={40} />
-                  </Link>
-                ))}
-              </div>
+        {/* container content */}
+        <div className="relative z-999 h-full  flex justify-between items-center ">
+          {/* actual content  */}
+          <div className=" h-full
+          flex flex-grow justify-center items-center
+          ">
+            <div className="md:ml-24 ">
+              <h1 className="text-[48px] text-center font-bold glowy-text
+              md:text-[4.2rem] md:tracking-[.425rem]
+              
+              ">A Centaur of Asia</h1>
+              <p className="text-[.725rem] flex justify-end md:text-[1.25rem]">Develop to be a centron hub of startup in Southeast Asiangion</p>
             </div>
           </div>
+          {/* social media logo  */}
+
+          <div className="hidden md:block">
+            <div className=" h-[300px] flex  flex-col items-center justify-evenly p-3 flex-shrink-0 border
+            ">
+              {Socail.map((item) => (
+                <Link href={item.path} key={item.logo}>
+                  <Image src={item.logo} alt="icon" width={40} height={40} />
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

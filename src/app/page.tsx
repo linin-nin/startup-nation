@@ -8,6 +8,7 @@ import Footer from "@/components/footer/footer";
 import Smooth from "@/components/smoothScroll";
 import Prelanding from "@/components/preloading/PreLoading";
 import { AnimatePresence } from "framer-motion";
+import MarqueeComponent from "@/components/animationMarquee/MarqueeComponent";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
       <Smooth>
         <div>
           <Header />
+          <MarqueeComponent/>
           <Hero />
           <VideoContent />
           <AboutUs />
