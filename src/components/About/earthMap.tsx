@@ -5,22 +5,21 @@ import Image from "next/image";
 const EarthMap = () => {
   return (
     <main data-scroll-contian>
-      <div className=" relative border-b-2 border-white h-[570px] my-20 bg-cover bg-center">
+      <div className=" relative border-b-2 border-white md:h-[80vh] h-[60vh] mt-20 bg-cover bg-center">
         <Image
           src="/icons/earth.svg"
           alt="image"
           fill
           className="w-full h-full object-cover "
         />
-        <div className="text-6xl pt-36 inset-0 mb-7 absolute">
-          <h2 data-scroll data-scroll-speed="0.1">
-            “ Develop Cambodia to be a central hub of startups
-            <br />
-            <span className="flex justify-end">
+        <div className="xl:text-7xl lg:text-6xl md:text-5xl text-4xl pt-20 inset-0 mb-7 absolute">
+          <div data-scroll data-scroll-speed="0.1" className="">
+            <span className="sm:flex sm:justify-start text-center">“ Develop Cambodia to be a central hub of startups</span>
+            <span className="flex sm:justify-end justify-center">
               in Southeast Asian region. “
             </span>
-          </h2>
-          <div className="relative flex justify-end mt-32 mr-56">
+          </div>
+          <div className="relative flex justify-end mt-16 pr-20">
             <Image
               src="/icons/circleYellow.svg"
               width={80}
@@ -28,7 +27,7 @@ const EarthMap = () => {
               alt="icon"
             />
             <Image
-              className="absolute flex justify-center top-5 right-4"
+              className="absolute mr-20 flex justify-center top-5 right-4"
               src="/icons/SubcircleYellow.svg"
               width={40}
               height={40}
