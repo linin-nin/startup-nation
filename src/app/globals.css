@@ -64,7 +64,9 @@ body {
 }
 
 .input {
-  @apply bg-black border-2 rounded-none w-full py-5 pl-3 mb-4 placeholder:text-2xl;
+  @apply bg-black border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px]
+  md:placeholder:text-2xl
+  ;
 }
 
 /* text size part  */
@@ -111,4 +113,7 @@ p{
                 0 0 60px #ffffff5d;
 }
 
+.answer {
+  transition: all 0.5s;
+}
 
