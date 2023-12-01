@@ -3,20 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Socail } from "@/lib/navbarMenu";
+import { useState } from "react";
 
 const images = [
   {
-    img: "/image/business 04.jpg"
+    img: "/image/Rectangle 29.png"
   },
   {
-    img: "/image/business 04.jpg"
+    img: "/image/Rectangle 30.png"
   },
   {
-    img: "/image/business 05.jpg"
+    img: "/image/Rectangle 25.png"
   }
 ];
 
 const Info_detail = () => {
+
+  const [urlImage, seturlImage] = useState<number>(0)
+
   return (
     <main className="text-white bg-black flex justify-start py-8 padding-body">
       <div className="container lg:flex">
@@ -25,51 +29,20 @@ const Info_detail = () => {
             <div className=" h-[416px] lg:w-full w-[100%] relative bg-cover bg-center">
               <Image
                 id="slide"
-                src={images[1].img}
+                src={images[urlImage].img}
                 fill
                 loading="lazy"
                 alt="image"
                 className="w-full h-full object-cover"
               />
             </div>
+            {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
             <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2">
-              <div className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
-                <Image
-                  id="pic"
-                  src={images[0].img}
-                  fill
-                  loading="lazy"
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="cursor-pointer opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
-                <Image
-                  id="pic"
-                  src={images[1].img}
-                  fill
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="cursor-pointer md:hidden opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
-                <Image
-                  id="pic"
-                  src={images[1].img}
-                  fill
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="cursor-pointer md:hidden opacity-40 md:h-[196px] h-[50px] w-[50px] md:w-[196px] relative bg-cover bg-center">
-                <Image
-                  id="pic"
-                  src={images[1].img}
-                  fill
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {images.map((item, index) => (
+                <div key={index} className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
+                  <Image onClick={() => seturlImage(index)} src={item.img} fill alt="image" className="w-full h-full object-cover"/>
+                </div>
+              ))}
             </div>
           </div>
           <p className="w-[100%] my-5">

@@ -1,5 +1,8 @@
-import React from "react";
+
+import dynamic from "next/dynamic";
 import ShareArrow from "./ShareArrow";
+
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const VideoContent = () => {
   return (
