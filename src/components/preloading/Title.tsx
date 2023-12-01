@@ -7,7 +7,6 @@ const Opacity = {
   },
   open: (i: number) => ({
     scale: 0.7,
-    // y: -30 ,
     opacity: 1,
     transition: {
       duration: 0.4,

@@ -38,11 +38,11 @@ const Prelanding = () => {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-[100vh] bg-black fixed w-[100%] flex items-center justify-center z-[999]"
+      className="h-[100vh] w-[100vw] fixed left-0 flex justify-center items-center z-[999] bg-black"
     >
       {dimension.width > 0 && (
         <div>
-          <h2 className="text-white text-8xl flex justify-center items-center z-10 absolute inset-0">
+          <h2 className="text-white sm:text-8xl text-5xl flex justify-center items-center z-10 absolute inset-0">
             <Title />
           </h2>
           <svg className="absolute w-[100%] h-[calc(100%+300px)] left-0 top-0">
