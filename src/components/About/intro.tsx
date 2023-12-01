@@ -29,10 +29,11 @@ const Intro = () => {
             StartupNation is a flagship community program of DreamsLAB for boot
             camp, heckathon, incubation, accelerator and investing.
           </h2>
-          <div className="w-full lg:h-[68vh] sm:h-[400px] bg-yellow-400">
+          <div className="w-full lg:h-[70vh] sm:h-[100vh] bg-yellow-400">
             <ReactPlayer
               url="/image/vid4.mp4"
-              // muted
+              muted
+              // playing
               loop
               controls
               width="100%"

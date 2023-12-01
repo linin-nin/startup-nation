@@ -32,7 +32,7 @@ const Info_detail = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:border-none border-2 md:py-0 py-2">
+            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2">
               <div className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
                 <Image
                   id="pic"

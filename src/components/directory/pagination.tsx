@@ -33,7 +33,7 @@ const Pagination = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-3">
               <div className="">
                 <Link href="/startup-directory/detail">
                   <h2 className="text-2xl hover:underline hover:text-blue-400">
