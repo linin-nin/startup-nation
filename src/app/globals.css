@@ -49,12 +49,15 @@ body {
 .page {
   @apply flex justify-end max-xl:flex-wrap;
 }
+
 .page .content-list {
   @apply flex justify-between;
 }
-.arrow{
+
+.arrow {
   @apply flex flex-col max-xl:flex-col max-lg:flex-row gap-5;
 }
+
 .arrow .arrow-btn {
   @apply rounded-full border-2 border-white bg-black hover:border-yellow-300;
 }
@@ -64,15 +67,14 @@ body {
 }
 
 .input {
-  @apply bg-black border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px]
-  md:placeholder:text-2xl
-  ;
+  @apply bg-black border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
 }
 
 /* text size part  */
 .text-lg {
   @apply text-6xl
 }
+
 .text-medium {
   @apply text-3xl;
 }
@@ -84,12 +86,11 @@ body {
 
 /* button style  */
 .button-style {
-  @apply border-2 border-white py-2 px-6
-  hover:bg-white hover:text-black hover:font-bold
+  @apply border-2 border-white py-2 px-6 hover:bg-white hover:text-black hover:font-bold
 }
 
 /* margin list  */
-.marquee ul li{
+.marquee ul li {
   margin: 0 10px;
 }
 
@@ -97,23 +98,30 @@ body {
 .effect-yellow {
   @apply hover:text-[#F8DC4C]
 }
-p{
+
+p {
   @apply text-[20px]
 }
 
-.map  {
+.map {
   filter: grayscale(100%) invert(100%);
 }
 
 .glowy-text {
   color: #fff;
-  text-shadow:  0 0 100px #ffffff,
-                0 0 20px #ffffff57,
-                0 0 40px #ffffff57,
-                0 0 60px #ffffff5d;
+  text-shadow: 0 0 100px #ffffff,
+    0 0 20px #ffffff57,
+    0 0 40px #ffffff57,
+    0 0 60px #ffffff5d;
 }
+
 
 .answer {
-  transition: all 0.5s;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
+.visible {
+  transition: max-height 0.3s ease-in-out;
+}
