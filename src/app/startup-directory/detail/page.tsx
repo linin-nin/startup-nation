@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Info_detail from "@/components/directory/info";
 import Header from "@/components/header/Header";

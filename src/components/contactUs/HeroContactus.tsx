@@ -4,19 +4,15 @@ import Image from "next/image";
 import { useState } from "react";
 
 const HeroContactus = () => {
-
   const [open, setOpen] = useState<number | null>(null); // Adjusted type annotation for `open`
 
   const toggle = (index: number) => {
     if (open === index) {
-      return setOpen(null)
+      return setOpen(null);
     }
 
-    setOpen(index)
-  }
-
-
-
+    setOpen(index);
+  };
 
   return (
     <div className="container">
@@ -38,13 +34,15 @@ const HeroContactus = () => {
               className="border-y-2 list-none text-[2rem] py-5 m-3"
               key={index + 1}
             >
-
               {/* title  */}
-              <div className="flex justify-between cursor-pointer" onClick={()=>toggle(index)}>
+              <div
+                className="flex justify-between cursor-pointer"
+                onClick={() => toggle(index)}
+              >
                 {index + 1}. {item.question}
                 <Image
                   className=""
-                  src={open === index ? '/icons/minus.svg' : '/icons/plus.svg'}
+                  src={open === index ? "/icons/minus.svg" : "/icons/plus.svg"}
                   alt="plusLogo"
                   width={50}
                   height={50}
@@ -53,11 +51,16 @@ const HeroContactus = () => {
 
               {/* answer  */}
 
-              <div className={`text-[22px] text-justify   
+              <div
+                className={`text-[22px] text-justify   
               `}
               >
-                <div className={`answer ${open === index ? 'pb-4' : 'h-0 overflow-hidden'}`}>
-                {item.answer}
+                <div
+                  className={`answer ${
+                    open === index ? "pb-4" : "h-0 overflow-hidden"
+                  }`}
+                >
+                  {item.answer}
                 </div>
               </div>
             </li>
