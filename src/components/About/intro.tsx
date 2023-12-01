@@ -32,8 +32,7 @@ const Intro = () => {
           <div className="w-full lg:h-[68vh] sm:h-[400px] bg-yellow-400">
             <ReactPlayer
               url="/image/vid4.mp4"
-              playing
-              muted
+              // muted
               loop
               controls
               width="100%"
