@@ -31,36 +31,39 @@ const HeroContactus = () => {
         {contactusQuest.map((item, index) => {
           return (
             <li
-        className="border-y-2 list-none text-[2rem] py-5 m-3"
-        key={index + 1}
-      >
-        {/* title  */}
-        <div
-          className="flex justify-between cursor-pointer"
-          onClick={() => toggle(index)}
-        >
-          {index + 1}. {item.question}
-          <Image
-            className=""
-            src={open === index ? "/icons/minus.svg" : "/icons/plus.svg"}
-            alt="plusLogo"
-            width={50}
-            height={50}
-          />
-        </div>
+              className="border-y-2 list-none text-[2rem] py-5 m-3"
+              key={index + 1}
+            >
+              {/* title  */}
+              <div
+                className="flex justify-between cursor-pointer"
+                onClick={() => toggle(index)}
+              >
+                {index + 1}. {item.question}
+                <Image
+                  className=""
+                  src={open === index ? "/icons/minus.svg" : "/icons/plus.svg"}
+                  alt="plusLogo"
+                  width={50}
+                  height={50}
+                />
+              </div>
 
-        {/* answer  */}
-        <div
-          className={`text-[22px] text-justify answer ${open === index ? 'visible' : ''}`}
-          ref={(element) => {
-            if (element) {
-              element.style.maxHeight = open === index ? `${element.scrollHeight}px` : '0';
-            }
-          }}
-        >
-          {item.answer}
-        </div>
-      </li>
+              {/* answer  */}
+              <div
+                className={`text-[22px] text-justify answer ${
+                  open === index ? "visible" : ""
+                }`}
+                ref={(element) => {
+                  if (element) {
+                    element.style.maxHeight =
+                      open === index ? `${element.scrollHeight}px` : "0";
+                  }
+                }}
+              >
+                {item.answer}
+              </div>
+            </li>
           );
         })}
       </div>
