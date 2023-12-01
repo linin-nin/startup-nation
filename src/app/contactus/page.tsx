@@ -1,6 +1,5 @@
 "use client";
 
-import Emptybox from "@/components/Emptybox";
 import EmailContactus from "@/components/contactUs/Emailcontactus";
 import HeroContactus from "@/components/contactUs/HeroContactus";
 import Map from "@/components/contactUs/Map";
@@ -21,10 +20,9 @@ const ContactUs = () => {
           <ShowPath />
           <HeroContactus />
           <Map />
-          <EmailContactus />
-          <Emptybox />
-          <Footer />
         </div>
+        <EmailContactus />
+        <Footer />
       </div>
     </Smooth>
   );
