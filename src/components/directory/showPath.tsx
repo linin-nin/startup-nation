@@ -12,7 +12,7 @@ const ShowPath = () => {
     }
   }
   return (
-    <div className="container py-6 border-b-2 border-t-2 font-body padding-body">
+    <div className="container lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body">
       <div className="inline-block">
         <div className="flex justify-between gap-4">
           <Link href="/">
@@ -27,12 +27,12 @@ const ShowPath = () => {
           <h2 className="text-yellow-300 text-2xl">
             <Name />
           </h2>
-          <Image
+          {/* <Image
             src={"/icons/greater-then.svg"}
             alt="greater-than-icon"
             width={32}
             height={32}
-          />
+          /> */}
         </div>
       </div>
     </div>

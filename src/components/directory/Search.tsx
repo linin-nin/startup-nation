@@ -35,7 +35,7 @@ const Search = () => {
         {/* search */}
         <div className="px-5 w-full items-center md:py-8 flex border-2 border-white">
           <div className="flex justify-start w-full">
-            <div className="flex justify-center items-center">
+            <div className="flex pr-4 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
