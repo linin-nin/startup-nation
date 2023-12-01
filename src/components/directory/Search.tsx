@@ -10,10 +10,10 @@ const Search = () => {
   };
 
   return (
-    <section className="bg-black text-white pt-5 padding-body font-body">
-      <div className="md:flex justify-between gap-8 w-[100%] h-16 container">
+    <section className="bg-black text-white py-5 padding-body font-body">
+      <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px] container">
         {/* filter  */}
-        <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 mb-3 px-5 items-center">
+        <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
           <div className=" w-full text-2xl">filter project</div>
           <div className=" w-[7%]">
             <svg
@@ -33,9 +33,9 @@ const Search = () => {
           </div>
         </div>
         {/* search */}
-        <div className="px-5 w-full items-center md:py-8 flex border-2 border-white">
+        <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
           <div className="flex justify-start w-full">
-            <div className="flex justify-center items-center">
+            <div className="flex pr-4 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,7 +52,7 @@ const Search = () => {
               </svg>
             </div>
             {/* <div className="ml-4 bg-blue-700">search project</div> */}
-            <div className="w-full bg-red-500">
+            <div className="w-full">
               <input
                 type="text"
                 placeholder="search"

@@ -3,58 +3,49 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Socail } from "@/lib/navbarMenu";
+import { useState } from "react";
 
 const images = [
   {
-    img: "/image/business 03.jpg"
+    img: "/image/Rectangle 29.png"
   },
   {
-    img: "/image/business 04.jpg"
+    img: "/image/Rectangle 30.png"
   },
   {
-    img: "/image/business 05.jpg"
+    img: "/image/Rectangle 25.png"
   }
 ];
 
 const Info_detail = () => {
+
+  const [urlImage, seturlImage] = useState<number>(0)
+
   return (
     <main className="text-white bg-black flex justify-start py-8 padding-body">
-      <div className="container flex">
-        <div className="pr-5 w-[70%]">
-          <div className="flex">
-            <div className=" h-[416px] w-[644px] relative bg-cover bg-center">
+      <div className="container lg:flex">
+        <div className="lg:pr-5 lg:w-[70%] w-full">
+          <div className="md:flex">
+            <div className=" h-[416px] lg:w-full w-[100%] relative bg-cover bg-center">
               <Image
                 id="slide"
-                src={images[2].img}
+                src={images[urlImage].img}
                 fill
                 loading="lazy"
                 alt="image"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="ml-5">
-              <div className="cursor-pointer h-[196px] w-[196px] relative bg-cover bg-center mb-5">
-                <Image
-                  id="pic"
-                  src={images[0].img}
-                  fill
-                  loading="lazy"
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="cursor-pointer h-[196px] w-[196px] relative bg-cover bg-center">
-                <Image
-                  id="pic"
-                  src={images[1].img}
-                  fill
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
+            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2">
+              {images.map((item, index) => (
+                <div key={index} className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
+                  <Image onClick={() => seturlImage(index)} src={item.img} fill alt="image" className="w-full h-full object-cover"/>
+                </div>
+              ))}
             </div>
           </div>
-          <p className="w-[100%] mt-5">
+          <p className="w-[100%] my-5">
             What Is a Startup? The term startup refers to a company in the first
             stages of operations. Startups are founded by one or more
             entrepreneurs who want to develop a product or service for which
@@ -62,19 +53,21 @@ const Info_detail = () => {
           </p>
         </div>
         {/* -------------------Right-------------------- */}
-        <div className="border-l-2 border-white pl-5 w-[48%]">
-          <div className="border-2 border-white p-5">
+        <div className="lg:border-l-2 border-white lg:pl-5 lg:w-[48%] w-full">
+          <div className="border-2 border-white p-5 lg:block flex flex-col justify-center">
             <div className="flex justify-start">
               <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
                 <Image
-                  src="/image/serevuth.jpg"
+                  src="/image/business 09.jpg"
                   fill
                   alt="image"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="ml-3">
-                <h1 className="text-5xl bold">Dreamslab,co.LTD</h1>
+                <h1 className="md:text-4xl sm:text-3xl text-2xl bold">
+                  Dreamslab,co.LTD
+                </h1>
                 <p className="text-gray-500">
                   Develop the latest technology around the world
                 </p>

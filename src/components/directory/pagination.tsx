@@ -17,7 +17,7 @@ const Pagination = () => {
   };
   return (
     <main>
-      <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden">
+      <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
         {records.map((item) => (
           <div
@@ -33,7 +33,7 @@ const Pagination = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-3">
               <div className="">
                 <Link href="/startup-directory/detail">
                   <h2 className="text-2xl hover:underline hover:text-blue-400">
