@@ -16,23 +16,17 @@ const ShowPath = () => {
       <div className="inline-block">
         <div className="flex justify-between gap-4">
           <Link href="/">
-            <h2 className="text-2xl hover:underline">Home</h2>
+            <h2 className="sm:text-2xl text-[13px] hover:underline">Home</h2>
           </Link>
           <Image
             src={"/icons/greater-then.svg"}
             alt="greater-than-icon"
-            width={32}
-            height={32}
+            width={22}
+            height={22}
           />
-          <h2 className="text-yellow-300 text-2xl">
+          <h2 className="text-yellow-300 sm:text-2xl text-[13px]">
             <Name />
           </h2>
-          {/* <Image
-            src={"/icons/greater-then.svg"}
-            alt="greater-than-icon"
-            width={32}
-            height={32}
-          /> */}
         </div>
       </div>
     </div>

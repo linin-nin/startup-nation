@@ -1,4 +1,3 @@
-
 import dynamic from "next/dynamic";
 import ShareArrow from "./ShareArrow";
 

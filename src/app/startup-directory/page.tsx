@@ -16,7 +16,6 @@ const Page = () => {
           <Header />
         </div>
         <Hero />
-        <ShowPath />
         <Search />
         <div className="padding-body font-body">
           <Footer />

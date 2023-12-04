@@ -59,7 +59,7 @@ body {
 }
 
 .arrow .arrow-btn {
-  @apply rounded-full border-2 border-white bg-black hover:border-yellow-300;
+  @apply border-2 rounded-full p-5 mt-5;
 }
 
 .hide {
