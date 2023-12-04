@@ -26,7 +26,9 @@ const Search = () => {
               width={22}
               height={22}
             />
-            <h2 className="text-yellow-300 sm:text-2xl text-[13px]">Startup Directory</h2>
+            <h2 className="text-yellow-300 sm:text-2xl text-[13px]">
+              Startup Directory
+            </h2>
           </div>
         </div>
       </div>

@@ -36,7 +36,9 @@ const Info_detail = () => {
               height={22}
             />
             <Link href="/startup-directory">
-              <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">Startup Directory</h2>
+              <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">
+                Startup Directory
+              </h2>
             </Link>
             <Image
               src={"/icons/greater-then.svg"}
@@ -44,7 +46,9 @@ const Info_detail = () => {
               width={22}
               height={22}
             />
-            <h2 className="text-yellow-300 text-[13px] sm:text-2xl">DreamsLab,co.LTD</h2>
+            <h2 className="text-yellow-300 text-[13px] sm:text-2xl">
+              DreamsLab,co.LTD
+            </h2>
           </div>
         </div>
       </div>
