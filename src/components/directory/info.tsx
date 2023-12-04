@@ -18,8 +18,7 @@ const images = [
 ];
 
 const Info_detail = () => {
-
-  const [urlImage, seturlImage] = useState<number>(0)
+  const [urlImage, seturlImage] = useState<number>(0);
 
   return (
     <main className="text-white bg-black flex justify-start py-8 padding-body">
@@ -39,8 +38,17 @@ const Info_detail = () => {
             {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
             <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2">
               {images.map((item, index) => (
-                <div key={index} className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5">
-                  <Image onClick={() => seturlImage(index)} src={item.img} fill alt="image" className="w-full h-full object-cover"/>
+                <div
+                  key={index}
+                  className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5"
+                >
+                  <Image
+                    onClick={() => seturlImage(index)}
+                    src={item.img}
+                    fill
+                    alt="image"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               ))}
             </div>
