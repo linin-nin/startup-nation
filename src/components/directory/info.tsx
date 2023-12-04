@@ -7,25 +7,56 @@ import { useState } from "react";
 
 const images = [
   {
-    img: "/image/Rectangle 29.png"
+    img: "/image/office1.jpeg"
   },
   {
-    img: "/image/Rectangle 30.png"
+    img: "/image/office2.jpeg"
   },
   {
-    img: "/image/Rectangle 25.png"
+    img: "/image/office4.jpeg"
   }
 ];
 
 const Info_detail = () => {
-  const [urlImage, seturlImage] = useState<number>(0);
+
+  const [urlImage, seturlImage] = useState(0)
 
   return (
-    <main className="text-white bg-black flex justify-start py-8 padding-body">
+    <main>
+    {/*  Path route */}
+      <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body">
+      <div className="inline-block">
+        <div className="flex justify-between gap-4">
+          <Link href="/">
+            <h2 className="text-2xl hover:underline">Home</h2>
+          </Link>
+          <Image
+            src={"/icons/greater-then.svg"}
+            alt="greater-than-icon"
+            width={32}
+            height={32}
+          />
+          <Link href="/startup-directory">
+            <h2 className="text-2xl hover:underline">Startup Directory</h2>
+          </Link>
+          <Image
+            src={"/icons/greater-then.svg"}
+            alt="greater-than-icon"
+            width={32}
+            height={32}
+          />
+          <h2 className="text-yellow-300 text-2xl">
+            DreamsLab,co.LTD
+          </h2>
+        </div>
+      </div>
+      </div>
+
+    <div className="text-white bg-black flex justify-start py-8">
       <div className="container lg:flex">
         <div className="lg:pr-5 lg:w-[70%] w-full">
-          <div className="md:flex">
-            <div className=" h-[416px] lg:w-full w-[100%] relative bg-cover bg-center">
+          <div className="md:flex md:justify-start">
+            <div className="w-[100%] relative h-[386px]">
               <Image
                 id="slide"
                 src={images[urlImage].img}
@@ -36,19 +67,10 @@ const Info_detail = () => {
               />
             </div>
             {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
-            <div className="md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2">
+            <div className="md:block flex justify-center items-center md:pt-0 md:pl-5 pt-4">
               {images.map((item, index) => (
-                <div
-                  key={index}
-                  className="cursor-pointer md:h-[196px] h-[50px] w-[50px] md:w-[100%] relative bg-cover bg-center md:mb-5"
-                >
-                  <Image
-                    onClick={() => seturlImage(index)}
-                    src={item.img}
-                    fill
-                    alt="image"
-                    className="w-full h-full object-cover"
-                  />
+                <div key={index} className={`w-[120px] h-[120px] md:mb-3 overflow-hidden ${urlImage === index ? "opacity-100":"opacity-50"} md:mr-0 mr-3 relative`}>
+                  <Image onClick={() => seturlImage(index)} src={item.img} fill alt="image" className="w-full h-full object-cover"/>
                 </div>
               ))}
             </div>
@@ -161,6 +183,7 @@ const Info_detail = () => {
           </div>
         </div>
       </div>
+    </div>
     </main>
   );
 };

@@ -27,12 +27,6 @@ const ShowPath = () => {
           <h2 className="text-yellow-300 text-2xl">
             <Name />
           </h2>
-          {/* <Image
-            src={"/icons/greater-then.svg"}
-            alt="greater-than-icon"
-            width={32}
-            height={32}
-          /> */}
         </div>
       </div>
     </div>
