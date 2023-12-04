@@ -1,12 +1,12 @@
 "use client";
- 
+
 import { pages } from "@/lib/pages";
 import Image from "next/image";
 import { arrows } from "@/lib/pages";
 import { useState } from "react";
 
 const AboutUs = () => {
-  const [Slide, setSlide] = useState(0)
+  const [Slide, setSlide] = useState(0);
 
   return (
     <section>
@@ -15,7 +15,9 @@ const AboutUs = () => {
       </div>
       <div className="my-1">
         <div>
-          <h2 className="my-4 font-normal text-4xl">{pages[Slide].numPage}/04</h2>
+          <h2 className="my-4 font-normal text-4xl">
+            {pages[Slide].numPage}/04
+          </h2>
           <div className="page">
             <div className="relative">
               <div className="relative">
@@ -60,24 +62,30 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="arrow hide xl:mt-44">
-                <div onClick={() => setSlide(Slide - 1)} className="arrow-btn p-5 mt-5">
-                  <Image
-                    src={arrows[0].arrow}
-                    width={50}
-                    height={50}
-                    alt="arrow"
-                    className=""
-                  />
-                </div>
-                <div onClick={() => setSlide(Slide + 1)} className="arrow-btn p-5 mt-5">
-                  <Image
-                    src={arrows[1].arrow}
-                    width={50}
-                    height={50}
-                    alt="arrow"
-                    className=""
-                  />
-                </div>
+              <div
+                onClick={() => setSlide(Slide - 1)}
+                className="arrow-btn p-5 mt-5"
+              >
+                <Image
+                  src={arrows[0].arrow}
+                  width={50}
+                  height={50}
+                  alt="arrow"
+                  className=""
+                />
+              </div>
+              <div
+                onClick={() => setSlide(Slide + 1)}
+                className="arrow-btn p-5 mt-5"
+              >
+                <Image
+                  src={arrows[1].arrow}
+                  width={50}
+                  height={50}
+                  alt="arrow"
+                  className=""
+                />
+              </div>
             </div>
           </div>
         </div>
