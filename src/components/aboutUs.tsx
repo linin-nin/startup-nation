@@ -6,7 +6,7 @@ import { arrows } from "@/lib/pages";
 import { useState } from "react";
 
 const AboutUs = () => {
-  const [Slide, setSlide] = useState(0)
+  const [Slide, setSlide] = useState(0);
 
   return (
     <section>
@@ -15,7 +15,9 @@ const AboutUs = () => {
       </div>
       <div className="my-1">
         <div>
-          <h2 className="my-4 font-normal text-4xl">{pages[Slide].numPage}/04</h2>
+          <h2 className="my-4 font-normal text-4xl">
+            {pages[Slide].numPage}/04
+          </h2>
           <div className="page myscreen:pl-20">
             <div className="relative">
               <div className="relative">
@@ -71,7 +73,7 @@ const AboutUs = () => {
                 />
               </div>
               <div
-                key={arrows[1].arrow} 
+                key={arrows[1].arrow}
                 onClick={() => setSlide(Slide - 1)}
                 className="arrow-btn p-5 mt-5"
               >

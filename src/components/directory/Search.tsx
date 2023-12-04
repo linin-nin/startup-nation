@@ -16,19 +16,17 @@ const Search = () => {
       {/* Path Route */}
       <div className="container lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body padding-body">
         <div className="inline-block">
-          <div className="flex justify-between gap-4">
+          <div className="flex justify-between sm:gap-2 gap-[5px]">
             <Link href="/">
-              <h2 className="text-2xl hover:underline">Home</h2>
+              <h2 className="sm:text-2xl text-[13px] hover:underline">Home</h2>
             </Link>
             <Image
               src={"/icons/greater-then.svg"}
               alt="greater-than-icon"
-              width={32}
-              height={32}
+              width={22}
+              height={22}
             />
-            <h2 className="text-yellow-300 text-2xl">
-              Startup Directory
-            </h2>
+            <h2 className="text-yellow-300 sm:text-2xl text-[13px]">Startup Directory</h2>
           </div>
         </div>
       </div>
@@ -36,7 +34,7 @@ const Search = () => {
       <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px] container">
         {/* filter  */}
         <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
-          <div className=" w-full text-2xl">filter project</div>
+          <div className=" w-full sm:text-2xl text-13px]">filter project</div>
           <div className=" w-[7%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +76,7 @@ const Search = () => {
               <input
                 type="text"
                 placeholder="search"
-                className="w-[100%] outline-none text-2xl placeholder:text-2xl bg-black"
+                className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
               />
             </div>
             {/* button navigate */}
