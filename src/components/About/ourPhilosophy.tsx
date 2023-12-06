@@ -19,7 +19,7 @@ const OurPhilosophy = () => {
       </p>
       <div className="relative lg:h-[570px] md:h-[450px] sm:h-[400px] h-[300px] w-full my-3">
         <Image
-          src="/image/business 07.jpg"
+          src="/image/Rectangle 47.jpg"
           alt="image"
           fill
           className="object-cover w-full h-full"
