@@ -50,18 +50,18 @@ const HeroContactus = () => {
               </div>
 
               {/* answer  */}
-
               <div
-                className={`text-[22px] text-justify   
-              `}
+                className={`text-[22px] text-justify answer ${
+                  open === index ? "visible" : ""
+                }`}
+                ref={(element) => {
+                  if (element) {
+                    element.style.maxHeight =
+                      open === index ? `${element.scrollHeight}px` : "0";
+                  }
+                }}
               >
-                <div
-                  className={`answer ${
-                    open === index ? "pb-4" : "h-0 overflow-hidden"
-                  }`}
-                >
-                  {item.answer}
-                </div>
+                {item.answer}
               </div>
             </li>
           );
