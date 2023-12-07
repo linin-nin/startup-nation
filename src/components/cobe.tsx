@@ -14,7 +14,6 @@ const Earth: React.FC = () => {
       phi = (event.clientY / window.innerHeight) * Math.PI;
     };
 
-
     const globe = createGlobe(canvasRef.current!, {
       devicePixelRatio: 2,
       width: 600 * 2,
@@ -39,11 +38,11 @@ const Earth: React.FC = () => {
       }
     });
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       globe.destroy();
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
