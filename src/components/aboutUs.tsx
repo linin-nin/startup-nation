@@ -1,6 +1,7 @@
 "use client";
 
 import { pages } from "@/lib/pages";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { arrows } from "@/lib/pages";
 import { useState } from "react";
@@ -61,30 +62,40 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
+            {/* Arrow  */}
             <div className="arrow hide xl:mt-44">
               <div
                 onClick={() => setSlide(Slide - 1)}
                 className="arrow-btn p-5 mt-5"
               >
-                <Image
-                  src={arrows[0].arrow}
-                  width={50}
-                  height={50}
-                  alt="arrow"
-                  className=""
-                />
+                <motion.div
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -10, transition: { duration: 0.7 } }}
+                >
+                  <Image
+                    src={arrows[0].arrow}
+                    width={50}
+                    height={50}
+                    alt="arrow"
+                  />
+                </motion.div>
               </div>
               <div
                 onClick={() => setSlide(Slide + 1)}
-                className="arrow-btn p-5 mt-5"
+                className="arrow-btn p-5 mt-5 "
               >
-                <Image
-                  src={arrows[1].arrow}
-                  width={50}
-                  height={50}
-                  alt="arrow"
-                  className=""
-                />
+                <motion.div
+                  initial={{ y: 0 }}
+                  whileHover={{ y: 10, transition: { duration: 0.7 } }}
+                >
+                  <Image
+                    src={arrows[1].arrow}
+                    width={50}
+                    height={50}
+                    alt="arrow"
+                    className=""
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
