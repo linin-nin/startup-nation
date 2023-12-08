@@ -15,28 +15,54 @@ const Map = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <div className="absolute sm:block hidden w-[400px] h-auto bottom-[70px] left-[70px] gap-y-3 p-10  lg:text-2xl md:text-xl text-[20px] text-white bg-black">
-          <h2 className="pl-10 mb-5 md:text-3xl text-2xl">CONTACT INFORMATION</h2>
+        <div className="absolute sm:w-[400px] w-[250px] h-auto bottom-[70px] opacity-90 sm:left-[70px] left-[10px] gap-y-3 p-10  lg:text-2xl md:text-xl text-[20px] text-white bg-black">
+          <h2 className="md:pl-10 pl-2 mb-5 md:text-3xl text-2xl">
+            CONTACT INFORMATION
+          </h2>
           <div className="">
             <div className="mb-5 relative">
-              <div className="flex gap-3"><Image src="/icons/phone.svg" alt="icon" width={30} height={30}/>( 855 ) 77 637 779</div>
+              <div className="flex gap-3">
+                <Image
+                  src="/icons/phone.svg"
+                  alt="icon"
+                  width={30}
+                  height={30}
+                />
+                ( 855 ) 77 637 779
+              </div>
             </div>
             <div className="mb-5 relative">
-              <div className="flex gap-3"><Image src="/icons/mail.svg" alt="icon" width={30} height={30}/>Leang@gmail.com</div>
+              <div className="flex gap-3">
+                <Image
+                  src="/icons/mail.svg"
+                  alt="icon"
+                  width={30}
+                  height={30}
+                />
+                Leang@gmail.com
+              </div>
             </div>
             <div className="mb-5 relative">
-              <div className="flex gap-3"><Image src="/icons/map.svg" alt="icon" width={30} height={30}/>BUILDING #3, ST 39D,  ANLUNGKONG VILLAGE, PREYSAR DISTRICT,
-                  DANGKOR COMMUNE.</div>
+              <div className="flex gap-3 items-start">
+                <Image src="/icons/map.svg" alt="icon" width={30} height={30} />
+                BUILDING #3, ST 39D, ANLUNGKONG VILLAGE, PREYSAR DISTRICT,
+                DANGKOR COMMUNE.
+              </div>
             </div>
             <div className="border-t-2 mt-5 pt-5 flex justify-between ">
               {Socail.map((item) => (
                 <div key={item.logo}>
-                  <Image src={item.logo} alt="icon" width={40} height={40}/>
+                  <Image src={item.logo} alt="icon" width={40} height={40} />
                 </div>
               ))}
               <div>
-                  <Image src="/icons/youtubelight.svg" alt="icon" width={40} height={40}/>
-                </div>
+                <Image
+                  src="/icons/youtubelight.svg"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                />
+              </div>
             </div>
           </div>
         </div>
