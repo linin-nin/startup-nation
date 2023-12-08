@@ -27,7 +27,7 @@ const Earth: React.FC = () => {
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [1, 0.5, 1], // Customize marker color here
       glowColor: [0.9, 0.9, 0.9],
-      opacity: 0.5,
+      opacity: 0.1,
       offset: [0, 0],
       markers: [
         // longitude latitude

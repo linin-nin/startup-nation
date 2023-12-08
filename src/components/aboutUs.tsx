@@ -68,7 +68,10 @@ const AboutUs = () => {
                 onClick={() => setSlide(Slide - 1)}
                 className="arrow-btn p-5 mt-5"
               >
-                <motion.div initial={{y: 0}} whileHover={{y: -10, transition: {duration: 0.7}}}>
+                <motion.div
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -10, transition: { duration: 0.7 } }}
+                >
                   <Image
                     src={arrows[0].arrow}
                     width={50}
@@ -81,7 +84,10 @@ const AboutUs = () => {
                 onClick={() => setSlide(Slide + 1)}
                 className="arrow-btn p-5 mt-5 "
               >
-                <motion.div initial={{y: 0}} whileHover={{y: 10, transition: {duration: 0.7}}}>
+                <motion.div
+                  initial={{ y: 0 }}
+                  whileHover={{ y: 10, transition: { duration: 0.7 } }}
+                >
                   <Image
                     src={arrows[1].arrow}
                     width={50}
