@@ -14,16 +14,16 @@ const VideoContent = () => {
           {/* <video autoPlay muted loop className="w-full h-full object-cover">
             <source src="/image/vid1.mp4" type="video/mp4" />
           </video> */}
-            <div>
-              <ReactPlayer
-                url='/image/vid1.mp4'
-                playing
-                loop
-                muted
-                width='100%'
-                height='100%'
-              />
-            </div>
+          <div>
+            <ReactPlayer
+              url="/image/vid1.mp4"
+              playing
+              loop
+              muted
+              width="100%"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">
@@ -40,15 +40,15 @@ const VideoContent = () => {
             <source src="/image/vid2.mp4" type="video/mp4" />
           </video> */}
           <div>
-              <ReactPlayer
-                url='/image/vid2.mp4'
-                playing
-                loop
-                muted
-                width='1000px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid2.mp4"
+              playing
+              loop
+              muted
+              width="1000px"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">
@@ -65,15 +65,15 @@ const VideoContent = () => {
             <source src="/image/vid3.mp4" type="video/mp4" />
           </video> */}
           <div>
-              <ReactPlayer
-                url='/image/vid3.mp4'
-                playing
-                loop
-                muted
-                width='1000px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid3.mp4"
+              playing
+              loop
+              muted
+              width="1000px"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">
@@ -94,15 +94,15 @@ const VideoContent = () => {
             <source src="/image/vid4.mp4" type="video/mp4" />
           </video> */}
           <div>
-              <ReactPlayer
-                url='/image/vid4.mp4'
-                playing
-                loop
-                muted
-                width='1260px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid4.mp4"
+              playing
+              loop
+              muted
+              width="1260px"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">
@@ -119,15 +119,15 @@ const VideoContent = () => {
             <source src="/image/vid5.mp4" type="video/mp4" />
           </video> */}
           <div>
-              <ReactPlayer
-                url='/image/vid5.mp4'
-                playing
-                loop
-                muted
-                width='1270px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid5.mp4"
+              playing
+              loop
+              muted
+              width="1270px"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">
@@ -144,15 +144,15 @@ const VideoContent = () => {
             <source src="/image/vid6.mp4" type="video/mp4" />
           </video> */}
           <div>
-              <ReactPlayer
-                url='/image/vid6.mp4'
-                playing
-                loop
-                muted
-                width='1270px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid6.mp4"
+              playing
+              loop
+              muted
+              width="1270px"
+              height="100%"
+            />
+          </div>
 
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
@@ -167,15 +167,15 @@ const VideoContent = () => {
         </div>
         <div className="box overflow-hidden bg-slate-300 h-[708px] border-2 border-white relative">
           <div>
-              <ReactPlayer
-                url='/image/vid7.mp4'
-                playing
-                loop
-                muted
-                width='1300px'
-                height='100%'
-              />
-            </div>
+            <ReactPlayer
+              url="/image/vid7.mp4"
+              playing
+              loop
+              muted
+              width="1300px"
+              height="100%"
+            />
+          </div>
           <div className="content hover:opacity-100 p-5">
             <h1 className="title">Dreamslab</h1>
             <p className="paragraph">

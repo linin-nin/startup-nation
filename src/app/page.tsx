@@ -25,13 +25,13 @@ export default function Home() {
 
   return (
     <main className="container padding-body font-body">
-      <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
+      {/* <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence> */}
       <Smooth>
         <div>
-          <Header />
-          <MarqueeComponent />
-          <Hero />
-          <VideoContent />
+          {/* <Header /> */}
+          {/* <MarqueeComponent /> */}
+          {/* <Hero /> */}
+          {/* <VideoContent /> */}
           <AboutUs />
           <Footer />
         </div>
