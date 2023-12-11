@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Socail } from "@/lib/navbarMenu";
 
-const Map = () => {
+const GoogleMap = () => {
   return (
     <div className="container">
       {/* google map  */}
@@ -71,4 +71,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default GoogleMap;

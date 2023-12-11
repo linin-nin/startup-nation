@@ -2,7 +2,7 @@
 
 import EmailContactus from "@/components/contactUs/Emailcontactus";
 import HeroContactus from "@/components/contactUs/HeroContactus";
-import Map from "@/components/contactUs/Map";
+import GoogleMap from "@/components/contactUs/Map";
 import ShowPath from "@/components/directory/showPath";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/Header";
@@ -19,7 +19,7 @@ const ContactUs = () => {
         <div className="padding-body font-body">
           <ShowPath />
           <HeroContactus />
-          <Map />
+          <GoogleMap />
         </div>
         <EmailContactus />
         <Footer />
