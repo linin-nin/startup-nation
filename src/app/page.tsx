@@ -28,10 +28,10 @@ export default function Home() {
       {/* <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence> */}
       <Smooth>
         <div>
-          {/* <Header /> */}
-          {/* <MarqueeComponent /> */}
-          {/* <Hero /> */}
-          {/* <VideoContent /> */}
+          <Header />
+          <MarqueeComponent />
+          <Hero />
+          <VideoContent />
           <AboutUs />
           <Footer />
         </div>
