@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShareArrow = ({url}:{url:string}) => {
+const ShareArrow = ({ url }: { url: string }) => {
   return (
     <a href={url}>
       <div className="absolute top-0 right-0 m-3 rounded-full p-2 border-[2px] border-white">

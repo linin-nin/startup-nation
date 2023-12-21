@@ -15,12 +15,9 @@ const AboutUs = () => {
         <h1 className="title border-t-2 border-b-2 py-3">We provide</h1>
       </div>
       <div className="flex justify-between">
-
         {/* slide */}
         <div className="">
-          <h2 className="title">
-            {pages[Slide].numPage}/04
-          </h2>
+          <h2 className="title">{pages[Slide].numPage}/04</h2>
           <div className="relative pl-[150px]">
             <div className="relative">
               <div className="relative border-2 xl:w-[1100px] lg:w-[1000px] h-[530px] border-white mr-16 max-xl:mr-0    ">
