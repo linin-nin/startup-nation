@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SideBar from "./SideBar";
-import MarqueeComponent from "../animationMarquee/MarqueeComponent";
+import { Button, buttonVariants } from "../ui/button";
 
 const Header = () => {
   const [mode, setmode] = useState(false);
@@ -10,13 +10,13 @@ const Header = () => {
     setmode(true);
     console.log(mode);
   };
-
+  // button-style text-[10px] font-bold sm:text-[20px] rounded-none
   return (
     <header className="container font-body pb-3 border-white sticky border-b-2 top-0 bg-black z-[99]">
       <nav className=" flex justify-between items-center">
-        <button className="button-style text-[10px] font-bold sm:text-[20px]">
+        <Button className={buttonVariants({className: "button-style py-3 text-[10px] font-bold sm:text-[20px] rounded-none"})}>
           Apply
-        </button>
+        </Button>
         <div className="logo">
           <Image
             src="/icons/logo.svg"

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Teko } from "next/font/google";

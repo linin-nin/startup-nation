@@ -6,6 +6,7 @@ import VideoContent from "@/components/VideoContent";
 import AboutUs from "@/components/aboutUs";
 import Footer from "@/components/footer/footer";
 import Smooth from "@/components/smoothScroll";
+import Container from "@/components/common/container";
 import Prelanding from "@/components/preloading/PreLoading";
 import { AnimatePresence } from "framer-motion";
 import MarqueeComponent from "@/components/animationMarquee/MarqueeComponent";
@@ -24,7 +25,7 @@ export default function Home() {
   });
 
   return (
-    <main className="container padding-body font-body">
+    <Container>
       {/* <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence> */}
       <Smooth>
         <div>
@@ -36,6 +37,6 @@ export default function Home() {
           <Footer />
         </div>
       </Smooth>
-    </main>
+    </Container>
   );
 }

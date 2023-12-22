@@ -4,7 +4,6 @@ import React from "react";
 import Smooth from "@/components/smoothScroll";
 import Hero from "@/components/directory/directory";
 import Header from "@/components/header/Header";
-import ShowPath from "@/components/directory/showPath";
 import Search from "@/components/directory/Search";
 import Footer from "@/components/footer/footer";
 
