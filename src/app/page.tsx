@@ -31,7 +31,7 @@ export default function Home() {
           <Header />
           <MarqueeComponent />
           <Hero />
-          <VideoContent />
+          {/* <VideoContent /> */}
           <AboutUs />
           <Footer />
         </div>
