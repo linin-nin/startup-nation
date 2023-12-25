@@ -1,12 +1,18 @@
-import { cn } from '@/lib/utils/utils'
-import React, { ReactNode } from 'react'
+import { cn } from "@/lib/utils/utils";
+import React, { ReactNode } from "react";
 
-const Container = ({className, children}:{className?: string, children: ReactNode}) => {
+const Container = ({
+  className,
+  children
+}: {
+  className?: string;
+  children: ReactNode;
+}) => {
   return (
     <div className={cn("bg-black container padding-body font-body", className)}>
-        {children}
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;

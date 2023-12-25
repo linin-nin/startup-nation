@@ -1,11 +1,19 @@
 import { cn } from "@/lib/utils/utils";
 
-const Input = ({className, text, placeholder}:{className?: string, text:string, placeholder:string}) => {
+const Input = ({
+  className,
+  text,
+  placeholder
+}: {
+  className?: string;
+  text: string;
+  placeholder: string;
+}) => {
   return (
     <input
       type={text}
       placeholder={placeholder}
-      className={cn('input outline-none', className)}
+      className={cn("input outline-none", className)}
     />
   );
 };
