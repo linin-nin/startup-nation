@@ -30,7 +30,7 @@ const VideoContent = async () => {
           >
             <div>
               <ReactPlayer
-                url={`/image/${items.video_url}`}
+                url={`https://startupnation.panel.dreamslab.dev/assets/${items.video_url}`}
                 playing
                 loop
                 muted
@@ -48,8 +48,8 @@ const VideoContent = async () => {
       </div>
 
       {/* layout 2 */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
-        {data.slice(2).map((items, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 lg:grid-cols-2">
+        {data.slice(3, 6).map((items, index) => (
           <div
             key={index}
             className="box overflow-hidden bg-slate-300 h-[708px] border-2 border-white relative"

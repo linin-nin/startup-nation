@@ -1,4 +1,7 @@
 "use client";
+import { Socail } from "@/lib/navbarMenu";
+import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/header/Header";
 import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
@@ -26,17 +29,19 @@ export default function Home() {
 
   return (
     <Container>
-      {/* <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence> */}
-      <Smooth>
-        <div>
-          <Header />
-          <MarqueeComponent />
-          <Hero />
-          {/* <VideoContent /> */}
-          <AboutUs />
-          <Footer />
-        </div>
-      </Smooth>
+      {/* <AnimatePresence>
+        {isLoading && <Prelanding />}
+      </AnimatePresence> */}
+      <div>
+        <Header />
+        <MarqueeComponent />
+        {/* <Hero cover="/image/directory.gif" title="A Centaur of Asia" content="Develop to be a centron hub of startup in Southeast Asiangion"> */}
+
+        <Hero />
+        <VideoContent />
+        <AboutUs />
+        <Footer />
+      </div>
     </Container>
   );
 }
