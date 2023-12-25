@@ -12,7 +12,7 @@ const Header = () => {
   };
   // button-style text-[10px] font-bold sm:text-[20px] rounded-none
   return (
-    <header className="container font-body pb-3 border-white sticky border-b-2 top-0 bg-black z-[99]">
+    <header className="font-body pb-3 border-white sticky border-b-2 top-0 bg-black z-[99]">
       <nav className=" flex justify-between items-center">
         <Button
           className={buttonVariants({

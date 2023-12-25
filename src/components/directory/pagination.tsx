@@ -17,7 +17,7 @@ const Pagination = () => {
   };
   return (
     <main>
-      <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
         {records.map((item) => (
           <div

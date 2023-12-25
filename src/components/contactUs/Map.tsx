@@ -4,7 +4,7 @@ import { Socail } from "@/lib/navbarMenu";
 
 const GoogleMap = () => {
   return (
-    <div className="container">
+    <div className="">
       {/* google map  */}
       <div className=" relative">
         <iframe

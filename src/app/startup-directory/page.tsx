@@ -6,19 +6,20 @@ import Hero from "@/components/directory/directory";
 import Header from "@/components/header/Header";
 import Search from "@/components/directory/Search";
 import Footer from "@/components/footer/footer";
+import Container from "@/components/common/container";
 
 const Page = () => {
   return (
     <Smooth>
       <div>
-        <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
+        <Container className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
           <Header />
-        </div>
+        </Container>
         <Hero />
         <Search />
-        <div className="padding-body font-body">
-          <Footer />
-        </div>
+        <Container>
+          <Footer/>
+        </Container>
       </div>
     </Smooth>
   );
