@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
-import Image from "next/image";
+
 import { Cards } from "@/lib/card-directory";
 import CompanyCard from "../ui/CompanyCard";
-import Link from "next/link";
 import { directusClient } from "@/lib/directus_client";
 import { readItems } from "@directus/sdk";
 import { Media } from "@/lib/utils/media";
+import { useRouter } from "next/router";
 
 const Data = () => {
   return directusClient.request(
@@ -18,19 +16,26 @@ const Data = () => {
 
 const Pagination = async () => {
   const data = await Data();
-  console.log(data);
+  // const router = useRouter()
+
+  // const handleClick = () => {
+  //   // router.push(`/startup-directory/${data?.id}`)
+  // }
+
+
   return (
     <main>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
         {data.map((item) => (
           <div key={item.id}>
-            <CompanyCard 
-              id={item.id} 
-              img_url={Media(item.logo_url)} 
-              company_name={item.company_name} 
-              founded_date={item.founded_date} 
-              slug={item.slug}/>
+            <CompanyCard
+              id={item.id}
+              img_url={Media(item.logo_url)}
+              company_name={item.company_name}
+              founded_date={item.founded_date}
+              slug={item.slug}
+            />
           </div>
         ))}
       </div>
