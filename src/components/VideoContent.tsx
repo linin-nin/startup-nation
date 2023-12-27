@@ -15,7 +15,6 @@ const Data = () => {
 
 const VideoContent = async () => {
   const data = await Data();
-  console.log(data);
 
   return (
     <div>
