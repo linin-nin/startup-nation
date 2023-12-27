@@ -1,4 +1,3 @@
-
 import { Cards } from "@/lib/card-directory";
 import CompanyCard from "../ui/CompanyCard";
 import { directusClient } from "@/lib/directus_client";
@@ -16,23 +15,17 @@ const Data = () => {
 
 const Pagination = async () => {
   const data = await Data();
-  // const router = useRouter()
-
-  // const handleClick = () => {
-  //   // router.push(`/startup-directory/${data?.id}`)
-  // }
-
-
   return (
     <main>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
-        {data.map((item) => (
+        {data.splice(0, 9).map((item) => (
           <div key={item.id}>
             <CompanyCard
               id={item.id}
               img_url={Media(item.logo_url)}
               company_name={item.company_name}
+              subtitle={item.title}
               founded_date={item.founded_date}
               slug={item.slug}
             />

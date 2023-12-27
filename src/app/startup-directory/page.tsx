@@ -1,20 +1,22 @@
-import React from "react";
-import Header from "@/components/header/Header";
-import Search from "@/components/directory/Search";
-import Footer from "@/components/footer/footer";
 import Container from "@/components/common/container";
+import Header from "@/components/header/Header";
+import Hero from "@/components/common/hero";
+import Footer from "@/components/footer/footer";
+import Search from "@/components/directory/Search";
 
 const Page = () => {
   return (
-    <div>
-      {/* <Container className=" bg-black padding-body right-0 left-0 sticky top-0 z-50">
-        <Header />
-      </Container> */}
+    <Container>
+      <Header />
+      <Hero
+        cover="/image/la.gif"
+        title="Startup Directory"
+        subtitle="Lorem ipsum dolor sit amet consectetur. Venenatis nec sodales
+        semper nec rhoncus leo arcu ultricies tincidunt."
+      />
       <Search />
-      {/* <Container>
-        <Footer />
-      </Container> */}
-    </div>
+      <Footer />
+    </Container>
   );
 };
 

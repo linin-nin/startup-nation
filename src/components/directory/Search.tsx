@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Pagination from "./pagination";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,11 +7,6 @@ import Container from "../common/container";
 import { useState } from "react";
 
 const Search = () => {
-  const [pages, setpages] = useState(1);
-  const handleChange = (e: React.ChangeEvent<unknown>, p: number) => {
-    setpages(p);
-  };
-
   return (
     <Container className="bg-black text-white py-5 font-body">
       {/* Path Route */}

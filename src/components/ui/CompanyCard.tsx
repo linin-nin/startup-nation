@@ -7,6 +7,7 @@ interface CardProps {
   slug: string;
   img_url: string;
   company_name: string;
+  subtitle: string;
   founded_date: string;
   id: number;
 }
@@ -16,6 +17,7 @@ const CompanyCard = ({
   slug,
   img_url,
   company_name,
+  subtitle,
   founded_date,
   id
 }: CardProps) => {
@@ -34,15 +36,25 @@ const CompanyCard = ({
         />
       </div>
       <div className="flex justify-between mt-3">
-        <div className="">
-          <div>
-            <h2 className="text-2xl hover:underline hover:text-blue-400">
-              {company_name}
-            </h2>
-          </div>
-          <p>{founded_date}</p>
+        <div>
+          <h2 className="text-2xl hover:underline hover:text-blue-400">
+            {company_name}
+          </h2>
+          <p>{subtitle}</p>
+          <p>{`Founded: ${founded_date}`}</p>
         </div>
-        <p>0{id}/100</p>
+        <div className="flex flex-col">
+          <div className="h-[46px] w-[46px] mb-5">
+            <Image
+              src={img_url}
+              alt="image"
+              width={36}
+              height={36}
+              className="h-full w-full rounded-full object-cover"
+            />
+          </div>
+          <p className="bottom-0">0{id}/100</p>
+        </div>
       </div>
     </Link>
   );
