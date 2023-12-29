@@ -1,20 +1,38 @@
-"use client";
+// "use client";
 import Pagination from "./pagination";
+import Link from "next/link";
+import Image from "next/image";
+import Container from "../common/container";
 
 import { useState } from "react";
 
 const Search = () => {
-  const [pages, setpages] = useState(1);
-  const handleChange = (e: React.ChangeEvent<unknown>, p: number) => {
-    setpages(p);
-  };
-
   return (
-    <section className="bg-black text-white pt-5 padding-body font-body">
-      <div className="md:flex justify-between gap-8 w-[100%] h-16 container">
+    <Container className="bg-black text-white py-5 font-body">
+      {/* Path Route */}
+      <div className="lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body">
+        <div className="inline-block">
+          <div className="flex justify-between sm:gap-2 gap-[5px]">
+            <Link href="/">
+              <h2 className="sm:text-2xl text-[13px] hover:underline">Home</h2>
+            </Link>
+            <Image
+              src={"/icons/greater-then.svg"}
+              alt="greater-than-icon"
+              width={22}
+              height={22}
+            />
+            <h2 className="text-yellow-300 sm:text-2xl text-[13px]">
+              Startup Directory
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
         {/* filter  */}
-        <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 mb-3 px-5 items-center">
-          <div className=" w-full text-2xl">filter project</div>
+        <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
+          <div className=" w-full sm:text-2xl text-13px]">filter project</div>
           <div className=" w-[7%]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,9 +51,9 @@ const Search = () => {
           </div>
         </div>
         {/* search */}
-        <div className="px-5 w-full items-center md:py-8 flex border-2 border-white">
+        <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
           <div className="flex justify-start w-full">
-            <div className="flex justify-center items-center">
+            <div className="flex pr-4 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,11 +70,11 @@ const Search = () => {
               </svg>
             </div>
             {/* <div className="ml-4 bg-blue-700">search project</div> */}
-            <div className="w-full bg-red-500">
+            <div className="w-full">
               <input
                 type="text"
                 placeholder="search"
-                className="w-[100%] outline-none text-2xl placeholder:text-2xl bg-black"
+                className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
               />
             </div>
             {/* button navigate */}
@@ -98,7 +116,7 @@ const Search = () => {
         </div>
       </div>
       <Pagination />
-    </section>
+    </Container>
   );
 };
 

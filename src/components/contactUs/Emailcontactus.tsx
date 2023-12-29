@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "@/ui/input";
+import Input from "@/components/ui/input";
 
 const EmailContactus = () => {
   return (
@@ -25,11 +25,19 @@ const EmailContactus = () => {
             <span className="text-[24px] font-normal mb-3 text-black">
               EMAIL
             </span>
-            <Input text="email" placeholder="Enter your email" />
+            <Input
+              text="email"
+              placeholder="Enter your email"
+              className="bg-black text-2xl"
+            />
             <span className="text-[24px] font-normal mb-3 text-black">
               PHONE
             </span>
-            <Input text="text" placeholder="Enter phone number" />
+            <Input
+              text="text"
+              placeholder="Enter phone number"
+              className="bg-black text-2xl"
+            />
             <button
               type="submit"
               className="bg-black border-2 border-white text-white w-full text-center font-bold p-3 mt-4 text-[22px]"

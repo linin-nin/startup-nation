@@ -59,7 +59,7 @@ body {
 }
 
 .arrow .arrow-btn {
-  @apply rounded-full border-2 border-white bg-black hover:border-yellow-300;
+  @apply border-2 rounded-full p-5 mt-5;
 }
 
 .hide {
@@ -67,7 +67,7 @@ body {
 }
 
 .input {
-  @apply bg-black border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
+  @apply  border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
 }
 
 /* text size part  */

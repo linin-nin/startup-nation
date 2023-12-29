@@ -1,7 +1,7 @@
 export const pages = [
   {
     numPage: "01",
-    coverImage: "/image/cover1.png",
+    coverImage: "/image/office1.jpeg",
     slideTitle: "Working Space",
     benifit: [
       {
@@ -14,7 +14,7 @@ export const pages = [
   },
   {
     numPage: "02",
-    coverImage: "/image/cover2.png",
+    coverImage: "/image/office2.jpeg",
     slideTitle: "Working Space",
     benifit: [
       {
@@ -33,7 +33,7 @@ export const pages = [
   },
   {
     numPage: "03",
-    coverImage: "/image/cover3.png",
+    coverImage: "/image/office3.jpeg",
     slideTitle: "Working Space",
     benifit: [
       {
@@ -52,7 +52,7 @@ export const pages = [
   },
   {
     numPage: "04",
-    coverImage: "/image/cover4.png",
+    coverImage: "/image/office4.jpeg",
     slideTitle: "Working Space",
     benifit: [
       {

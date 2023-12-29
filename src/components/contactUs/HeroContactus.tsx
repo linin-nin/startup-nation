@@ -15,7 +15,7 @@ const HeroContactus = () => {
   };
 
   return (
-    <div className="container">
+    <div className="">
       <h1 className="text-[44px] py-6 md:text-[4rem] ">
         Get in Touch and Watch Your Digital Dreams <br />
         Come to Life

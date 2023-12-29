@@ -1,54 +1,39 @@
-import { useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
-import Image from "next/image";
 import { Cards } from "@/lib/card-directory";
-import Link from "next/link";
+import CompanyCard from "../ui/CompanyCard";
+import { directusClient } from "@/lib/directus_client";
+import { readItems } from "@directus/sdk";
+import { Media } from "@/lib/utils/media";
+import { useRouter } from "next/router";
 
-const Pagination = () => {
-  const [pageCount, setPageCount] = useState(1);
-  let limit = 9;
-  const records = Cards.slice(0, 9);
-  useEffect(() => {
-    setPageCount(Math.ceil(Cards.length / limit));
-  }, [limit]);
+const Data = () => {
+  return directusClient.request(
+    readItems("Startups", {
+      fields: ["*"]
+    })
+  );
+};
 
-  const onclickChange = () => {
-    console.log("");
-  };
+const Pagination = async () => {
+  const data = await Data();
   return (
     <main>
-      <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
-        {records.map((item) => (
-          <div
-            key={item.id}
-            className="relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px] before:top-0 before:left-[-17px]"
-          >
-            <div className="h-[416px] ">
-              <Image
-                src={item.img}
-                alt="image"
-                width={416}
-                height={416}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="flex justify-between">
-              <div className="">
-                <Link href="/startup-directory/detail">
-                  <h2 className="text-2xl hover:underline hover:text-blue-400">
-                    {item.name}
-                  </h2>
-                </Link>
-                <p>{item.date}</p>
-              </div>
-              <p>0{item.id}/100</p>
-            </div>
+        {data.splice(0, 9).map((item) => (
+          <div key={item.id}>
+            <CompanyCard
+              id={item.id}
+              img_url={Media(item.logo_url)}
+              company_name={item.company_name}
+              subtitle={item.title}
+              founded_date={item.founded_date}
+              slug={item.slug}
+            />
           </div>
         ))}
       </div>
       {/* ---Pagination--- */}
-      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
+      {/* <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
         <div>1 -6 from 100</div>
         <ReactPaginate
           previousLabel={"<"}
@@ -63,7 +48,7 @@ const Pagination = () => {
           activeClassName="bg-gray-600"
         />
         <div>Show rows </div>
-      </div>
+      </div> */}
     </main>
   );
 };
