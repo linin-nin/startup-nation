@@ -31,9 +31,10 @@ const Detail = async ({ params }: Props) => {
     })
   );
   const imageUrls = startup[0]?.image_url ?? [];
-  const website = startup[0]?.website_url.startup_web_link;
-  const imag = imageUrls.map((item: any) => item.directus_files_id);
-  console.log(website);
+  const website = startup[0]?.website_url.startup_web_link
+  const founder = startup[0]?.founder
+  const imag = imageUrls.map((item:any) => item.directus_files_id);
+  console.log(founder?.social_link ?? [])
 
   return (
     <Container>
@@ -138,7 +139,7 @@ const Detail = async ({ params }: Props) => {
                   Website:{" "}
                   <Link href={website}>
                     <span className="text-white underline hover:text-yellow-500 cursor-pointer">
-                      Arbnb
+                      {website}
                     </span>
                   </Link>
                 </p>
@@ -167,19 +168,19 @@ const Detail = async ({ params }: Props) => {
               <div className="flex justify-start mb-3">
                 <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
                   <Image
-                    src="/image/serevuth.jpg"
+                    src={Media(founder.profile_img)}
                     fill
                     alt="image"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="ml-3">
-                  <p>San SereyVath</p>
+                  <p>{founder.full_name}</p>
                   <p>
                     Manager of{" "}
-                    <Link href="https://dreamslab.dev/">
+                    <Link href={website}>
                       <span className="text-white underline hover:text-yellow-500 cursor-pointer">
-                        Dreamslab.dev
+                        {startup[0].company_name}
                       </span>
                     </Link>
                   </p>
@@ -197,13 +198,7 @@ const Detail = async ({ params }: Props) => {
                   </div>
                 </div>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. At non id tellus ornare
-                placerat quam laoreet. In ipsum amet sapien risus sem augue
-                lorem vel. Euismod nunc lectus ut volutpat sodales sollicitudin.
-                Imperdiet tellus id porttitor lectus aliquet sed pretium integer
-                nam.
-              </p>
+              <p>{founder.contant}</p>
             </div>
           </div>
         </div>
