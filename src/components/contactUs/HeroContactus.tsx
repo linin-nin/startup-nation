@@ -54,6 +54,7 @@ const HeroContactus = () => {
                 className={`text-[22px] text-justify answer ${
                   open === index ? "visible" : ""
                 }`}
+                
                 ref={(element) => {
                   if (element) {
                     element.style.maxHeight =
