@@ -1,41 +1,21 @@
-"use client";
-import Header from "@/components/header/Header";
-import { useEffect, useState } from "react";
-import Hero from "@/components/Hero";
-import VideoContent from "@/components/VideoContent";
-import AboutUs from "@/components/aboutUs";
-import Footer from "@/components/footer/footer";
-import Smooth from "@/components/smoothScroll";
-import Prelanding from "@/components/preloading/PreLoading";
-import { AnimatePresence } from "framer-motion";
-import MarqueeComponent from "@/components/animationMarquee/MarqueeComponent";
+import React from "react";
+import { directusClient } from "@/lib/directus_client";
+import { readItems } from "@directus/sdk";
+import Home from "@/components/fetchVideo";
 
-export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = "default";
-        window.scrollTo(0, 0);
-      }, 1500);
-    })();
-  });
-
-  return (
-    <main className="container padding-body font-body">
-      <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
-      <Smooth>
-        <div>
-          <Header />
-          <MarqueeComponent />
-          <Hero />
-          <VideoContent />
-          <AboutUs />
-          <Footer />
-        </div>
-      </Smooth>
-    </main>
+const Test = async () => {
+  const startup = await directusClient.request(
+    readItems("Startups", {
+      fields: ["*"]
+    })
   );
-}
+
+  console.log(startup);
+  return (
+    <div>
+      <Home data={startup} />
+    </div>
+  );
+};
+
+export default Test;
