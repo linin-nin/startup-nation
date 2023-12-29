@@ -16,7 +16,13 @@ interface Props {
 const Detail = async ({ params }: Props) => {
   const startup = await directusClient.request(
     readItems("Startups", {
-      fields: ["*", {image_url: ['*']}, {category: ['*']}, {founder: ['*']}, {website_url: ['*']}],
+      fields: [
+        "*",
+        { image_url: ["*"] },
+        { category: ["*"] },
+        { founder: ["*"] },
+        { website_url: ["*"] }
+      ],
       filter: {
         slug: {
           _eq: params.name
@@ -25,13 +31,12 @@ const Detail = async ({ params }: Props) => {
     })
   );
   const imageUrls = startup[0]?.image_url ?? [];
-  const website = startup[0]?.website_url.startup_web_link
-  const imag = imageUrls.map((item:any) => item.directus_files_id);
-  console.log(website)
+  const website = startup[0]?.website_url.startup_web_link;
+  const imag = imageUrls.map((item: any) => item.directus_files_id);
+  console.log(website);
 
   return (
     <Container>
-
       {/* image slide */}
       <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body">
         <div className="inline-block">
@@ -80,19 +85,19 @@ const Detail = async ({ params }: Props) => {
               {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
               <div className="md:block flex justify-center items-center md:pt-0 md:pl-5 pt-4">
                 {/* {images.map((item, index) => ( */}
-                  <div
-                    // key={index}
-                    className={`w-[120px] h-[120px] md:mb-3 overflow-hidden 
+                <div
+                  // key={index}
+                  className={`w-[120px] h-[120px] md:mb-3 overflow-hidden 
                      md:mr-0 mr-3 relative`}
-                  >
-                    <Image
-                      // onClick={() => seturlImage(index)}
-                      src={Media(imag[1])}
-                      fill
-                      alt="image"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                >
+                  <Image
+                    // onClick={() => seturlImage(index)}
+                    src={Media(imag[1])}
+                    fill
+                    alt="image"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 {/* ))} */}
               </div>
             </div>
@@ -111,7 +116,9 @@ const Detail = async ({ params }: Props) => {
                   />
                 </div>
                 <div className="ml-3">
-                  <h1 className="md:text-4xl sm:text-3xl text-2xl bold">{startup[0].company_name}</h1>
+                  <h1 className="md:text-4xl sm:text-3xl text-2xl bold">
+                    {startup[0].company_name}
+                  </h1>
                   <p className="text-gray-500">{startup[0].title}</p>
                 </div>
               </div>
