@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Search = () => {
   return (
-    <Container className="bg-black text-white py-5 font-body">
+    <main className="bg-black text-white py-5 font-body">
       {/* Path Route */}
       <div className="lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body">
         <div className="inline-block">
@@ -116,7 +116,7 @@ const Search = () => {
         </div>
       </div>
       <Pagination />
-    </Container>
+    </main>
   );
 };
 

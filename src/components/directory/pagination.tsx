@@ -16,7 +16,7 @@ const Data = () => {
 const Pagination = async () => {
   const data = await Data();
   return (
-    <main>
+    <main className="">
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
         {data.splice(0, 9).map((item) => (
@@ -33,22 +33,16 @@ const Pagination = async () => {
         ))}
       </div>
       {/* ---Pagination--- */}
-      {/* <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
+      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
         <div>1 -6 from 100</div>
-        <ReactPaginate
-          previousLabel={"<"}
-          nextLabel={">"}
-          breakLabel={"..."}
-          pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={2}
-          onPageChange={onclickChange}
-          containerClassName="flex gap-5 text-2xl"
-          pageClassName="border-2 px-3 border-gray-600 hover:bg-gray-600"
-          activeClassName="bg-gray-600"
-        />
+        <div className="flex justify-between gap-10">
+          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">1</p>
+          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">2</p>
+          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">3</p>
+          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">4</p>
+        </div>
         <div>Show rows </div>
-      </div> */}
+      </div>
     </main>
   );
 };

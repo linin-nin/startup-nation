@@ -11,10 +11,10 @@ const AboutUs = () => {
 
   return (
     <section>
-      <div className="py-3 mt-4">
+      <div className="py-3 mt-4 ">
         <h1 className="title border-t-2 border-b-2 py-3">We provide</h1>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between mb-6">
         {/* slide */}
         <div className="">
           <h2 className="title">{pages[Slide].numPage}/04</h2>
