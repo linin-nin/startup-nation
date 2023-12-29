@@ -67,7 +67,7 @@ body {
 }
 
 .input {
-  @apply bg-black border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
+  @apply  border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
 }
 
 /* text size part  */

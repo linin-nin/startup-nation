@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Teko } from "next/font/google";
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${teko.className}`}>{children}</body>
+      <body className={cn("bg-black h-full", teko.className)}>{children}</body>
     </html>
   );
 }

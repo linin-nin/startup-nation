@@ -12,7 +12,7 @@ const ShowPath = () => {
     }
   }
   return (
-    <div className="container lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body">
+    <div className="lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body">
       <div className="inline-block">
         <div className="flex justify-between gap-4">
           <Link href="/">

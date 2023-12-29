@@ -1,8 +1,9 @@
 import React from "react";
+import Link from "next/link";
 
-const ShareArrow = () => {
+const ShareArrow = ({ url }: { url: string }) => {
   return (
-    <a href="https://www.youtube.com/watch?v=j5ApYIlR-xA&list=RDCMUCHjhFxSuvN6F2zPqaCk0Q3Q&start_radio=1&ab_channel=TosLeng-%E1%9E%8F%E1%9F%84%E1%9F%87%E1%9E%9B%E1%9F%81%E1%9E%84">
+    <a href={url}>
       <div className="absolute top-0 right-0 m-3 rounded-full p-2 border-[2px] border-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"

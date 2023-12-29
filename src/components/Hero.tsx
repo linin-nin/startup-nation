@@ -1,28 +1,9 @@
-"use client";
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Socail } from "@/lib/navbarMenu";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
 
 const Hero = () => {
-  const text = "A Centaur of Asia";
-
-  const defaultAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 200
-    },
-
-    visible: {
-      opacity: 1,
-      y: 0
-    }
-  };
-
-  const ref2 = useRef(null);
-  const isInView = useInView(ref2, { amount: 0.8, once: true });
-
   return (
     <section className="hero mb-7">
       <div className="w-full h-[610px] relative bg-cover bg-center">
@@ -80,5 +61,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;

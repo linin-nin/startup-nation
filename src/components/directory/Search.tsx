@@ -1,20 +1,16 @@
-"use client";
+// "use client";
 import Pagination from "./pagination";
 import Link from "next/link";
 import Image from "next/image";
+import Container from "../common/container";
 
 import { useState } from "react";
 
 const Search = () => {
-  const [pages, setpages] = useState(1);
-  const handleChange = (e: React.ChangeEvent<unknown>, p: number) => {
-    setpages(p);
-  };
-
   return (
-    <section className="bg-black text-white py-5 padding-body font-body">
+    <main className="bg-black text-white py-5 font-body">
       {/* Path Route */}
-      <div className="container lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body padding-body">
+      <div className="lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body">
         <div className="inline-block">
           <div className="flex justify-between sm:gap-2 gap-[5px]">
             <Link href="/">
@@ -33,7 +29,7 @@ const Search = () => {
         </div>
       </div>
 
-      <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px] container">
+      <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
         {/* filter  */}
         <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
           <div className=" w-full sm:text-2xl text-13px]">filter project</div>
@@ -120,7 +116,7 @@ const Search = () => {
         </div>
       </div>
       <Pagination />
-    </section>
+    </main>
   );
 };
 
