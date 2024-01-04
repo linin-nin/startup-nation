@@ -15,7 +15,6 @@ const Data = () => {
 
 const VideoContent = async () => {
   const data = await Data();
-
   return (
     <div>
       <h1 className="border-t-2 border-b-2 py-3 title">Side Project</h1>
@@ -33,8 +32,6 @@ const VideoContent = async () => {
                 playing
                 loop
                 muted
-                width="1000px"
-                height="100%"
               />
             </div>
             <div className="content hover:opacity-100 p-5">

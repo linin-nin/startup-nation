@@ -31,10 +31,10 @@ const Detail = async ({ params }: Props) => {
     })
   );
   const imageUrls = startup[0]?.image_url ?? [];
-  const website = startup[0]?.website_url.startup_web_link
-  const founder = startup[0]?.founder
-  const imag = imageUrls.map((item:any) => item.directus_files_id);
-  console.log(founder?.social_link ?? [])
+  const website = startup[0]?.website_url.startup_web_link;
+  const founder = startup[0]?.founder;
+  const imag = imageUrls.map((item: any) => item.directus_files_id);
+  console.log(founder?.social_link ?? []);
 
   return (
     <Container>
