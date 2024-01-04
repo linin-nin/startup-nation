@@ -17,7 +17,7 @@ const Pagination = async () => {
     <main className="">
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
-        {data.splice(0, 9).map((item) => (
+        {data.map((item) => (
           <div key={item.id}>
             <CompanyCard
               id={item.id}

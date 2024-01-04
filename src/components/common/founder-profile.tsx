@@ -1,19 +1,28 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Socail } from '@/lib/navbarMenu'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Socail } from "@/lib/navbarMenu";
 
 interface ProfileProps {
-  className?:string, 
-  profile_img:string,
-  name:string,
-  position:string,
-  company_web:string,
-  company_name:string,
-  content:string,
-  key:number
+  className?: string;
+  profile_img: string;
+  name: string;
+  position: string;
+  company_web: string;
+  company_name: string;
+  content: string;
+  key: number;
 }
-const Profile = ({className,key, profile_img, name, position, company_web, company_name, content}: ProfileProps) => {
+const Profile = ({
+  className,
+  key,
+  profile_img,
+  name,
+  position,
+  company_web,
+  company_name,
+  content
+}: ProfileProps) => {
   return (
     <div key={key}>
       <div className="flex justify-start mb-3">
@@ -38,12 +47,7 @@ const Profile = ({className,key, profile_img, name, position, company_web, compa
           <div className="flex justify-start gap-5 mt-[2px]">
             {Socail.map((item) => (
               <Link href={item.path} key={item.logo}>
-                <Image
-                  src={item.logo}
-                  alt="icon"
-                  width={20}
-                  height={20}
-                />
+                <Image src={item.logo} alt="icon" width={20} height={20} />
               </Link>
             ))}
           </div>
@@ -51,7 +55,7 @@ const Profile = ({className,key, profile_img, name, position, company_web, compa
       </div>
       <p>{content}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

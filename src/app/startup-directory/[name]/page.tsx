@@ -33,11 +33,11 @@ const Detail = async ({ params }: Props) => {
         { founder: ["*"] },
         { website_url: ["*"] }
       ],
-      // filter: {
-      //   slug: {
-      //     _eq: params.name
-      //   }
-      // }
+      filter: {
+        slug: {
+          _eq: params.name
+        }
+      }
     })
   );
 
@@ -47,7 +47,7 @@ const Detail = async ({ params }: Props) => {
   const imag = imageUrls.map((item: any) => item.directus_files_id);
   const category = startup[0].category;
   const categorys = category.map((item: any) => item.Category_id);
-  console.log(founder)
+  console.log(startup);
   return (
     <Container>
       <Header />
@@ -151,7 +151,7 @@ const Detail = async ({ params }: Props) => {
             </div>
             <h2 className="py-2 title">Founder</h2>
             <div>
-              {/* {founder.map((item:any) => (
+              {founder.map((item:any) => (
                 <Profile
                 key={item.id}
                 company_name={item.full_name}
@@ -161,7 +161,7 @@ const Detail = async ({ params }: Props) => {
                 name="Pon Sreynin"
                 profile_img="/image"                   
               />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
