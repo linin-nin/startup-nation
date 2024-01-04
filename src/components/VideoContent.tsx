@@ -18,12 +18,7 @@ const VideoContent = ({ data }: { data: any[] }) => {
             className="box overflow-hidden bg-slate-300 h-[555px] border-2 border-white relative sm:col-span-2 lg:col-span-1"
           >
             <div>
-              <ReactPlayer
-                url={Media(items.video_url)}
-                playing
-                loop
-                muted
-              />
+              <ReactPlayer url={Media(items.video_url)} playing loop muted />
             </div>
             <div className="content hover:opacity-100 p-5">
               <h1 className="title">{items.company_name}</h1>
