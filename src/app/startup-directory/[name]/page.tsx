@@ -6,7 +6,9 @@ import { readItems } from "@directus/sdk";
 import Image from "next/image";
 import { Socail } from "@/lib/navbarMenu";
 import Link from "next/link";
-
+import Footer from "@/components/footer/footer";
+import Header from "@/components/header/Header";
+import Slide from "@/components/common/slideImge";
 interface Props {
   params: {
     name: string;
@@ -19,7 +21,14 @@ const Detail = async ({ params }: Props) => {
       fields: [
         "*",
         { image_url: ["*"] },
-        { category: ["*"] },
+        {
+          category: [
+            "Category_id",
+            {
+              Category_id: ["*"]
+            }
+          ]
+        },
         { founder: ["*"] },
         { website_url: ["*"] }
       ],
@@ -30,14 +39,16 @@ const Detail = async ({ params }: Props) => {
       }
     })
   );
+
   const imageUrls = startup[0]?.image_url ?? [];
   const website = startup[0]?.website_url.startup_web_link;
   const founder = startup[0]?.founder;
   const imag = imageUrls.map((item: any) => item.directus_files_id);
-  console.log(founder?.social_link ?? []);
-
+  const category = startup[0].category;
+  const categorys = category.map((item: any) => item.Category_id);
   return (
     <Container>
+      <Header />
       {/* image slide */}
       <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body">
         <div className="inline-block">
@@ -63,45 +74,16 @@ const Detail = async ({ params }: Props) => {
               height={22}
             />
             <h2 className="text-yellow-300 text-[13px] sm:text-2xl">
-              DreamsLab,co.LTD
+              {startup[0].company_name}
             </h2>
           </div>
         </div>
       </div>
 
       <div className="text-white bg-black flex justify-start py-8">
-        <div className="container lg:flex">
+        <div className="lg:flex">
           <div className="lg:pr-5 lg:w-[70%] w-full">
-            <div className="md:flex md:justify-start">
-              <div className="w-[100%] relative h-[386px]">
-                <Image
-                  id="slide"
-                  src={Media(imag[0])}
-                  fill
-                  loading="lazy"
-                  alt="image"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
-              <div className="md:block flex justify-center items-center md:pt-0 md:pl-5 pt-4">
-                {/* {images.map((item, index) => ( */}
-                <div
-                  // key={index}
-                  className={`w-[120px] h-[120px] md:mb-3 overflow-hidden 
-                     md:mr-0 mr-3 relative`}
-                >
-                  <Image
-                    // onClick={() => seturlImage(index)}
-                    src={Media(imag[1])}
-                    fill
-                    alt="image"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* ))} */}
-              </div>
-            </div>
+            <Slide data={imag} />
             <p className="w-[100%] my-5">{startup[0].dirscription}</p>
           </div>
           {/* -------------------Right-------------------- */}
@@ -123,13 +105,15 @@ const Detail = async ({ params }: Props) => {
                   <p className="text-gray-500">{startup[0].title}</p>
                 </div>
               </div>
-              <div className="my-3">
-                <button className="px-4 py-2 bg-none border-2  hover:bg-white hover:text-black  border-white mr-3">
-                  Robot
-                </button>
-                <button className="px-4 py-2 bg-none border-2 hover:bg-white hover:text-black  border-white">
-                  Technology
-                </button>
+              <div className="my-3 flex justify-start">
+                {categorys.map((item: any) => (
+                  <p
+                    key={item.id}
+                    className="px-4 py-2 bg-none border-2  hover:bg-white hover:text-black  border-white mr-3"
+                  >
+                    {item.category_name}
+                  </p>
+                ))}
               </div>
               <div className="leading-9">
                 <p>{`Founded: ${startup[0].founded_date}`}</p>
@@ -177,9 +161,9 @@ const Detail = async ({ params }: Props) => {
                 <div className="ml-3">
                   <p>{founder.full_name}</p>
                   <p>
-                    Manager of{" "}
+                    {founder.founder_position} of{" "}
                     <Link href={website}>
-                      <span className="text-white underline hover:text-yellow-500 cursor-pointer">
+                      <span className="text-white hover:text-yellow-500 cursor-pointer">
                         {startup[0].company_name}
                       </span>
                     </Link>
@@ -203,6 +187,7 @@ const Detail = async ({ params }: Props) => {
           </div>
         </div>
       </div>
+      <Footer />
     </Container>
   );
 };
