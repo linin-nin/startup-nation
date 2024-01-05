@@ -1,6 +1,6 @@
 "use client";
 
-import Earth from "../cobe";
+import Earth from "../ui/cobe";
 
 const EarthMap = () => {
   return (
