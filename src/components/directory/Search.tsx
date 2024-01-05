@@ -1,12 +1,17 @@
-// "use client";
+"use client";
 import Pagination from "./pagination";
 import Link from "next/link";
 import Image from "next/image";
-import Container from "../common/container";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Search = () => {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    console.log(text);
+  }, [text]);
+
   return (
     <main className="bg-black text-white py-5 font-body">
       {/* Path Route */}
@@ -53,6 +58,7 @@ const Search = () => {
         {/* search */}
         <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
           <div className="flex justify-start w-full">
+            {/* search glass logo  */}
             <div className="flex pr-4 justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,9 +76,12 @@ const Search = () => {
               </svg>
             </div>
             {/* <div className="ml-4 bg-blue-700">search project</div> */}
+
+            {/* search form  */}
             <div className="w-full">
               <input
-                type="text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
                 placeholder="search"
                 className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
               />
@@ -115,6 +124,8 @@ const Search = () => {
           </div>
         </div>
       </div>
+
+      {/* directories card  */}
       <Pagination />
     </main>
   );

@@ -3,7 +3,8 @@ import { directusClient } from "@/lib/directus_client";
 import { readItems } from "@directus/sdk";
 import { Media } from "@/lib/utils/media";
 
-const Data = () => {
+// fetch data of startup
+const startupDirectories = () => {
   return directusClient.request(
     readItems("Startups", {
       fields: ["*"]
@@ -12,11 +13,14 @@ const Data = () => {
 };
 
 const Pagination = async () => {
-  const data = await Data();
+  // await for data
+  const data = await startupDirectories();
+  console.log(data);
   return (
     <main className="">
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 overflow-hidden ">
         {/* card content  */}
+        {/* this show 9 card per page */}
         {data.splice(0, 9).map((item) => (
           <div key={item.id}>
             <CompanyCard

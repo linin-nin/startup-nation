@@ -10,7 +10,6 @@ const Test = async () => {
     })
   );
 
-  console.log(startup);
   return (
     <div>
       <Home data={startup} />
