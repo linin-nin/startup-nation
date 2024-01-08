@@ -1,8 +1,10 @@
-import CompanyCard from "../ui/CompanyCard";
+import CompanyCard from "@/components/ui/CompanyCard";
 import { directusClient } from "@/lib/directus_client";
 import { readItems } from "@directus/sdk";
 import { Media } from "@/lib/utils/media";
-import Grid from "../common/gridStyle";
+import Grid from "@/components/common/gridStyle";
+import Container from "@/components/common/container";
+import Search from "./search";
 
 const Data = () => {
   return directusClient.request(
@@ -15,7 +17,8 @@ const Data = () => {
 const Pagination = async () => {
   const data = await Data();
   return (
-    <main className="">
+    <Container className="">
+        <Search/>
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
         {/* card content  */}
         {data.splice(0,9).map((item) => (
@@ -51,7 +54,7 @@ const Pagination = async () => {
         </div>
         <div>Show rows </div>
       </div>
-    </main>
+    </Container>
   );
 };
 

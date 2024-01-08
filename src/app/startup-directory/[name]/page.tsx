@@ -150,7 +150,7 @@ const Detail = async ({ params }: Props) => {
               </div>
             </div>
             <h2 className="py-2 title">Founder</h2>
-            <div>
+            {/* <div>
               {founder.map((item: any) => (
                 <Profile
                   key={item.id}
@@ -162,7 +162,7 @@ const Detail = async ({ params }: Props) => {
                   profile_img="/image"
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
