@@ -1,10 +1,10 @@
 import CompanyCard from "@/components/ui/CompanyCard";
 import { directusClient } from "@/lib/directus_client";
 import { readItems } from "@directus/sdk";
+import Search from "./search";
 import { Media } from "@/lib/utils/media";
 import Grid from "@/components/common/gridStyle";
-import Container from "@/components/common/container";
-import Search from "./search";
+import Link from "next/link";
 
 const Data = () => {
   return directusClient.request(
@@ -14,14 +14,75 @@ const Data = () => {
   );
 };
 
-const Pagination = async () => {
+interface SearchProps {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+const Pagination = async ({searchParams}:SearchProps) => {
+  
+  const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
+  const limit = typeof searchParams.limit === 'string' ? Number(searchParams.limit) : 10
+
+  const search = typeof searchParams.search === 'string' ? searchParams.search : undefined
+
   const data = await Data();
+
   return (
-    <Container className="">
-      <Search />
+    <main className="">
+      <Search/>
+      <div className="flex">
+              <Link
+              href={{
+                pathname: '/direcctory',
+                query: {
+                  ...(search ? {search}: {}),
+                  page: page > 1 ? page - 1 : 1
+                }
+              }}
+              className="pl-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </Link>
+              <Link
+              href={{
+                pathname: '/directory',
+                query: {
+                  ...(search ? {search} : {}),
+                  page: page + 1
+                }
+              }}
+              className="pl-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </Link>
+            </div>
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
         {/* card content  */}
-        {data.splice(0, 9).map((item) => (
+        {data.map((item) => (
           <div key={item.id}>
             <CompanyCard
               id={item.id}
@@ -35,26 +96,7 @@ const Pagination = async () => {
         ))}
       </Grid>
 
-      {/* ---Pagination--- */}
-      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400 container ">
-        <div>1 -6 from 100</div>
-        <div className="flex justify-between gap-10">
-          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">
-            1
-          </p>
-          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">
-            2
-          </p>
-          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">
-            3
-          </p>
-          <p className="border-2 py-2 px-5 hover:bg-gray-800 cursor-pointer">
-            4
-          </p>
-        </div>
-        <div>Show rows </div>
-      </div>
-    </Container>
+    </main>
   );
 };
 

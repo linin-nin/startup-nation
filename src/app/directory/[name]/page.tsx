@@ -64,7 +64,7 @@ const Detail = async ({ params }: Props) => {
               width={22}
               height={22}
             />
-            <Link href="/startup-directory">
+            <Link href="/directory">
               <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">
                 Startup Directory
               </h2>
