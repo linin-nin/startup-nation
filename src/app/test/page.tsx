@@ -6,80 +6,92 @@ import { Media } from "@/lib/utils/media";
 import Grid from "@/components/common/gridStyle";
 import Link from "next/link";
 
-const Data = () => {
+const getData = ({
+  page = 1,
+  limit = 10,
+  query = "sok"
+}: {
+  page: number;
+  limit: number;
+  query?: string;
+}) => {
   return directusClient.request(
     readItems("Startups", {
-      fields: ["*"]
+      fields: ["*"],
+      _contains: query
     })
   );
 };
 
 interface SearchProps {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const Pagination = async ({searchParams}:SearchProps) => {
-  
-  const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
-  const limit = typeof searchParams.limit === 'string' ? Number(searchParams.limit) : 10
+const Pagination = async ({ searchParams }: SearchProps) => {
+  const page =
+    typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  const limit =
+    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 10;
+  const search =
+    typeof searchParams.search === "string" ? searchParams.search : undefined;
 
-  const search = typeof searchParams.search === 'string' ? searchParams.search : undefined
-
-  const data = await Data();
+  const data = await getData({ page, limit, query: search });
 
   return (
     <main className="">
-      <Search/>
+      <Search search={search} />
       <div className="flex">
-              <Link
-              href={{
-                pathname: '/direcctory',
-                query: {
-                  ...(search ? {search}: {}),
-                  page: page > 1 ? page - 1 : 1
-                }
-              }}
-              className="pl-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 19.5L8.25 12l7.5-7.5"
-                  />
-                </svg>
-              </Link>
-              <Link
-              href={{
-                pathname: '/directory',
-                query: {
-                  ...(search ? {search} : {}),
-                  page: page + 1
-                }
-              }}
-              className="pl-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </Link>
-            </div>
+        <Link
+          href={{
+            pathname: "/test",
+            query: {
+              ...(search ? { search } : {}),
+              page: page > 1 ? page - 1 : 1
+            }
+          }}
+          className="pl-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </Link>
+        <Link
+          href={{
+            pathname: "/test",
+            query: {
+              ...(search ? { search } : {}),
+              page: page + 1
+            }
+          }}
+          className="pl-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </Link>
+      </div>
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
         {/* card content  */}
         {data.map((item) => (
@@ -95,7 +107,6 @@ const Pagination = async ({searchParams}:SearchProps) => {
           </div>
         ))}
       </Grid>
-
     </main>
   );
 };

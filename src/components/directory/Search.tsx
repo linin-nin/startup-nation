@@ -2,7 +2,7 @@
 import Pagination from "./pagination";
 import Link from "next/link";
 import Image from "next/image";
-import Container from "../common/container";
+import Dropdownbox from "../ui/dropdownbox";
 
 import { useState } from "react";
 
@@ -33,22 +33,7 @@ const Search = () => {
         {/* filter  */}
         <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
           <div className=" w-full sm:text-2xl text-13px]">filter project</div>
-          <div className=" w-[7%]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </div>
+          <Dropdownbox />
         </div>
         {/* search */}
         <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
