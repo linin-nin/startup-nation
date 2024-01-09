@@ -10,9 +10,8 @@ import SearchData from "../../components/common/searchData";
 import { GetData } from "../../components/directory/getStartup";
 import CardDirectory from "@/components/directory/card-directory";
 import PaginationBar from "@/components/directory/paginationBar";
-import { directusClient } from '@/lib/directus_client';
-import { readItems } from '@directus/sdk';
-
+import { directusClient } from "@/lib/directus_client";
+import { readItems } from "@directus/sdk";
 
 const Data = () => {
   return directusClient.request(
@@ -27,7 +26,6 @@ interface SearchProps {
 }
 
 const Page = async ({ searchParams }: SearchProps) => {
-
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
@@ -37,8 +35,8 @@ const Page = async ({ searchParams }: SearchProps) => {
 
   const data = await GetData({ page, limit, query: search });
 
-  const Alldata = (await Data()).length
-  const AllCount = Math.ceil(Alldata / limit)
+  const Alldata = (await Data()).length;
+  const AllCount = Math.ceil(Alldata / limit);
 
   return (
     <Container>
@@ -50,7 +48,7 @@ const Page = async ({ searchParams }: SearchProps) => {
         semper nec rhoncus leo arcu ultricies tincidunt."
       />
       <div className="bg-black text-white py-5 font-body">
-        <ShowPath className="mb-5"/>
+        <ShowPath className="mb-5" />
         <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
           {/* filter  */}
           <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
@@ -97,7 +95,7 @@ const Page = async ({ searchParams }: SearchProps) => {
           </div>
         </div>
         <CardDirectory data={data} />
-        <PaginationBar totalPage={AllCount}/>
+        <PaginationBar totalPage={AllCount} />
       </div>
       <Footer />
     </Container>

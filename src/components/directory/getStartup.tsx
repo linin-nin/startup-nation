@@ -1,24 +1,23 @@
 import { readItems } from "@directus/sdk";
 import { directusClient } from "@/lib/directus_client";
 
-interface GetDataProps 
-{
+interface GetDataProps {
   page: number;
   limit: number;
   query?: string;
 }
 
-export const GetData = async ({page, limit, query}: GetDataProps) => {
+export const GetData = async ({ page, limit, query }: GetDataProps) => {
   try {
     if (!query) {
-      const allData =  await directusClient.request(
+      const allData = await directusClient.request(
         readItems("Startups", {
           fields: ["*"]
         })
       );
-      return allData
+      return allData;
     }
-    const response =  await directusClient.request(
+    const response = await directusClient.request(
       readItems("Startups", {
         fields: ["*"],
         offset: (page - 1) * limit,

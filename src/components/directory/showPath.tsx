@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { MenuNavbar } from "@/lib/menu-navbar";
 import { cn } from "@/lib/utils/utils";
 
-const ShowPath = ({className}:{className?:string}) => {
+const ShowPath = ({ className }: { className?: string }) => {
   const pathName = usePathname();
   function Name() {
     for (const element of MenuNavbar) {
@@ -13,7 +13,12 @@ const ShowPath = ({className}:{className?:string}) => {
     }
   }
   return (
-    <div className={cn('lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body', className)}>
+    <div
+      className={cn(
+        "lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body",
+        className
+      )}
+    >
       <div className="inline-block">
         <div className="flex justify-between gap-4">
           <Link href="/">
