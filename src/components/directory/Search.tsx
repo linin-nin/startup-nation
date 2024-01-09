@@ -11,7 +11,7 @@ const Search = () => {
   return (
     <main className="bg-black text-white py-5 font-body">
       {/* Path Route */}
-      <ShowPath/>
+      <ShowPath />
 
       <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
         {/* filter  */}

@@ -5,16 +5,17 @@ import { Media } from "@/lib/utils/media";
 import Grid from "@/components/common/gridStyle";
 import Link from "next/link";
 
-
-
 interface SearchProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const Pagination = async ({ searchParams }: SearchProps) => {
-  const page = typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
-  const limit = typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
-  const search = typeof searchParams.search === "string" ? searchParams.search : undefined;
+  const page =
+    typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  const limit =
+    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
+  const search =
+    typeof searchParams.search === "string" ? searchParams.search : undefined;
 
   const data = await GetData({ page, limit, query: search });
   return (

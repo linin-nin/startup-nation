@@ -1,26 +1,26 @@
-import React from 'react'
-import Grid from '../common/gridStyle'
-import CompanyCard from '../ui/CompanyCard'
-import { Media } from '@/lib/utils/media'
+import React from "react";
+import Grid from "../common/gridStyle";
+import CompanyCard from "../ui/CompanyCard";
+import { Media } from "@/lib/utils/media";
 
-const CardDirectory = ({data}: {data : any[]}) => {
+const CardDirectory = ({ data }: { data: any[] }) => {
   return (
     <Grid cols={3} className="overflow-hidden mt-8 gap-8">
-        {/* card content  */}
-        {data.splice(0, 9).map((item) => (
-          <div key={item.id}>
-            <CompanyCard
-              id={item.id}
-              img_url={Media(item.logo_url)}
-              company_name={item.company_name}
-              subtitle={item.title}
-              founded_date={item.founded_date}
-              slug={item.slug}
-            />
-          </div>
-        ))}
-      </Grid>
-  )
-}
+      {/* card content  */}
+      {data.splice(0, 9).map((item) => (
+        <div key={item.id}>
+          <CompanyCard
+            id={item.id}
+            img_url={Media(item.logo_url)}
+            company_name={item.company_name}
+            subtitle={item.title}
+            founded_date={item.founded_date}
+            slug={item.slug}
+          />
+        </div>
+      ))}
+    </Grid>
+  );
+};
 
-export default CardDirectory
+export default CardDirectory;
