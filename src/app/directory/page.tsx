@@ -3,7 +3,7 @@ import Header from "@/components/header/Header";
 import Hero from "@/components/common/hero";
 import Footer from "@/components/footer/footer";
 import ShowPath from "@/components/directory/showPath";
-import Dropdownbox from "@/components/ui/dropdownbox";
+import DropdownIcon from "@/app/test/dropdownIcon";
 import Link from "next/link";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import SearchData from "../../components/common/searchData";
@@ -53,7 +53,7 @@ const Page = async ({ searchParams }: SearchProps) => {
           {/* filter  */}
           <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
             <div className=" w-full sm:text-2xl text-13px]">filter project</div>
-            <Dropdownbox />
+            <DropdownIcon />
           </div>
 
           {/* search */}

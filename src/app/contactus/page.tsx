@@ -10,9 +10,6 @@ import React from "react";
 import Smooth from "@/components/ui/smoothScroll";
 import Container from "@/components/common/container";
 
-{
-  /* <div className=" bg-black padding-body right-0 left-0 sticky top-0 z-50"> */
-}
 const ContactUs = () => {
   return (
     <Smooth>
