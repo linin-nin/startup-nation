@@ -1,6 +1,6 @@
 import CompanyCard from "@/components/ui/CompanyCard";
-import { GetData } from "./getData";
-import SearchData from "./search";
+import { GetData } from "../../components/directory/getStartup";
+import SearchData from "../../components/common/searchData";
 import { Media } from "@/lib/utils/media";
 import Grid from "@/components/common/gridStyle";
 import Link from "next/link";

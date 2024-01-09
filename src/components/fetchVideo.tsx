@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/aboutUs";
 import Footer from "@/components/footer/footer";
-import Smooth from "@/components/smoothScroll";
+import Smooth from "@/components/ui/smoothScroll";
 import Prelanding from "@/components/preloading/PreLoading";
 import { AnimatePresence } from "framer-motion";
-import MarqueeComponent from "@/components/animationMarquee/MarqueeComponent";
+import MarqueeComponent from "@/components/ui/MarqueeComponent";
 import VideoContent from "./VideoContent";
 
 export default function Home({ data }: { data: any[] }) {

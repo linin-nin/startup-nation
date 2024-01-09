@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import SideBar from "./SideBar";
-import MarqueeComponent from "../animationMarquee/MarqueeComponent";
+import MarqueeComponent from "../ui/MarqueeComponent";
 
 const Header = () => {
   const [mode, setmode] = useState(false);

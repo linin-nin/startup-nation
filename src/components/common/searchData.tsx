@@ -14,7 +14,7 @@ const SearchData = ({ search }: { search?: string }) => {
     if (!query) {
       router.push("/directory");
     } else {
-      router.push(`/directus?search=${query}`);
+      router.push(`/directory?search=${query}`);
     }
   }, [query, router]);
 

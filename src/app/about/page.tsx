@@ -5,7 +5,7 @@ import EarthMap from "@/components/About/earthMap";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/Header";
 import OurPhilosophy from "@/components/About/ourPhilosophy";
-import Smooth from "@/components/smoothScroll";
+import Smooth from "@/components/ui/smoothScroll";
 
 const About = () => {
   return (
