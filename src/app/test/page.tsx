@@ -1,45 +1,25 @@
 import CompanyCard from "@/components/ui/CompanyCard";
-import { directusClient } from "@/lib/directus_client";
-import { readItems } from "@directus/sdk";
-import Search from "./search";
+import { GetData } from "./getData";
+import SearchData from "./search";
 import { Media } from "@/lib/utils/media";
 import Grid from "@/components/common/gridStyle";
 import Link from "next/link";
 
-const getData = ({
-  page = 1,
-  limit = 10,
-  query = "sok"
-}: {
-  page: number;
-  limit: number;
-  query?: string;
-}) => {
-  return directusClient.request(
-    readItems("Startups", {
-      fields: ["*"],
-      _contains: query
-    })
-  );
-};
+
 
 interface SearchProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const Pagination = async ({ searchParams }: SearchProps) => {
-  const page =
-    typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
-  const limit =
-    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 10;
-  const search =
-    typeof searchParams.search === "string" ? searchParams.search : undefined;
+  const page = typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  const limit = typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
+  const search = typeof searchParams.search === "string" ? searchParams.search : undefined;
 
-  const data = await getData({ page, limit, query: search });
-
+  const data = await GetData({ page, limit, query: search });
   return (
     <main className="">
-      <Search search={search} />
+      <SearchData search={search} />
       <div className="flex">
         <Link
           href={{

@@ -3,6 +3,7 @@ import Pagination from "./pagination";
 import Link from "next/link";
 import Image from "next/image";
 import Dropdownbox from "../ui/dropdownbox";
+import ShowPath from "./showPath";
 
 import { useState } from "react";
 
@@ -10,24 +11,7 @@ const Search = () => {
   return (
     <main className="bg-black text-white py-5 font-body">
       {/* Path Route */}
-      <div className="lg:py-5 md:py-4 py-3 mb-5 border-b-2 border-t-2 font-body">
-        <div className="inline-block">
-          <div className="flex justify-between sm:gap-2 gap-[5px]">
-            <Link href="/">
-              <h2 className="sm:text-2xl text-[13px] hover:underline">Home</h2>
-            </Link>
-            <Image
-              src={"/icons/greater-then.svg"}
-              alt="greater-than-icon"
-              width={22}
-              height={22}
-            />
-            <h2 className="text-yellow-300 sm:text-2xl text-[13px]">
-              Startup Directory
-            </h2>
-          </div>
-        </div>
-      </div>
+      <ShowPath/>
 
       <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
         {/* filter  */}

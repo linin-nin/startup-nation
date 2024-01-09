@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "use-debounce";
 
-const Search = ({ search }: { search?: string }) => {
+const SearchData = ({ search }: { search?: string }) => {
   const router = useRouter();
 
   const [text, setText] = useState(search);
@@ -12,22 +12,22 @@ const Search = ({ search }: { search?: string }) => {
 
   useEffect(() => {
     if (!query) {
-      router.push("/test");
+      router.push("/directory");
     } else {
-      router.push(`/test?search=${query}`);
+      router.push(`/directus?search=${query}`);
     }
   }, [query, router]);
 
   return (
-    <div className="relative rounded-md shadow-sm">
+    <div className="w-full">
       <input
         value={text}
-        placeholder="Search movies..."
         onChange={(e) => setText(e.target.value)}
-        className="block w-full rounded-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
+        placeholder="search"
+        className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
       />
     </div>
   );
 };
 
-export default Search;
+export default SearchData;
