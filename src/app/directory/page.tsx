@@ -25,7 +25,7 @@ interface SearchProps {
 }
 
 const Page = async ({ searchParams }: SearchProps) => {
-  console.log(await Data())
+  console.log(await Data());
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
@@ -101,15 +101,15 @@ const Page = async ({ searchParams }: SearchProps) => {
         <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400">
           <div>1 -6 from 100</div>
           <div className="flex justify-between gap-10">
-          <Link
-            href={{
-              pathname: "/directory",
-              query: {
-                ...(search ? { search } : {}),
-                page: page > 1 ? page - 1 : 1
-              }
-            }}
-            className="pl-3"
+            <Link
+              href={{
+                pathname: "/directory",
+                query: {
+                  ...(search ? { search } : {}),
+                  page: page > 1 ? page - 1 : 1
+                }
+              }}
+              className="pl-3"
             >
               <ChevronLeft className="w-6 h-6" />
             </Link>
@@ -124,14 +124,14 @@ const Page = async ({ searchParams }: SearchProps) => {
               ))}
             </div>
             <Link
-            href={{
-              pathname: "/directory",
-              query: {
-                ...(search ? { search } : {}),
-                page: page + 1
-              }
-            }}
-            className="pl-3"
+              href={{
+                pathname: "/directory",
+                query: {
+                  ...(search ? { search } : {}),
+                  page: page + 1
+                }
+              }}
+              className="pl-3"
             >
               <ChevronRight className="w-6 h-6" />
             </Link>

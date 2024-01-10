@@ -46,8 +46,8 @@ const Detail = async ({ params }: Props) => {
   const imag = imageUrls.map((item: any) => item.directus_files_id);
   const category = startup[0].category;
   const categorys = category.map((item: any) => item.Category_id);
-  const founder = startup[0].founder
-  const founders = founder.map((item:any) => item.Founder_id)
+  const founder = startup[0].founder;
+  const founders = founder.map((item: any) => item.Founder_id);
   console.log(founder);
   return (
     <Container>
