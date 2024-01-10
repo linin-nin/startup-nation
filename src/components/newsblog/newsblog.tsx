@@ -17,7 +17,6 @@ function Newsblog() {
     if (slideRef.current && slideRef.current instanceof HTMLElement) {
       slideRef.current.style.scrollBehavior = "unset";
       slideRef.current.style.cursor = "grabbing";
-
       let startX = event.pageX - slideRef.current.offsetLeft;
       let scrollLeft = slideRef.current.scrollLeft;
 
