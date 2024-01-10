@@ -9,7 +9,7 @@ dependencies:
     specifier: ^13.0.2
     version: 13.0.2
   '@emotion/react':
-    specifier: ^11.11.1
+    specifier: ^11.11.3
     version: 11.11.3(@types/react@18.2.45)(react@18.2.0)
   '@emotion/styled':
     specifier: ^11.11.0
@@ -18,7 +18,7 @@ dependencies:
     specifier: ^5.0.17
     version: 5.0.18
   '@mui/material':
-    specifier: ^5.14.14
+    specifier: ^5.15.2
     version: 5.15.2(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-dropdown-menu':
     specifier: ^2.0.6
