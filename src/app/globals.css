@@ -68,7 +68,7 @@ body {
 }
 
 .input {
-  @apply  border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
+  @apply border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
 }
 
 /* text size part  */
@@ -126,3 +126,29 @@ p {
 .visible {
   transition: max-height 0.3s ease-in-out;
 }
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.frame::after,
+.frame::before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.861);
+}
+
+.frame::after {
+  left: 1.5px;
+  bottom: 1.5px;
+}
+
+.frame::before {
+  right: 1.5px;
+  top: 1.5px;
+}
+
+
+
