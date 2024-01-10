@@ -65,10 +65,7 @@ const AboutUs = () => {
         {/* arrow */}
         <div className="flex justify-center items-center">
           <div className="arrow">
-            <div
-              onClick={() => setSlide(Slide - 1)}
-              className="arrow-btn p-5 mt-5"
-            >
+            <div className="arrow-btn p-5 mt-5">
               <motion.div
                 initial={{ y: 0 }}
                 whileHover={{ y: -10, transition: { duration: 0.7 } }}
@@ -81,10 +78,7 @@ const AboutUs = () => {
                 />
               </motion.div>
             </div>
-            <div
-              onClick={() => setSlide(Slide + 1)}
-              className="arrow-btn p-5 mt-5 "
-            >
+            <div className="arrow-btn p-5 mt-5">
               <motion.div
                 initial={{ y: 0 }}
                 whileHover={{ y: 10, transition: { duration: 0.7 } }}

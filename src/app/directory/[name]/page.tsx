@@ -9,6 +9,7 @@ import Link from "next/link";
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/Header";
 import Slide from "@/components/common/slideImge";
+import Profile from "@/components/common/founder-profile";
 interface Props {
   params: {
     name: string;
@@ -42,10 +43,10 @@ const Detail = async ({ params }: Props) => {
 
   const imageUrls = startup[0]?.image_url ?? [];
   const website = startup[0]?.website_url.startup_web_link;
-  const founder = startup[0]?.founder;
   const imag = imageUrls.map((item: any) => item.directus_files_id);
   const category = startup[0].category;
   const categorys = category.map((item: any) => item.Category_id);
+
   return (
     <Container>
       <Header />
@@ -62,7 +63,7 @@ const Detail = async ({ params }: Props) => {
               width={22}
               height={22}
             />
-            <Link href="/startup-directory">
+            <Link href="/directory">
               <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">
                 Startup Directory
               </h2>
@@ -148,41 +149,19 @@ const Detail = async ({ params }: Props) => {
               </div>
             </div>
             <h2 className="py-2 title">Founder</h2>
+
             <div>
-              <div className="flex justify-start mb-3">
-                <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
-                  <Image
-                    src={Media(founder.profile_img)}
-                    fill
-                    alt="image"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="ml-3">
-                  <p>{founder.full_name}</p>
-                  <p>
-                    {founder.founder_position} of{" "}
-                    <Link href={website}>
-                      <span className="text-white hover:text-yellow-500 cursor-pointer">
-                        {startup[0].company_name}
-                      </span>
-                    </Link>
-                  </p>
-                  <div className="flex justify-start gap-5 mt-[2px]">
-                    {Socail.map((item) => (
-                      <Link href={item.path} key={item.logo}>
-                        <Image
-                          src={item.logo}
-                          alt="icon"
-                          width={20}
-                          height={20}
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p>{founder.contant}</p>
+              {/* {founder.map((item: any) => (
+                <Profile
+                  key={item.id}
+                  company_name={startup[0].company_name}
+                  content={item.contant}
+                  position={item.founder_position}
+                  company_web={startup[0].website_url}
+                  name={item.full_name}
+                  profile_img={Media(item.profile_img)}
+                />
+              ))} */}
             </div>
           </div>
         </div>
