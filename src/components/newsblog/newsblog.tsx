@@ -9,36 +9,38 @@ import { newsblogCard } from "@/lib/newsblog/newsblog";
 function Newsblog() {
   const slideRef = useRef<HTMLDivElement | null>(null);
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseDown = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     event.preventDefault();
-  
+
     if (slideRef.current && slideRef.current instanceof HTMLElement) {
       slideRef.current.style.scrollBehavior = "unset";
       slideRef.current.style.cursor = "grabbing";
-  
+
       let startX = event.pageX - slideRef.current.offsetLeft;
       let scrollLeft = slideRef.current.scrollLeft;
-  
+
       const handleMouseMove = (event: MouseEvent) => {
         event.preventDefault();
-  
+
         if (slideRef.current) {
           const x = event.pageX - slideRef.current.offsetLeft;
           const walk = (x - startX) * 2;
           slideRef.current.scrollLeft = scrollLeft - walk;
         }
       };
-  
+
       const handleMouseUp = () => {
         if (slideRef.current) {
           slideRef.current.style.scrollBehavior = "smooth";
           slideRef.current.style.cursor = "grab";
-  
+
           document.removeEventListener("mousemove", handleMouseMove);
           document.removeEventListener("mouseup", handleMouseUp);
         }
       };
-  
+
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
     }
