@@ -68,7 +68,7 @@ body {
 }
 
 .input {
-  @apply  border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
+  @apply border-2 rounded-none w-full py-3 pl-3 mb-4 placeholder:text-[14px] md:placeholder:text-2xl;
 }
 
 /* text size part  */
@@ -127,13 +127,28 @@ p {
   transition: max-height 0.3s ease-in-out;
 }
 
- /* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
+.no-scroll::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.frame::after,
+.frame::before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.861);
 }
+
+.frame::after {
+  left: 1.5px;
+  bottom: 1.5px;
+}
+
+.frame::before {
+  right: 1.5px;
+  top: 1.5px;
+}
+
+
+

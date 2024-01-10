@@ -9,6 +9,7 @@ import Prelanding from "@/components/preloading/PreLoading";
 import { AnimatePresence } from "framer-motion";
 import MarqueeComponent from "@/components/ui/MarqueeComponent";
 import VideoContent from "./VideoContent";
+import Newsblog from "./newsblog/newsblog";
 
 export default function Home({ data }: { data: any[] }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,7 @@ export default function Home({ data }: { data: any[] }) {
           <Hero />
           <VideoContent data={data} />
           <AboutUs />
+          <Newsblog />
           <Footer />
         </div>
       </Smooth>
