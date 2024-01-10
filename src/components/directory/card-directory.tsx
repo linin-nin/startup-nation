@@ -7,7 +7,7 @@ const CardDirectory = ({ data }: { data: any[] }) => {
   return (
     <Grid cols={3} className="overflow-hidden mt-8 gap-8">
       {/* card content  */}
-      {data.splice(0, 9).map((item) => (
+      {data.map((item) => (
         <div key={item.id}>
           <CompanyCard
             id={item.id}
