@@ -1,16 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import SideBar from "./SideBar";
-import MarqueeComponent from "../animationMarquee/MarqueeComponent";
 
 const Header = () => {
-  const [mode, setmode] = useState(false);
-  const handleClick = () => {
-    setmode(true);
-    console.log(mode);
-  };
-
   return (
     <header className=" font-body pb-3 border-white sticky border-b-2 top-0 bg-black z-[99]">
       <nav className=" flex justify-between items-center">

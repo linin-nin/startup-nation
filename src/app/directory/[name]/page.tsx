@@ -43,11 +43,10 @@ const Detail = async ({ params }: Props) => {
 
   const imageUrls = startup[0]?.image_url ?? [];
   const website = startup[0]?.website_url.startup_web_link;
-  const founder = startup[0]?.founder;
   const imag = imageUrls.map((item: any) => item.directus_files_id);
   const category = startup[0].category;
   const categorys = category.map((item: any) => item.Category_id);
-  console.log(startup);
+
   return (
     <Container>
       <Header />
@@ -64,7 +63,7 @@ const Detail = async ({ params }: Props) => {
               width={22}
               height={22}
             />
-            <Link href="/startup-directory">
+            <Link href="/directory">
               <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">
                 Startup Directory
               </h2>
@@ -150,18 +149,19 @@ const Detail = async ({ params }: Props) => {
               </div>
             </div>
             <h2 className="py-2 title">Founder</h2>
+
             <div>
-              {founder.map((item: any) => (
+              {/* {founder.map((item: any) => (
                 <Profile
                   key={item.id}
-                  company_name={item.full_name}
-                  content="Hello world"
-                  position="CEO"
-                  company_web="wdw"
-                  name="Pon Sreynin"
-                  profile_img="/image"
+                  company_name={startup[0].company_name}
+                  content={item.contant}
+                  position={item.founder_position}
+                  company_web={startup[0].website_url}
+                  name={item.full_name}
+                  profile_img={Media(item.profile_img)}
                 />
-              ))}
+              ))} */}
             </div>
           </div>
         </div>

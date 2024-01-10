@@ -4,7 +4,7 @@ export const MenuNavbar = [
     menuName: "Home"
   },
   {
-    pathUrl: "/startup-directory",
+    pathUrl: "/directory",
     menuName: "Startup Directory"
   },
   {
