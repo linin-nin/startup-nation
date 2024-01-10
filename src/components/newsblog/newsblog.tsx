@@ -48,7 +48,6 @@ function Newsblog() {
 
   return (
     <div className="mt-5 ">
-      <Container className="">
         {/* title  */}
         <div className="border-t-2 border-b-2 py-3 mb-7 title">News & Blog</div>
 
@@ -132,7 +131,6 @@ function Newsblog() {
             </span>
           </Link>
         </div>
-      </Container>
     </div>
   );
 }
