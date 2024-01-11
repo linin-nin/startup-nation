@@ -17,10 +17,6 @@ const VideoContent = ({ data }: { data: any[] }) => {
       {/* layout 1 */}
       <Grid cols={3} className="py-7 gap-6">
         {data.slice(0, 3).map((items) => {
-          const isShortText =
-            items &&
-            items.description &&
-            items.description.split("\n").length <= 4;
           return (
             <div
               key={items.id}
@@ -36,23 +32,15 @@ const VideoContent = ({ data }: { data: any[] }) => {
                   height="100%"
                 />
               </div>
+
               <div className="content hover:opacity-100 p-5">
                 <h1 className="title">{items.company_name}</h1>
-                <p
-                  className={`paragraph ${
-                    Isopen || isShortText ? "line-clamp-none" : "line-clamp-3"
-                  }`}
-                >
-                  {items && items.description}
+                <p className={`paragraph line-clamp-3 ${Isopen ? 'line-clamp-none': 'line-clamp-3'}`}>
+                  {items.dirscription}
                 </p>
-                {!isShortText && (
-                  <p
-                    onClick={() => setIsopen(!Isopen)}
-                    className="hover:underline"
-                  >
-                    {Isopen ? "See less" : "See more"}
-                  </p>
-                )}
+                <p onClick={() => setIsopen(!Isopen)} className="hover:underline">
+                  {Isopen ? "see less" : "see more"}
+                </p>
                 <ShareArrow url={`/startup-directory/${items.slug}`} />
               </div>
             </div>

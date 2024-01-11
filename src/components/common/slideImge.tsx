@@ -22,13 +22,12 @@ const Slide = ({ data }: Props) => {
           className="w-full h-full object-cover"
         />
       </div>
-      {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
-      <div className="md:block flex overflow-y-scroll h-[400px] no-scrollbar w-[200px] justify-center items-center md:pt-0 md:pl-5 pt-4">
+      <div className="md:block flex overflow-y-scroll h-[387px] no-scroll w-[200px] justify-center items-center md:pt-0 md:pl-5 pt-4">
         {data.map((item: any, index: number) => (
           <div
             key={item}
-            className={`w-[120px] h-[120px] md:mb-3 overflow-hidden ${
-              urlImage === index ? "opacity-100" : "opacity-50"
+            className={`w-[140px] h-[140px] md:mb-3 overflow-hidden ${
+              urlImage === index ? "opacity-100 border-2" : "opacity-70 hover:opacity-100"
             } md:mr-0 mr-3 relative`}
           >
             <Image
