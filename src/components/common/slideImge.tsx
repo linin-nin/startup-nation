@@ -27,7 +27,9 @@ const Slide = ({ data }: Props) => {
           <div
             key={item}
             className={`w-[140px] h-[140px] md:mb-3 overflow-hidden ${
-              urlImage === index ? "opacity-100 border-2" : "opacity-70 hover:opacity-100"
+              urlImage === index
+                ? "opacity-100 border-2"
+                : "opacity-70 hover:opacity-100"
             } md:mr-0 mr-3 relative`}
           >
             <Image
