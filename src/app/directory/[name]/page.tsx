@@ -30,7 +30,14 @@ const Detail = async ({ params }: Props) => {
             }
           ]
         },
-        { founder: ["*"] },
+        {
+          founder: [
+            "Founder_id",
+            {
+              Founder_id: ["*"]
+            }
+          ]
+        },
         { website_url: ["*"] }
       ],
       filter: {
@@ -48,7 +55,8 @@ const Detail = async ({ params }: Props) => {
   const categorys = category.map((item: any) => item.Category_id);
   const founder = startup[0].founder;
   const founders = founder.map((item: any) => item.Founder_id);
-  console.log(founders);
+  const web = startup[0].website_url
+  console.log(web.socail_media_url)
   return (
     <Container>
       <Header />

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Socail } from "@/lib/navbarMenu";
+import { cn } from "@/lib/utils/utils";
 
 interface ProfileProps {
   className?: string;
@@ -24,7 +25,7 @@ const Profile = ({
   content
 }: ProfileProps) => {
   return (
-    <div key={key}>
+    <div key={key} className={cn('mt-3', className)}>
       <div className="flex justify-start mb-3">
         <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
           <Image
@@ -35,7 +36,7 @@ const Profile = ({
           />
         </div>
         <div className="ml-3">
-          <p>{name}</p>
+          <p className="capitalize">{name}</p>
           <p>
             {position} of{" "}
             <Link href={company_web}>
