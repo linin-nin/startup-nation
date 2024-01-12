@@ -46,7 +46,9 @@ const Detail = async ({ params }: Props) => {
   const imag = imageUrls.map((item: any) => item.directus_files_id);
   const category = startup[0].category;
   const categorys = category.map((item: any) => item.Category_id);
-
+  const founder = startup[0].founder;
+  const founders = founder.map((item: any) => item.Founder_id);
+  console.log(founders)
   return (
     <Container>
       <Header />
@@ -151,7 +153,7 @@ const Detail = async ({ params }: Props) => {
             <h2 className="py-2 title">Founder</h2>
 
             <div>
-              {/* {founder.map((item: any) => (
+              {founders.map((item: any) => (
                 <Profile
                   key={item.id}
                   company_name={startup[0].company_name}
@@ -161,7 +163,7 @@ const Detail = async ({ params }: Props) => {
                   name={item.full_name}
                   profile_img={Media(item.profile_img)}
                 />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

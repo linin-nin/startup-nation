@@ -33,7 +33,7 @@ export default function Home({ data }: { data: any[] }) {
           <MarqueeComponent />
           <Hero />
           <VideoContent data={data} />
-          <AboutUs />
+          {/* <AboutUs /> */}
           <Newsblog />
           <Footer />
         </div>

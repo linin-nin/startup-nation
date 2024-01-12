@@ -26,7 +26,7 @@ const Hero = () => {
           {/* social media logo  */}
           <div className="hidden md:block w-full ">
             <div
-              className=" h-[280px] flex flex-col items-end flex-shrink-0
+              className=" h-[190px] flex flex-col items-end flex-shrink-0
             "
             >
               {Socail.map((item) => (
@@ -43,18 +43,18 @@ const Hero = () => {
             </div>
           </div>
           {/* actual content  */}
-          <div className=" h-full flex flex-grow justify-between">
-            <h1 className="text-[48px] font-bold glowy-text md:text-[6rem] md:tracking-[.425rem]">
+          <div className=" h-full md:flex flex-grow justify-between  md:mt-0 mt-52">
+            <h1 className="text-[48px] md:block flex justify-center items-center font-bold glowy-text lg:text-[5rem] md:text-[3.5rem] md:tracking-[.425rem]">
               A Centaur of <br />
               <span className="text-[#F8DC4C]">Asia</span>
             </h1>
-            <div>
-              <p className=" w-[500px]">
+            <div className=" md:block flex flex-col justify-center items-center">
+              <p className=" lg:w-[500px] md:w-[400px] md:pt-30 pt-50">
                 Lorem ipsum dolor sit amet consectetur. Risus vivamus ultrices
                 pharetra consectetur vitae diam. Faucibus at suscipit justo non
                 mauris in orci ut.
               </p>
-              <Link href="/directory" className="w-full flex justify-end mt-5">
+              <Link href="/directory" className="w-full flex md:justify-end mt-5 justify-center">
                 <div className="border-2 px-5 py-2 border-[#FAFF00] flex justify-end items-center">
                   <p>
                     Explore <span className="text-[#FAFF00]">Startup</span>

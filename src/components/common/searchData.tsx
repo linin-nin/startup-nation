@@ -22,7 +22,7 @@ const SearchData = ({ search }: { search?: string }) => {
     <div className="w-full">
       <input
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value.toLowerCase())}
         placeholder="search"
         className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
       />

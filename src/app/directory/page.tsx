@@ -25,7 +25,6 @@ interface SearchProps {
 }
 
 const Page = async ({ searchParams }: SearchProps) => {
-  console.log(await Data());
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
@@ -54,10 +53,7 @@ const Page = async ({ searchParams }: SearchProps) => {
         <ShowPath className="mb-5" />
         <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
           {/* filter  */}
-          <div className=" flex md:w-[47%] w-full border-2 border-white md:py-8 py-2 mb-3 px-5 items-center">
-            <div className=" w-full sm:text-2xl text-13px]">filter project</div>
             <DropdownIcon />
-          </div>
 
           {/* search */}
           <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
