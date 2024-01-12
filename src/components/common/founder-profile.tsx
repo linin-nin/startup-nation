@@ -25,7 +25,7 @@ const Profile = ({
   content
 }: ProfileProps) => {
   return (
-    <div key={key} className={cn('mt-3', className)}>
+    <div key={key} className={cn("mt-3", className)}>
       <div className="flex justify-start mb-3">
         <div className=" h-[80px] w-[80px] relative bg-cover bg-center">
           <Image
