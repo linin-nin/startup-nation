@@ -48,7 +48,7 @@ const Detail = async ({ params }: Props) => {
   const categorys = category.map((item: any) => item.Category_id);
   const founder = startup[0].founder;
   const founders = founder.map((item: any) => item.Founder_id);
-  console.log(founders)
+  console.log(founders);
   return (
     <Container>
       <Header />

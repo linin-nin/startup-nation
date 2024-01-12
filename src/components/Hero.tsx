@@ -54,7 +54,10 @@ const Hero = () => {
                 pharetra consectetur vitae diam. Faucibus at suscipit justo non
                 mauris in orci ut.
               </p>
-              <Link href="/directory" className="w-full flex md:justify-end mt-5 justify-center">
+              <Link
+                href="/directory"
+                className="w-full flex md:justify-end mt-5 justify-center"
+              >
                 <div className="border-2 px-5 py-2 border-[#FAFF00] flex justify-end items-center">
                   <p>
                     Explore <span className="text-[#FAFF00]">Startup</span>

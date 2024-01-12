@@ -53,7 +53,7 @@ const Page = async ({ searchParams }: SearchProps) => {
         <ShowPath className="mb-5" />
         <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
           {/* filter  */}
-            <DropdownIcon />
+          <DropdownIcon />
 
           {/* search */}
           <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
