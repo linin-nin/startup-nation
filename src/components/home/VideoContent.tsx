@@ -1,9 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
-import ShareArrow from "./ShareArrow";
+import ShareArrow from "../ShareArrow";
 import { Media } from "@/lib/utils/media";
 import { useState } from "react";
-import Grid from "./common/gridStyle";
+import Grid from "../gridStyle";
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 

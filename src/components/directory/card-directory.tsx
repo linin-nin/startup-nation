@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "../common/gridStyle";
+import Grid from "../gridStyle";
 import CompanyCard from "../ui/CompanyCard";
 import { Media } from "@/lib/utils/media";
 

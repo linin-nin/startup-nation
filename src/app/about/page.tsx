@@ -3,7 +3,7 @@
 import Intro from "@/components/About/intro";
 import EarthMap from "@/components/About/earthMap";
 import Footer from "@/components/footer/footer";
-import Header from "@/components/header/Header";
+import Header from "@/components/home/header/Header";
 import OurPhilosophy from "@/components/About/ourPhilosophy";
 import Smooth from "@/components/ui/smoothScroll";
 

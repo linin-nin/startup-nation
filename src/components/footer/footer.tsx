@@ -4,7 +4,7 @@ import Image from "next/image";
 import { NavsList } from "@/lib/navbarMenu";
 import Link from "next/link";
 import { Socail } from "@/lib/navbarMenu";
-import Container from "../common/container";
+import Container from "../container";
 
 const Footer = () => {
   return (

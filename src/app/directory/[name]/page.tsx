@@ -1,4 +1,4 @@
-import Container from "@/components/common/container";
+import Container from "@/components/container";
 import { Media } from "@/lib/utils/media";
 import React from "react";
 import { directusClient } from "@/lib/directus_client";
@@ -7,9 +7,9 @@ import Image from "next/image";
 import { Socail } from "@/lib/navbarMenu";
 import Link from "next/link";
 import Footer from "@/components/footer/footer";
-import Header from "@/components/header/Header";
-import Slide from "@/components/common/slideImge";
-import Profile from "@/components/common/founder-profile";
+import Header from "@/components/home/header/Header";
+import Slide from "@/components/directory/slideImge";
+import Profile from "@/components/directory/founder-profile";
 interface Props {
   params: {
     name: string;
