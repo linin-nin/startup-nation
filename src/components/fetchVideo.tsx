@@ -11,7 +11,7 @@ import MarqueeComponent from "@/components/ui/MarqueeComponent";
 import VideoContent from "./VideoContent";
 import Newsblog from "./newsblog/newsblog";
 import { Podcast } from "lucide-react";
-import PodcastComponent from '@/components/Podcast'
+import PodcastComponent from "@/components/Podcast";
 
 export default function Home({ data }: { data: any[] }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +37,7 @@ export default function Home({ data }: { data: any[] }) {
           <VideoContent data={data} />
           <AboutUs />
           <Newsblog />
-          <PodcastComponent/>
+          <PodcastComponent />
           <Footer />
         </div>
       </Smooth>

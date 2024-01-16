@@ -1,15 +1,14 @@
-import PodcastComponent from '@/components/Podcast'
-import React from 'react'
-
+import PodcastComponent from "@/components/Podcast";
+import React from "react";
 
 function PodcastPage() {
   return (
-    // container 
-    <div className='max-w-[1080px] mx-auto px-5'>
+    // container
+    <div className="max-w-[1080px] mx-auto px-5">
       {/* children   */}
-      <PodcastComponent/>
+      <PodcastComponent />
     </div>
-  )
+  );
 }
- 
-export default PodcastPage
+
+export default PodcastPage;
