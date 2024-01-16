@@ -61,7 +61,7 @@ const Detail = async ({ params }: Props) => {
     <Container>
       <Header />
       {/* image slide */}
-      <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body">
+      <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body ">
         <div className="inline-block">
           <div className="flex justify-between sm:gap-2 gap-[5px]">
             <Link href="/">
