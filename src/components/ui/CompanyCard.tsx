@@ -23,7 +23,7 @@ const CompanyCard = ({
 }: CardProps) => {
   return (
     <Link
-      href={`/directory/${slug}`}
+      href={`/startup/${slug}`}
       className="relative before:absolute before:bg-gray-400 before:h-[100vh] before:w-[2px] before:top-0 before:left-[-17px]"
     >
       <div className="h-[416px] ">

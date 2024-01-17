@@ -38,7 +38,7 @@ const Detail = async ({ params }: Props) => {
             }
           ]
         },
-        { website_url: ["*"] }
+        { website_url: ["startup_web_link"] }
       ],
       filter: {
         slug: {
@@ -55,8 +55,6 @@ const Detail = async ({ params }: Props) => {
   const categorys = category.map((item: any) => item.Category_id);
   const founder = startup[0].founder;
   const founders = founder.map((item: any) => item.Founder_id);
-  const web = startup[0].website_url;
-  console.log(web.socail_media_url);
   return (
     <Container>
       <Header />
@@ -73,7 +71,7 @@ const Detail = async ({ params }: Props) => {
               width={22}
               height={22}
             />
-            <Link href="/directory">
+            <Link href="/startups">
               <h2 className="sm:text-2xl text-[13px] hover:underline whitespace-nowrap">
                 Startup Directory
               </h2>
@@ -167,7 +165,7 @@ const Detail = async ({ params }: Props) => {
                   company_name={startup[0].company_name}
                   content={item.contant}
                   position={item.founder_position}
-                  company_web={startup[0].website_url}
+                  company_web={website}
                   name={item.full_name}
                   profile_img={Media(item.profile_img)}
                 />
