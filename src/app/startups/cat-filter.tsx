@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
-const Filter = ({category}:{category:any[]}) => {
-
-    const [drop, setdrop] = useState(false);
-    const [query, setquery] = useState("");
-    const [first, setfirst] = useState("");
-    const [selectitem, setselectitem] = useState(false);
+const Filter = ({ category }: { category: any[] }) => {
+  const [drop, setdrop] = useState(false);
+  const [query, setquery] = useState("");
+  const [first, setfirst] = useState("");
+  const [selectitem, setselectitem] = useState(false);
 
   return (
     <div
@@ -33,12 +32,8 @@ const Filter = ({category}:{category:any[]}) => {
               drop ? "block" : "hidden"
             }`}
           >
-            <Link
-              href='/startups'
-            >
-              <li className="hover:bg-gray-800 p-3">
-                All
-              </li>
+            <Link href="/startups">
+              <li className="hover:bg-gray-800 p-3">All</li>
             </Link>
             {category
               .filter((abs) => abs.category_name.toLowerCase().includes(query))
@@ -57,7 +52,7 @@ const Filter = ({category}:{category:any[]}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;
