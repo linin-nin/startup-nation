@@ -9,10 +9,12 @@ function PodcastComponent() {
       <div className="border-t-2 border-b-2 py-3 mb-7 title">PODCAST</div>
 
       {/* podcast layout  */}
-      <div className=" grid 
+      <div
+        className=" grid 
       grid-cols-2 grid-rows-3
       md:grid-cols-3 md:grid-rows-2 
-      h-[600px] gap-5 ">
+      h-[600px] gap-5 "
+      >
         {podcastData.map((data, index) => {
           if (index === 0) {
             return (
@@ -37,7 +39,10 @@ function PodcastComponent() {
             );
           } else {
             return (
-              <div key={index} className="bg-yellow-500 relative h-[200px] md:h-auto">
+              <div
+                key={index}
+                className="bg-yellow-500 relative h-[200px] md:h-auto"
+              >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                   src={data.podcastURL}
@@ -83,7 +88,10 @@ function PodcastComponent() {
 
       {/* button expore more podcast  */}
       <div className="flex justify-center my-10">
-        <Link className="text-[1rem] md:text-[2rem] p-3 border-effect  " href={"#"}>
+        <Link
+          className="text-[1rem] md:text-[2rem] p-3 border-effect  "
+          href={"#"}
+        >
           EXPLORE <span className="text-[#F8DC4C]">PODCAST</span>
           <span>
             {/* arrow right icon  */}

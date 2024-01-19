@@ -108,7 +108,10 @@ function Newsblog() {
 
       {/* button for explore news blog  */}
       <div className="flex justify-center my-10">
-        <Link className="text-[1rem] md:text-[2rem] p-3 border-2 border-effect " href={"#"}>
+        <Link
+          className="text-[1rem] md:text-[2rem] p-3 border-2 border-effect "
+          href={"#"}
+        >
           EXPLORE <span className="text-[#F8DC4C]">NEWS & BLOG</span>
           <span>
             {/* arrow right icon  */}
