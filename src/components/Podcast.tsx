@@ -9,13 +9,16 @@ function PodcastComponent() {
       <div className="border-t-2 border-b-2 py-3 mb-7 title">PODCAST</div>
 
       {/* podcast layout  */}
-      <div className=" grid grid-cols-3 grid-rows-2 h-[600px] gap-5">
+      <div className=" grid 
+      grid-cols-2 grid-rows-3
+      md:grid-cols-3 md:grid-rows-2 
+      h-[600px] gap-5 ">
         {podcastData.map((data, index) => {
           if (index === 0) {
             return (
               <div
                 key={index}
-                className="bg-yellow-500  first-podcast-layout relative"
+                className="bg-yellow-500 col-span-2 row-span-2 md:col-span-2 md:row-span-2  relative"
               >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -25,7 +28,7 @@ function PodcastComponent() {
                   loop
                 ></video>
                 <div className="dark-gradient-overlay">
-                  <div className="text-[58px] mt-56 mx-10 text-[#F8DC4C] hover:underline">
+                  <div className="text-[30px] md:text-[58px] mt-56 mx-10 text-[#F8DC4C] hover:underline">
                     {data.podcastTitle}
                   </div>
                   <p className="mx-10">{data.podcastSubTitle}</p>
@@ -34,7 +37,7 @@ function PodcastComponent() {
             );
           } else {
             return (
-              <div key={index} className="bg-yellow-500 relative">
+              <div key={index} className="bg-yellow-500 relative h-[200px] md:h-auto">
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
                   src={data.podcastURL}
@@ -80,7 +83,7 @@ function PodcastComponent() {
 
       {/* button expore more podcast  */}
       <div className="flex justify-center my-10">
-        <Link className="title p-3 border-effect  " href={"#"}>
+        <Link className="text-[1rem] md:text-[2rem] p-3 border-effect  " href={"#"}>
           EXPLORE <span className="text-[#F8DC4C]">PODCAST</span>
           <span>
             {/* arrow right icon  */}
