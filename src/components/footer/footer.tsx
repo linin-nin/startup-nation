@@ -10,8 +10,9 @@ const Footer = () => {
   return (
     <footer className="font-body">
       <Link
-       href='/'
-       className="flex justify-center items-center border-t-2 border-b-2 py-2">
+        href="/"
+        className="flex justify-center items-center border-t-2 border-b-2 py-2"
+      >
         <Image
           src="/icons/logo.svg"
           width={200}
