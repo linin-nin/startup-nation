@@ -128,7 +128,6 @@ const AboutUs = () => {
               </div>
 
               {/* slide button on mobile screen */}
-
               {/* left button  */}
               <svg
                 className="absolute left-4 sm:hidden opacity-60 hover:opacity-90"
