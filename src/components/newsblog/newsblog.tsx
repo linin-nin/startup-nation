@@ -86,8 +86,7 @@ function Newsblog() {
                 </div>
                 {/* sub title  */}
                 <div className="text-[22px] my-3 pb-3 border-b">
-
-                  <Link href={'#'} className="hover:underline">
+                  <Link href={"#"} className="hover:underline">
                     {data.sub_title}
                   </Link>
                 </div>
