@@ -10,11 +10,29 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/home/header/Header";
 import Slide from "@/components/directory/slideImge";
 import Profile from "@/components/directory/founder-profile";
+import { Metadata } from "next";
 interface Props {
   params: {
     name: string;
   };
 }
+
+export const generateMetadata = async ({ params }: Props) => {
+  const startup = await directusClient.request(
+    readItems("Startups", {
+      fields: ["*"],
+      filter: {
+        slug: {
+          _eq: params.name
+        }
+      }
+    })
+  );
+  return {
+    title: `${startup[0].company_name}: ${startup[0].title}`
+    // description: `${startup[0].title}`
+  };
+};
 
 const Detail = async ({ params }: Props) => {
   const startup = await directusClient.request(

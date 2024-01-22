@@ -4,6 +4,11 @@ import CompanyCard from "@/components/ui/CompanyCard";
 import Grid from "@/components/gridStyle";
 import { Media } from "@/lib/utils/media";
 import Search from "./searchBar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Startup Directory"
+};
 
 const page = async () => {
   const directusClient = createDirectus(

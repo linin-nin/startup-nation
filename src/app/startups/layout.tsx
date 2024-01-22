@@ -9,8 +9,9 @@ import ShowPath from "@/components/directory/showPath";
 import Footer from "@/components/footer/footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Search from "./searchBar";
+import { Teko } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const teko = Teko({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +29,7 @@ export default async function RootLayout({
   const cat = await directusClient.request(readItems("Category", {}));
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={teko.className}>
         <Container>
           <Header />
           <Hero
