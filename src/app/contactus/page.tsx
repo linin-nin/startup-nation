@@ -5,10 +5,10 @@ import HeroContactus from "@/components/contactUs/HeroContactus";
 import GoogleMap from "@/components/contactUs/Map";
 import ShowPath from "@/components/directory/showPath";
 import Footer from "@/components/footer/footer";
-import Header from "@/components/header/Header";
+import Header from "@/components/home/header/Header";
 import React from "react";
 import Smooth from "@/components/ui/smoothScroll";
-import Container from "@/components/common/container";
+import Container from "@/components/container";
 
 const ContactUs = () => {
   return (

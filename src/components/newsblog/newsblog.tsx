@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Container from "../common/container";
+import Container from "../container";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
