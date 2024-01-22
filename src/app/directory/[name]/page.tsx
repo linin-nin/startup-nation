@@ -51,7 +51,7 @@ const Detail = async ({ params }: Props) => {
     <Container>
       <Header />
       {/* image slide */}
-      <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body">
+      <div className="lg:py-5 container md:py-4 p-3 mb-5 border-b-2 font-body ">
         <div className="inline-block">
           <div className="flex justify-between sm:gap-2 gap-[5px]">
             <Link href="/">
@@ -134,17 +134,30 @@ const Detail = async ({ params }: Props) => {
                     ( 855 ) 123 123 123
                   </span>
                 </p>
-                <div className=" flex justify-start gap-10 mt-3">
-                  {Socail.map((item) => (
-                    <Link href={item.path} key={item.logo}>
-                      <Image
-                        src={item.logo}
-                        alt="icon"
-                        width={40}
-                        height={40}
-                      />
-                    </Link>
-                  ))}
+                <div className="flex justify-start gap-10 mt-3">
+                  {Socail.map((item) => {
+                    // function to check is link have or not, if path has, it will return true
+                    function isUrlValid(path: any) {
+                      return Boolean(path);
+                    }
+
+                    const isValid = isUrlValid(item.path);
+
+                    if (isValid) {
+                      return (
+                        <Link href={item.path} key={item.logo}>
+                          <Image
+                            src={item.logo}
+                            alt="icon"
+                            width={40}
+                            height={40}
+                          />
+                        </Link>
+                      );
+                    }
+
+                    return null;
+                  })}
                 </div>
               </div>
             </div>

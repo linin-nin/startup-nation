@@ -23,7 +23,7 @@ const Slide = ({ data }: Props) => {
         />
       </div>
       {/* md:ml-5 flex md:block md:mt-0 mt-5 justify-center gap-3 md:py-0 py-2 */}
-      <div className="md:block flex overflow-y-scroll h-[400px] no-scrollbar w-[200px] justify-center items-center md:pt-0 md:pl-5 pt-4">
+      <div className="md:block flex scroll-overflow h-[400px] w-[200px] justify-center items-center md:pt-0 md:pl-5 pt-4">
         {data.map((item: any, index: number) => (
           <div
             key={item}
