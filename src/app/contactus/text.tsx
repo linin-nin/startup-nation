@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { directusClient } from "@/lib/directus_client";
 import { createItem } from "@directus/sdk";
 import EmailContactus from "@/components/contactUs/Emailcontactus";
@@ -9,9 +9,6 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/home/header/Header";
 import React from "react";
 import Container from "@/components/container";
-
-
-
 
 const ContactUs = () => {
   // const result = await directusClient.request(
