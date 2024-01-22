@@ -12,36 +12,43 @@ function Newsblog() {
   const handleMouseDown = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    event.preventDefault();
+    if (
+      event.target === slideRef.current ||
+      (slideRef.current && slideRef.current.contains(event.target as Node))
+    ) {
+      event.preventDefault();
 
-    if (slideRef.current && slideRef.current instanceof HTMLElement) {
-      slideRef.current.style.scrollBehavior = "unset";
-      slideRef.current.style.cursor = "grabbing";
-      let startX = event.pageX - slideRef.current.offsetLeft;
-      let scrollLeft = slideRef.current.scrollLeft;
+      if (slideRef.current && slideRef.current instanceof HTMLElement) {
+        slideRef.current.style.scrollBehavior = "unset";
+        slideRef.current.style.cursor = "grabbing";
+        let startX = event.pageX - slideRef.current.offsetLeft;
+        let scrollLeft = slideRef.current.scrollLeft;
 
-      const handleMouseMove = (event: MouseEvent) => {
-        event.preventDefault();
+        const handleMouseMove = (event: MouseEvent) => {
+          event.preventDefault();
 
-        if (slideRef.current) {
-          const x = event.pageX - slideRef.current.offsetLeft;
-          const walk = (x - startX) * 2;
-          slideRef.current.scrollLeft = scrollLeft - walk;
-        }
-      };
+          if (slideRef.current) {
+            const x = event.pageX - slideRef.current.offsetLeft;
+            const walk = (x - startX) * 2;
+            slideRef.current.scrollLeft = scrollLeft - walk;
+          }
+        };
 
-      const handleMouseUp = () => {
-        if (slideRef.current) {
-          slideRef.current.style.scrollBehavior = "smooth";
-          slideRef.current.style.cursor = "grab";
+        const handleMouseUp = (event: MouseEvent) => {
+          event.preventDefault();
 
-          document.removeEventListener("mousemove", handleMouseMove);
-          document.removeEventListener("mouseup", handleMouseUp);
-        }
-      };
+          if (slideRef.current) {
+            slideRef.current.style.scrollBehavior = "smooth";
+            slideRef.current.style.cursor = "grab";
 
-      document.addEventListener("mousemove", handleMouseMove);
-      document.addEventListener("mouseup", handleMouseUp);
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+          }
+        };
+
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+      }
     }
   };
 
@@ -58,9 +65,9 @@ function Newsblog() {
       >
         {newsblogCard.map((data: any) => {
           return (
-            <Link href={"/tdgd"} className="" key={data.id}>
+            <div key={data.id}>
               {/* one card  */}
-              <div className="border-white border-l-2 pl-5">
+              <div className="border-white border-l-2 pl-5  ">
                 {/* tag  */}
                 <div className="text-[#F8DC4C] text-[22px] my-2">
                   {data.tag}
@@ -79,7 +86,10 @@ function Newsblog() {
                 </div>
                 {/* sub title  */}
                 <div className="text-[22px] my-3 pb-3 border-b">
-                  {data.sub_title}
+
+                  <Link href={'#'} className="hover:underline">
+                    {data.sub_title}
+                  </Link>
                 </div>
                 {/* blog owner information  */}
                 <div className="flex 500 items-center justify-between">
@@ -101,7 +111,7 @@ function Newsblog() {
                   <div className="text-[20px] opacity-80">{data.post_date}</div>
                 </div>
               </div>
-            </Link>
+            </div>
           );
         })}
       </div>

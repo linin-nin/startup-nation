@@ -28,7 +28,7 @@ export default function Home({ data }: { data: any[] }) {
   return (
     <main className="container padding-body font-body">
       <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
-      <Smooth>
+  
         <div>
           <Header />
           <MarqueeComponent />
@@ -39,7 +39,7 @@ export default function Home({ data }: { data: any[] }) {
           <PodcastComponent />
           <Footer />
         </div>
-      </Smooth>
+
     </main>
   );
 }
