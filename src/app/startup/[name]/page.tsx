@@ -10,7 +10,6 @@ import Footer from "@/components/footer/footer";
 import Header from "@/components/home/header/Header";
 import Slide from "@/components/directory/slideImge";
 import Profile from "@/components/directory/founder-profile";
-import { Metadata } from "next";
 interface Props {
   params: {
     name: string;
@@ -29,8 +28,18 @@ export const generateMetadata = async ({ params }: Props) => {
     })
   );
   return {
-    title: `${startup[0].company_name}: ${startup[0].title}`
+    title: `${startup[0].company_name}: ${startup[0].title}`,
     // description: `${startup[0].title}`
+    openGraph: {
+      images: [
+        {
+          url: Media(startup[0].logo),
+          width: 1200,
+          height: 630,
+          alt: startup[0].company_name
+        }
+      ]
+    }
   };
 };
 
