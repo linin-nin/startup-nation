@@ -28,17 +28,16 @@ export default function Home({ data }: { data: any[] }) {
   return (
     <main className="container padding-body font-body">
       <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
+
       <div>
-        <div>
-          <Header />
-          <MarqueeComponent />
-          <Hero />
-          <VideoContent data={data} />
-          {/* <AboutUs /> */}
-          <Newsblog />
-          <PodcastComponent />
-          <Footer />
-        </div>
+        <Header />
+        <MarqueeComponent />
+        <Hero />
+        <VideoContent data={data} />
+        <AboutUs />
+        <Newsblog />
+        <PodcastComponent />
+        <Footer />
       </div>
     </main>
   );
