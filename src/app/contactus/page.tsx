@@ -1,15 +1,28 @@
-import { directusClient } from "@/lib/directus_client";
-import { createItem } from "@directus/sdk";
-import ContactUs from "./text";
+"use client";
 
-const Page = async () => {
-  const result = await directusClient.request(
-    createItem("Subscriber", {
-      email: "sreyninpon@gmail.com",
-      phone_number: "070419305"
-    })
+import EmailContactus from "@/components/contactUs/Emailcontactus";
+import HeroContactus from "@/components/contactUs/HeroContactus";
+import GoogleMap from "@/components/contactUs/Map";
+import ShowPath from "@/components/directory/showPath";
+import Footer from "@/components/footer/footer";
+import Header from "@/components/home/header/Header";
+import React from "react";
+import Smooth from "@/components/ui/smoothScroll";
+import Container from "@/components/container";
+
+const ContactUs = () => {
+  return (
+    <Smooth>
+      <Container>
+        <Header />
+        <ShowPath />
+        <HeroContactus />
+        <GoogleMap />
+        <EmailContactus />
+        <Footer />
+      </Container>
+    </Smooth>
   );
-  return <ContactUs />;
 };
 
-export default Page;
+export default ContactUs;
