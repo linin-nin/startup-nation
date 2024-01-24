@@ -29,8 +29,7 @@ export const Socail = [
   {
     path: "flsdjf",
     logo: "/icons/linkin.svg"
-  },
-  
+  }
 ];
 
 export const SocailDark = [

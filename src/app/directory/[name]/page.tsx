@@ -151,7 +151,6 @@ const Detail = async ({ params }: Props) => {
                             alt="icon"
                             width={40}
                             height={40}
-                            
                           />
                         </Link>
                       );
