@@ -1,36 +1,9 @@
-import { readItems } from "@directus/sdk";
-import { directusClient } from "@/lib/directus_client";
+import React from "react";
 
-interface GetDataProps {
-  page: number;
-  limit: number;
-  query?: string;
+interface SearchProps {
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export const GetData = async ({ page, limit, query }: GetDataProps) => {
-  try {
-    if (!query) {
-      const allData = await directusClient.request(
-        readItems("Startups", {
-          fields: ["*"]
-        })
-      );
-      return allData;
-    }
-    const response = await directusClient.request(
-      readItems("Startups", {
-        fields: ["*"],
-        offset: (page - 1) * limit,
-        limit,
-        filter: {
-          company_name: { _contains: `%${query}%` }
-        }
-      })
-    );
+const GetStartup = async ({ searchParams }: SearchProps) => {};
 
-    return response;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-};
+export default GetStartup;

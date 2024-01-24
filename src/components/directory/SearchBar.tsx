@@ -12,7 +12,7 @@ const SearchData = ({ search }: { search?: string }) => {
 
   useEffect(() => {
     if (!query) {
-      router.push("/startups");
+      router.push("/startups/all");
     } else {
       router.push(`/startups?search=${query}`);
     }
