@@ -19,17 +19,18 @@ export const NavsList = [
 
 export const Socail = [
   {
-    path: "/",
+    path: "f",
     logo: "/icons/facebook.svg"
   },
   {
-    path: "/",
+    path: "fksjfl",
     logo: "/icons/telegram.svg"
   },
   {
-    path: "/",
+    path: "flsdjf",
     logo: "/icons/linkin.svg"
-  }
+  },
+  
 ];
 
 export const SocailDark = [
