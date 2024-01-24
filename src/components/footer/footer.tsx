@@ -9,7 +9,10 @@ import Container from "../container";
 const Footer = () => {
   return (
     <footer className="font-body">
-      <div className="flex justify-center items-center border-t-2 border-b-2 py-2">
+      <Link
+        href="/"
+        className="flex justify-center items-center border-t-2 border-b-2 py-2"
+      >
         <Image
           src="/icons/logo.svg"
           width={200}
@@ -17,7 +20,7 @@ const Footer = () => {
           alt="Startup Nation"
           className="py-4"
         />
-      </div>
+      </Link>
       <nav className=" border-b-2 py-4 text-center text-[19px] md:text-[32px] ">
         {NavsList.map((item) => (
           <Link key={item.menu} href={item.path} className="px-3 effect-yellow">

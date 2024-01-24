@@ -1,10 +1,10 @@
 export const NavsList = [
   {
-    path: "/",
+    path: "/about",
     menu: "About us"
   },
   {
-    path: "/",
+    path: "/contactus",
     menu: "Contact us"
   },
   {
@@ -19,22 +19,22 @@ export const NavsList = [
 
 export const Socail = [
   {
-    path: "/",
+    path: "https://www.facebook.com/dreamslab.dev",
     logo: "/icons/facebook.svg"
   },
   {
-    path: "/",
+    path: "https://t.me/dreamslab_kh",
     logo: "/icons/telegram.svg"
   },
   {
-    path: "/",
+    path: "https://www.linkedin.com/showcase/astartupnation/",
     logo: "/icons/linkin.svg"
   }
 ];
 
 export const SocailDark = [
   {
-    path: "/",
+    path: "https://www.facebook.com/dreamslab.dev",
     logo: "/icons/facebookDark.svg"
   },
   {
