@@ -36,9 +36,8 @@ const VideoContent = ({ data }: { data: any[] }) => {
               <div className="content hover:opacity-100 p-5">
                 <h1 className="title">{items.company_name}</h1>
                 <p
-                  className={`paragraph line-clamp-3 ${
-                    Isopen ? "line-clamp-none" : "line-clamp-3"
-                  }`}
+                  className={`paragraph line-clamp-3 ${Isopen ? "line-clamp-none" : "line-clamp-3"
+                    }`}
                 >
                   {items.dirscription}
                 </p>
@@ -75,9 +74,8 @@ const VideoContent = ({ data }: { data: any[] }) => {
             <div className="content hover:opacity-100 p-5">
               <h1 className="title">{items.company_name}</h1>
               <p
-                className={`paragraph ${
-                  Isopen ? "line-clamp-none" : "line-clamp-3"
-                }`}
+                className={`paragraph ${Isopen ? "line-clamp-none" : "line-clamp-3"
+                  }`}
               >
                 {items.dirscription}
               </p>
