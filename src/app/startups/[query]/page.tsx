@@ -32,14 +32,14 @@ const Page = async ({ searchParams }: SearchProps) => {
   const cate = await fetchdata();
   const startup = await Fetchstartup();
 
-  const page =
-    typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
-  const limit =
-    typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
-  const search =
-    typeof searchParams.search === "string" ? searchParams.search : undefined;
-  const query =
-    typeof searchParams.search === "string" ? searchParams.search : undefined;
+  // const page =
+  //   typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
+  // const limit =
+  //   typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
+  // const search =
+  //   typeof searchParams.search === "string" ? searchParams.search : undefined;
+  // const query =
+  //   typeof searchParams.search === "string" ? searchParams.search : undefined;
 
   // const data = await GetData({ page, limit, search: search, query: query });
 

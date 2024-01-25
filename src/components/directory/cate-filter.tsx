@@ -26,7 +26,7 @@ const Filter = ({ category }: { category: any[] }) => {
           <div className="cursor-pointer">
             {drop ? <ChevronUp /> : <ChevronDown />}
           </div>
-          <ul
+          {/* <ul
             className={`absolute text-xl capitalize w-[420px] bg-black border-2 h-[293px] overflow-y-scroll no-scrollbar rounded-md z-[30] top-[50px] right-0 ${
               drop ? "hidden" : "hidden"
             }`}
@@ -34,7 +34,7 @@ const Filter = ({ category }: { category: any[] }) => {
             <Link href="/startups">
               <li className="py-3 pl-3 border-b-2">All</li>
             </Link>
-            {/* {category
+            {category
               .filter((abs) => abs.category_name.toLowerCase().includes(query))
               .map((category) => (
                 <div key={category.id}>
@@ -45,8 +45,8 @@ const Filter = ({ category }: { category: any[] }) => {
                     {category.category_name}
                   </li>
                 </div>
-              ))} */}
-          </ul>
+              ))}
+          </ul> */}
         </div>
       </div>
     </div>
