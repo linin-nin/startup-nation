@@ -36,32 +36,32 @@ export const GetData = async ({
             ]
           }
         ],
-        offset: (page - 1) * limit,
-        limit,
-        filter: {
-          _or: [
-            {
-              _and: [
-                {
-                  company_name: {
-                    _contains: `%${search}%`
-                  }
-                }
-              ]
-            },
-            {
-              _and: [
-                {
-                  category: {
-                    Category_id: {
-                      category_name: { _contains: `%${query}%` }
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
+        // offset: (page - 1) * limit,
+        // limit,
+        // filter: {
+        //   _or: [
+        //     {
+        //       _and: [
+        //         {
+        //           company_name: {
+        //             _contains: `%${search}%`
+        //           }
+        //         }
+        //       ]
+        //     },
+        //     {
+        //       _and: [
+        //         {
+        //           category: {
+        //             Category_id: {
+        //               category_name: { _contains: `%${query}%` }
+        //             }
+        //           }
+        //         }
+        //       ]
+        //     }
+        //   ]
+        // }
       })
     );
 
