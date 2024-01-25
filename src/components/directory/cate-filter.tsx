@@ -3,12 +3,11 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { useQueryState } from "nuqs";
 
 const Filter = ({ category }: { category: any[] }) => {
   const [drop, setdrop] = useState(false);
-  const [query, setquery] = useState("");
-  const [first, setfirst] = useState("");
-  const [selectitem, setselectitem] = useState(false);
+  const [query, setquery] = useQueryState("cate");
 
   return (
     <div
@@ -16,9 +15,8 @@ const Filter = ({ category }: { category: any[] }) => {
       className=" flex md:w-[47%] w-full border-2  border-white md:py-8 py-2 mb-3 px-5 items-center"
     >
       <input
-        onClick={() => setselectitem(!selectitem)}
         className="w-[100%] outline-none sm:text-2xl text-[13px] placeholder:sm:text-2xl placeholder:text-[13px] bg-black"
-        value={selectitem ? first : query}
+        value={query || ""}
         placeholder="filter project"
         onChange={(e) => setquery(e.target.value.toLowerCase())}
       />
@@ -34,20 +32,19 @@ const Filter = ({ category }: { category: any[] }) => {
             }`}
           >
             <Link href="/startups">
-              <li className="hover:bg-gray-800 p-3">All</li>
+              <li className="py-3 pl-3 border-b-2">All</li>
             </Link>
             {category
               .filter((abs) => abs.category_name.toLowerCase().includes(query))
               .map((category) => (
-                <Link
-                  onClick={() => setfirst(category.category_name)}
-                  key={category.id}
-                  href={`/startups/${category.slug}`}
-                >
-                  <li className="hover:bg-gray-800 p-3">
+                <div key={category.id}>
+                  <li
+                    onClick={() => setquery(category.category_name)}
+                    className="hover:bg-gray-800 p-3"
+                  >
                     {category.category_name}
                   </li>
-                </Link>
+                </div>
               ))}
           </ul>
         </div>

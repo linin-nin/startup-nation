@@ -1,10 +1,9 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
-import { useQueryState, parseAsString } from "nuqs";
+import { useQueryState } from "nuqs";
 
-const Search = () => {
-  const [searchParams, setsearchParams] = useQueryState("query");
+const Search = ({ search }: { search?: string }) => {
+  const [searchParams, setsearchParams] = useQueryState("search");
 
   return (
     <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">

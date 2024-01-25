@@ -20,7 +20,7 @@ function PodcastComponent() {
             return (
               <div
                 key={index}
-                className="bg-yellow-500 col-span-2 row-span-2 md:col-span-2 md:row-span-2  relative"
+                className="bg-yellow-500 col-span-2 row-span-2 md:col-span-2 md:row-span-2 w-[888px] h-[549px] relative"
               >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -41,7 +41,7 @@ function PodcastComponent() {
             return (
               <div
                 key={index}
-                className="bg-yellow-500 relative h-[200px] md:h-auto"
+                className="bg-yellow-500 relative h-[262px] w-[399px] md:h-auto"
               >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}

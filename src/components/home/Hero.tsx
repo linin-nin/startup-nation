@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <section className="hero mb-7">
-      <div className="w-full h-[610px] relative bg-cover bg-center">
+      <div className="w-full md:h-[553px] h-[400px] relative bg-cover bg-center">
         <Image
           src="/image/c1.gif"
           fill
@@ -18,7 +18,7 @@ const Hero = () => {
         {/* black screen on top  */}
         <div
           className="hero-section1 absolute w-full h-full inset-0
-                      before:absolute before:w-full before:inset-0 before:h-[610px] before:top-0 before:left-0 before:bg-black before:opacity-70"
+                      before:absolute before:w-full before:inset-0 before:md:h-[553px] before:h-[400px] before:top-0 before:left-0 before:bg-black before:opacity-70"
         ></div>
 
         {/* container content */}
@@ -43,13 +43,13 @@ const Hero = () => {
             </div>
           </div>
           {/* actual content  */}
-          <div className=" h-full md:flex flex-grow justify-between  md:mt-0 mt-52">
-            <h1 className="text-[48px] md:block flex justify-center items-center font-bold glowy-text lg:text-[5rem] md:text-[3.5rem] md:tracking-[.425rem]">
+          <div className=" lg:pt-16 h-full md:flex flex-grow justify-between  md:mt-0 mt-32">
+            <h1 className=" text-[48px] md:block flex justify-center items-center font-bold glowy-text lg:text-[5rem] md:text-[3.5rem] md:tracking-[.425rem]">
               A Centaur of <br />
               <span className="text-[#F8DC4C]">Asia</span>
             </h1>
-            <div className=" md:block flex flex-col justify-center items-center">
-              <p className=" lg:w-[500px] md:w-[400px] md:pt-30 pt-50">
+            <div className=" md:block pt-8 flex flex-col justify-center items-center">
+              <p className=" lg:w-[500px] md:w-[400px] md:text-right text-center md:pt-30 pt-50">
                 Lorem ipsum dolor sit amet consectetur. Risus vivamus ultrices
                 pharetra consectetur vitae diam. Faucibus at suscipit justo non
                 mauris in orci ut.

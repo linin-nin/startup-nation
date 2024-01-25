@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Container from "../container";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
@@ -75,7 +74,7 @@ function Newsblog() {
                 {/* frame card  */}
                 <div className=" p-1 frame relative ">
                   {/* image card  */}
-                  <div className="w-[400px] h-[400px] relative z-10 ">
+                  <div className="w-[410px] h-[310px] relative z-10 ">
                     <Image
                       fill
                       objectFit="cover"

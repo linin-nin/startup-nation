@@ -13,7 +13,6 @@ const VideoContent = ({ data }: { data: any[] }) => {
   return (
     <div>
       <h1 className="border-t-2 border-b-2 py-3 title">Side Project</h1>
-
       {/* layout 1 */}
       <Grid cols={3} className="py-7 gap-6">
         {data.slice(0, 3).map((items) => {
@@ -56,7 +55,7 @@ const VideoContent = ({ data }: { data: any[] }) => {
       </Grid>
 
       {/* layout 2 */}
-      <Grid cols={2} className="gap-6">
+      <Grid cols={2} className="gap-6 mb-5">
         {data.slice(3, 7).map((items, index) => (
           <div
             key={index}

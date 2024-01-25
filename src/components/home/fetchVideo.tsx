@@ -30,12 +30,12 @@ export default function Home({ data }: { data: any[] }) {
       <AnimatePresence>{isLoading && <Prelanding />}</AnimatePresence>
 
       <div>
-        <Header />
+        {/* <Header />
         <MarqueeComponent />
         <Hero />
         <VideoContent data={data} />
         <AboutUs />
-        <Newsblog />
+        <Newsblog /> */}
         <PodcastComponent />
         <Footer />
       </div>
