@@ -35,7 +35,7 @@ export const GetData = async ({
               }
             ]
           }
-        ],
+        ]
         // offset: (page - 1) * limit,
         // limit,
         // filter: {
