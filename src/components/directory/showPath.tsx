@@ -15,7 +15,7 @@ const ShowPath = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body",
+        "lg:py-5 md:py-4 py-3 border-b-2 border-t-2 font-body padding-body",
         className
       )}
     >

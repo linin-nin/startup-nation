@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Filter from "@/components/directory/cate-filter";
+import Filter from "./cat-filter";
 import { readItems, rest, createDirectus } from "@directus/sdk";
 import Container from "@/components/container";
 import Header from "@/components/home/header/Header";
@@ -8,7 +8,7 @@ import Hero from "@/components/directory/hero";
 import ShowPath from "@/components/directory/showPath";
 import Footer from "@/components/footer/footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Search from "./searchbar";
+import Search from "../../components/directory/searchBar";
 import { Teko } from "next/font/google";
 
 const teko = Teko({ subsets: ["latin"] });

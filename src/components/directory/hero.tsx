@@ -12,7 +12,7 @@ const Hero = ({
 }) => {
   return (
     <main>
-      <div className="w-full h-[620px] relative bg-cover bg-center">
+      <div className="w-full h-[610px] relative bg-cover bg-center">
         <Image
           src={cover}
           fill
