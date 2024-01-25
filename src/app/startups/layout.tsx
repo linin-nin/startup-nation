@@ -2,7 +2,6 @@ import { type Metadata } from "next";
 import Container from "@/components/container";
 import Header from "@/components/home/header/Header";
 import Hero from "@/components/directory/hero";
-import ShowPath from "@/components/directory/showPath";
 import Footer from "@/components/footer/footer";
 import { cn } from "@/lib/utils/utils";
 import Image from "next/image";
