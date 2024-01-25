@@ -13,14 +13,14 @@ function PodcastComponent() {
         className=" grid 
       grid-cols-2 grid-rows-3
       md:grid-cols-3 md:grid-rows-2 
-      h-[600px] gap-5 "
+      h-[500px] gap-5 "
       >
         {podcastData.map((data, index) => {
           if (index === 0) {
             return (
               <div
                 key={index}
-                className="bg-yellow-500 col-span-2 row-span-2 md:col-span-2 md:row-span-2 w-[888px] h-[549px] relative"
+                className="bg-yellow-500 col-span-2 row-span-2 md:col-span-2 md:row-span-2  relative"
               >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -41,7 +41,7 @@ function PodcastComponent() {
             return (
               <div
                 key={index}
-                className="bg-yellow-500 relative h-[262px] w-[399px] md:h-auto"
+                className="bg-yellow-500 relative h-[200px] md:h-auto"
               >
                 <video
                   style={{ objectFit: "cover", width: "100%", height: "100%" }}
@@ -87,7 +87,7 @@ function PodcastComponent() {
       </div>
 
       {/* button expore more podcast  */}
-      <div className="flex justify-center my-10">
+      <div className="flex justify-center md:my-10 my-20">
         <Link
           className="text-[1rem] md:text-[2rem] p-3 border-effect  "
           href={"#"}

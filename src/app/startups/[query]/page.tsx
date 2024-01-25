@@ -51,7 +51,7 @@ const Page = async ({ searchParams }: SearchProps) => {
       </div>
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
         {/* card content  */}
-        {data.map((item) => (
+        {data.splice(4, 9).map((item) => (
           <div key={item.id}>
             <CompanyCard
               id={item.id}
