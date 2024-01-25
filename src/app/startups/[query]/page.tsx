@@ -7,7 +7,7 @@ import CompanyCard from "@/components/ui/CompanyCard";
 import { Media } from "@/lib/utils/media";
 import Grid from "@/components/gridStyle";
 import { GetData } from "@/components/directory/getStartup";
-import Pagination from "@/app/test/pagination";
+import Pagination from "@/app/startups/pagination";
 
 interface SearchProps {
   searchParams: { [key: string]: string | string[] | undefined };
