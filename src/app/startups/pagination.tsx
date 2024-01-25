@@ -1,7 +1,6 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { parseAsInteger, useQueryState } from "nuqs";
 import React, { useState } from "react";
 import ReactPaginate, { type ReactPaginateProps } from "react-paginate";
 
@@ -12,7 +11,7 @@ const Pagination = ({
   itemsPerPage: number;
   items: any[];
 }) => {
-  const [pagequery] = useQueryState("page", parseAsInteger);
+  // const [pagequery] = useQueryState("page", parseAsInteger);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const [itemOffset, setItemOffset] = useState(0);
@@ -36,7 +35,7 @@ const Pagination = ({
         pageCount={pageCount}
         renderOnZeroPageCount={null}
         activeClassName="border-2 px-5 py-2"
-        forcePage={(pagequery ?? 1) - 1}
+        // forcePage={(pagequery ?? 1) - 1}
         className="flex justify-between items-center gap-10"
       />
       <div>Show rows </div>

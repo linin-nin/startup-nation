@@ -3,11 +3,10 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
-import { useQueryState } from "nuqs";
 
 const Filter = ({ category }: { category: any[] }) => {
   const [drop, setdrop] = useState(false);
-  const [query, setquery] = useQueryState("cate");
+  const [query, setquery] = useState("cate");
 
   return (
     <div
