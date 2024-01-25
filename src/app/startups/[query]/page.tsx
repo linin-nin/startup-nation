@@ -6,7 +6,7 @@ import { readItems } from "@directus/sdk";
 import CompanyCard from "@/components/ui/CompanyCard";
 import { Media } from "@/lib/utils/media";
 import Grid from "@/components/gridStyle";
-import { GetData } from "@/components/directory/getStartup";
+// import { GetData } from "@/components/directory/getStartup";
 import Pagination from "@/app/startups/pagination";
 
 interface SearchProps {
@@ -41,7 +41,7 @@ const Page = async ({ searchParams }: SearchProps) => {
   const query =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
 
-  const data = await GetData({ page, limit, search: search, query: query });
+  // const data = await GetData({ page, limit, search: search, query: query });
 
   return (
     <main className="py-7">
@@ -51,7 +51,7 @@ const Page = async ({ searchParams }: SearchProps) => {
       </div>
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
         {/* card content  */}
-        {data.splice(4, 9).map((item) => (
+        {startup.splice(4, 9).map((item) => (
           <div key={item.id}>
             <CompanyCard
               id={item.id}
@@ -65,7 +65,7 @@ const Page = async ({ searchParams }: SearchProps) => {
         ))}
       </Grid>
       <div>
-        <Pagination items={data} itemsPerPage={9} />
+        <Pagination items={startup} itemsPerPage={9} />
       </div>
     </main>
   );
