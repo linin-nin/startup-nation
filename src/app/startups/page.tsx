@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation"
+import { redirect } from "next/navigation";
 
 const page = () => {
-  return redirect('startups/all')
-}
+  return redirect("startups/all");
+};
 
-export default page
+export default page;
