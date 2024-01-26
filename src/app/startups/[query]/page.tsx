@@ -106,10 +106,10 @@ const Page = async ({ searchParams }: SearchProps) => {
           </div>
         ))}
       </Grid>
-      <div className="flex justify-center items-center mt-10">
-        <div className="flex justify-between items-center py-10  w-full border-t-2 border-gray-400">
-          <div>{`1 -6 from 100`}</div>
-          <div className="flex justify-between gap-10">
+      <div className="flex h-[100px] justify-center border items-center mt-5">
+        <div className="flex justify-between w-full ">
+          <div>{`1 - 9 from 100`}</div>
+          <div className="flex justify-between">
             <Link
               href={{
                 pathname: "/startups/all",
@@ -135,7 +135,7 @@ const Page = async ({ searchParams }: SearchProps) => {
                   }}
                 >
                   <p
-                    className={`hover:border-2 px-5 ml-2 hover:bg-gray-600 cursor-pointer`}
+                    className={`hover:border-2 px-5 hover:bg-gray-600 cursor-pointer`}
                   >
                     {num}
                   </p>
