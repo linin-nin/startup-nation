@@ -27,6 +27,7 @@ const VideoContent = ({ data }: { data: any[] }) => {
                   playing
                   loop
                   muted
+                  playsinline
                   width="1000px"
                   height="100%"
                 />
@@ -67,6 +68,7 @@ const VideoContent = ({ data }: { data: any[] }) => {
                 playing
                 loop
                 muted
+                playsinline
                 width="1270px"
                 height="100%"
               />
