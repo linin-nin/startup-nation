@@ -14,7 +14,7 @@ export const GetStartup = async ({ page, limit, query }: GetDataProps) => {
         readItems("Startups", {
           fields: ["*"],
           offset: (page - 1) * limit,
-        limit,
+          limit
         })
       );
       return allData;
@@ -25,7 +25,7 @@ export const GetStartup = async ({ page, limit, query }: GetDataProps) => {
         offset: (page - 1) * limit,
         limit,
         filter: {
-          company_name: { _contains: `%${query}%` },
+          company_name: { _contains: `%${query}%` }
           // category: {
           //   Category_id: {
           //     // category_name: {_contains: `%o%`}
@@ -35,7 +35,7 @@ export const GetStartup = async ({ page, limit, query }: GetDataProps) => {
         }
       })
     );
-      console.log(response)
+    console.log(response);
     return response;
   } catch (error) {
     console.error("Error fetching data:", error);

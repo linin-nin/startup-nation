@@ -19,7 +19,7 @@ const SearchStartup = ({ search }: { search?: string }) => {
   }, [query, router]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value.toLocaleLowerCase());
+    setText(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
