@@ -11,7 +11,7 @@ const StartupsLayout = ({ children }: { children: ReactNode }) => {
     <Container>
       <Header />
       <Hero />
-      <ShowPath />
+      <ShowPath className="mb-5" />
       {children}
       <Footer />
     </Container>

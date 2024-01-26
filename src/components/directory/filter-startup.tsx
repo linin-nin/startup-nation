@@ -1,8 +1,18 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-const Filter = ({ category }: { category: any[] }) => {
+import Link from "next/link";
+
+const Filter = ({
+  category,
+  filter = "Filter project"
+}: {
+  category: any[];
+  filter?: string;
+}) => {
+  const router = useRouter();
   const [drop, setdrop] = useState(false);
   const [selectCategory, setselectCategory] = useState("Filter Project");
 
@@ -21,7 +31,9 @@ const Filter = ({ category }: { category: any[] }) => {
               drop ? "block" : "hidden"
             }`}
           >
+            <li className="hover:bg-gray-800 p-3">{selectCategory}</li>
             {category.map((item) => (
+              // <Link key={item.id} href={`/startups`}>
               <li
                 key={item.id}
                 className="hover:bg-gray-800 p-3"
@@ -29,6 +41,7 @@ const Filter = ({ category }: { category: any[] }) => {
               >
                 {item.category_name}
               </li>
+              // </Link>
             ))}
           </ul>
         </div>

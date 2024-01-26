@@ -8,7 +8,7 @@ const SearchStartup = ({ search }: { search?: string }) => {
   const router = useRouter();
 
   const [text, setText] = useState(search);
-  const [query] = useDebounce(text, 200);
+  const [query] = useDebounce(text, 100);
 
   useEffect(() => {
     if (!query) {

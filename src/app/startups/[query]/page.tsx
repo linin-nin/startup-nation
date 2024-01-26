@@ -36,8 +36,10 @@ const Page = async ({ searchParams }: SearchProps) => {
     typeof searchParams.limit === "string" ? Number(searchParams.limit) : 9;
   const search =
     typeof searchParams.search === "string" ? searchParams.search : undefined;
+  const filter =
+    typeof searchParams.filter === "string" ? searchParams.search : undefined;
 
-  const data = await GetStartup({ page, limit, query: search });
+  const data = await GetStartup({ page, limit, search: search, query: filter });
   const Alldata = (await Data()).length;
   const AllCount = Math.ceil(Alldata / limit);
   const numPage = Array.from(
@@ -104,45 +106,57 @@ const Page = async ({ searchParams }: SearchProps) => {
           </div>
         ))}
       </Grid>
-      <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400">
-        <div>{`1 -6 from 100`}</div>
-        <div className="flex justify-between gap-10">
-          <Link
-            href={{
-              pathname: "/startups/all",
-              query: {
-                ...(search ? { search } : {}),
-                page: page > 1 ? page - 1 : 1
-              }
-            }}
-            className="pl-3"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </Link>
-          <div className="flex">
-            {numPage.map((num) => (
-              <p
-                key={num}
-                className={`border-2 px-5 ml-2 hover:bg-gray-600 cursor-pointer`}
-              >
-                {num}
-              </p>
-            ))}
+      <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-between items-center py-10  w-full border-t-2 border-gray-400">
+          <div>{`1 -6 from 100`}</div>
+          <div className="flex justify-between gap-10">
+            <Link
+              href={{
+                pathname: "/startups/all",
+                query: {
+                  ...(search ? { search } : {}),
+                  page: page > 1 ? page - 1 : 1
+                }
+              }}
+              className="pl-3"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </Link>
+            <div className="flex">
+              {numPage.map((num) => (
+                <Link
+                  key={num}
+                  href={{
+                    pathname: "/startups/all",
+                    query: {
+                      ...(search ? { search } : {}),
+                      page: num
+                    }
+                  }}
+                >
+                  <p
+                    className={`hover:border-2 px-5 ml-2 hover:bg-gray-600 cursor-pointer`}
+                  >
+                    {num}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <Link
+              href={{
+                pathname: "/startups/all",
+                query: {
+                  ...(search ? { search } : {}),
+                  page: page + 1
+                }
+              }}
+              className="pl-3"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </Link>
           </div>
-          <Link
-            href={{
-              pathname: "/startups/all",
-              query: {
-                ...(search ? { search } : {}),
-                page: page + 1
-              }
-            }}
-            className="pl-3"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </Link>
+          <div>Show rows </div>
         </div>
-        <div>Show rows </div>
       </div>
     </>
   );
