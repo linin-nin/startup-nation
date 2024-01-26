@@ -29,7 +29,7 @@ interface SearchProps {
 }
 
 const Page = async ({ searchParams }: SearchProps) => {
-  const categoryDta = await cate()
+  const categoryDta = await cate();
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1;
   const limit =
@@ -49,7 +49,7 @@ const Page = async ({ searchParams }: SearchProps) => {
     <>
       <div className="md:flex justify-between gap-8 w-[100%] md:h-16 h-[100px]">
         {/* filter */}
-        <FilterStartup category={categoryDta}/>
+        <FilterStartup category={categoryDta} />
         {/* search */}
         <div className="px-5 w-full items-center md:py-8 py-2 flex border-2 border-white">
           <div className="flex justify-start w-full">
@@ -90,20 +90,20 @@ const Page = async ({ searchParams }: SearchProps) => {
       </div>
       {/* all Card startup */}
       <Grid cols={3} className="overflow-hidden mt-8 gap-8">
-      {/* card content  */}
-      {data.map((item) => (
-        <div key={item.id}>
-          <CompanyCard
-            id={item.id}
-            img_url={Media(item.logo_url)}
-            company_name={item.company_name}
-            subtitle={item.title}
-            founded_date={item.founded_date}
-            slug={item.slug}
-          />
-        </div>
-      ))}
-    </Grid>
+        {/* card content  */}
+        {data.map((item) => (
+          <div key={item.id}>
+            <CompanyCard
+              id={item.id}
+              img_url={Media(item.logo_url)}
+              company_name={item.company_name}
+              subtitle={item.title}
+              founded_date={item.founded_date}
+              slug={item.slug}
+            />
+          </div>
+        ))}
+      </Grid>
       <div className="flex justify-between items-center mt-10 py-5 w-full border-t-2 border-gray-400">
         <div>{`1 -6 from 100`}</div>
         <div className="flex justify-between gap-10">
