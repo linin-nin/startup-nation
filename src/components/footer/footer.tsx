@@ -13,13 +13,7 @@ const Footer = () => {
         href="/"
         className="flex justify-center items-center border-t-2 border-b-2 py-2"
       >
-        <Image
-          src="/icons/logo.svg"
-          width={200}
-          height={80}
-          alt="Startup Nation"
-          className="py-4"
-        />
+       
       </Link>
       <nav className=" border-b-2 py-4 text-center text-[19px] md:text-[32px] ">
         {NavsList.map((item) => (
